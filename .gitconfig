@@ -1,0 +1,10 @@
+[remote "skygragon"]
+    url = https://github.com/skygragon/leetcode-cli.git
+    fetch = +refs/heads/*:refs/remotes/skygragon/*
+[gsync]
+    remote = skygragon
+    branch = master
+[merge]
+	allow = true
+[commit]
+	message = n

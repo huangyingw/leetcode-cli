@@ -1,10 +1,15 @@
 [remote "skygragon"]
     url = https://github.com/skygragon/leetcode-cli.git
     fetch = +refs/heads/*:refs/remotes/skygragon/*
+[remote "origin"]
+    url = git@github.com:huangyingw/leetcode-cli.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[push]
+    remote = origin
 [gsync]
     remote = skygragon
     branch = master
 [merge]
-	allow = true
+    allow = true
 [commit]
-	message = n
+    message = n

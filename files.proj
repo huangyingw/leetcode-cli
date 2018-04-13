@@ -1,4 +1,5 @@
 "./.dockerignore"
+"./.env.json"
 "./.eslintrc.js"
 "./.git/config"
 "./.gitconfig"
@@ -12,6 +13,7 @@
 "./bin/entrypoint"
 "./bin/install"
 "./bin/leetcode"
+"./build.sh"
 "./colors/blue.json"
 "./colors/dark.json"
 "./colors/default.json"

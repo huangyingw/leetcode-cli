@@ -3,4 +3,5 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-./bin/install
+./build.sh
+leetcode submission -a -o submissions

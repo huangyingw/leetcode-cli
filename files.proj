@@ -63,6 +63,7 @@
 "./package.json"
 "./prunefile.conf"
 "./prunefix.conf"
+"./run.sh"
 "./templates/codeonly.tpl"
 "./templates/detailed.tpl"
 "./test/helper.js"

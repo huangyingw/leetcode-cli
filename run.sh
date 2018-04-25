@@ -5,3 +5,4 @@ cd "$SCRIPTPATH"
 
 ./build.sh
 leetcode submission -a -o submissions
+~/loadrc/bashrc/jformat.sh

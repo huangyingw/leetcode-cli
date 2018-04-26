@@ -9,22 +9,23 @@
 # Total Submissions: 357.6K
 # Testcase Example:  '["Trie","search"]\n[[],["a"]]'
 #
-# 
+#
 # Implement a trie with insert, search, and startsWith methods.
-# 
-# 
-# 
+#
+#
+#
 # Note:
 # You may assume that all inputs are consist of lowercase letters a-z.
-# 
 #
+#
+
+
 class Trie(object):
 
     def __init__(self):
         """
         Initialize your data structure here.
         """
-        
 
     def insert(self, word):
         """
@@ -32,7 +33,6 @@ class Trie(object):
         :type word: str
         :rtype: void
         """
-        
 
     def search(self, word):
         """
@@ -40,7 +40,6 @@ class Trie(object):
         :type word: str
         :rtype: bool
         """
-        
 
     def startsWith(self, prefix):
         """
@@ -48,7 +47,6 @@ class Trie(object):
         :type prefix: str
         :rtype: bool
         """
-        
 
 
 # Your Trie object will be instantiated and called as such:

@@ -12,7 +12,7 @@
 # Given a string representing a code snippet, you need to implement a tag
 # validator to parse the code and return whether it is valid. A code snippet is
 # valid if all the following rules hold:
-# 
+#
 # The code must be wrapped in a valid closed tag. Otherwise, the code is
 # invalid.
 # A closed tag (not necessarily valid) has exactly the following format :
@@ -34,25 +34,25 @@
 # TAG_NAME  (not necessarily valid).
 # The cdata has the following format : <![CDATA[CDATA_CONTENT]]>. The range of
 # CDATA_CONTENT is defined as the characters between <![CDATA[ and the first
-# subsequent ]]>. 
+# subsequent ]]>.
 # CDATA_CONTENT may contain any characters. The function of cdata is to forbid
 # the validator to parse CDATA_CONTENT, so even it has some characters that can
 # be parsed as tag (no matter valid or invalid), you should treat it as regular
-# characters. 
-# 
-# 
+# characters.
+#
+#
 # Valid Code Examples:
-# 
+#
 # Input: "<DIV>This is the first line <![CDATA[<div>]]></DIV>"
 # Output: True
-# Explanation: 
-# The code is wrapped in a closed tag : <DIV> and </DIV>. 
+# Explanation:
+# The code is wrapped in a closed tag : <DIV> and </DIV>.
 # The TAG_NAME is valid, the TAG_CONTENT consists of some characters and
-# cdata. 
+# cdata.
 # Although CDATA_CONTENT has unmatched start tag with invalid TAG_NAME, it
 # should be considered as plain text, not parsed as tag.
 # So TAG_CONTENT is valid, and then the code is valid. Thus return true.
-# 
+#
 # Input: "<DIV>>>  ![cdata[]] <![CDATA[<div>]>]]>]]>>]</DIV>"
 # Output: True
 # Explanation:
@@ -63,50 +63,51 @@
 # text1 -> ">>  ![cdata[]] "
 # cdata -> "<![CDATA[<div>]>]]>", where the CDATA_CONTENT is "<div>]>"
 # text2 -> "]]>>]"
-# 
+#
 # The reason why start_tag is NOT "<DIV>>>" is because of the rule 6.
 # The reason why cdata is NOT "<![CDATA[<div>]>]]>]]>" is because of the rule
 # 7.
-# 
-# 
-# 
+#
+#
+#
 # Invalid Code Examples:
-# 
+#
 # Input: "<A>  <B> </A>   </B>"
 # Output: False
 # Explanation: Unbalanced. If "<A>" is closed, then "<B>" must be unmatched,
 # and vice versa.
-# 
+#
 # Input: "<DIV>  div tag is not closed  <DIV>"
 # Output: False
-# 
+#
 # Input: "<DIV>  unmatched <  </DIV>"
 # Output: False
-# 
+#
 # Input: "<DIV> closed tags with invalid tag name  <b>123</b> </DIV>"
 # Output: False
-# 
+#
 # Input: "<DIV> unmatched tags with invalid tag name  </1234567890> and
 # <CDATA[[]]>  </DIV>"
 # Output: False
-# 
+#
 # Input: "<DIV>  unmatched start tag <B>  and unmatched end tag </C>  </DIV>"
 # Output: False
-# 
-# 
-# 
+#
+#
+#
 # Note:
-# 
+#
 # For simplicity, you could assume the input code (including the any characters
 # mentioned above) only contain letters, digits, '<','>','/','!','[',']' and '
 # '.
-# 
-# 
 #
+#
+#
+
+
 class Solution(object):
     def isValid(self, code):
         """
         :type code: str
         :rtype: bool
         """
-        

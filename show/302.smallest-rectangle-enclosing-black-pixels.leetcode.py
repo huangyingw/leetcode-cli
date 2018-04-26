@@ -14,23 +14,25 @@
 # region. Pixels are connected horizontally and vertically. Given the location
 # (x, y) of one of the black pixels, return the area of the smallest
 # (axis-aligned) rectangle that encloses all black pixels.
-# 
-# 
+#
+#
 # For example, given the following image:
-# 
+#
 # [
 # ⁠ "0010",
 # ⁠ "0110",
 # ⁠ "0100"
 # ]
-# 
-# and x = 0, y = 2,
-# 
-# 
-# 
-# Return 6.
-# 
 #
+# and x = 0, y = 2,
+#
+#
+#
+# Return 6.
+#
+#
+
+
 class Solution(object):
     def minArea(self, image, x, y):
         """
@@ -39,4 +41,3 @@ class Solution(object):
         :type y: int
         :rtype: int
         """
-        

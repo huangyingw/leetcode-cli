@@ -16,23 +16,25 @@
 # transaction fee for each transaction.  You may not buy more than 1 share of a
 # stock at a time (ie. you must sell the stock share before you buy again.)
 # Return the maximum profit you can make.
-# 
+#
 # Example 1:
-# 
+#
 # Input: prices = [1, 3, 2, 8, 4, 9], fee = 2
 # Output: 8
 # Explanation: The maximum profit can be achieved by:
 # Buying at prices[0] = 1Selling at prices[3] = 8Buying at prices[4] = 4Selling
 # at prices[5] = 9The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
-# 
-# 
-# 
+#
+#
+#
 # Note:
 # 0 < prices.length .
 # 0 < prices[i] < 50000.
 # 0 .
-# 
 #
+#
+
+
 class Solution(object):
     def maxProfit(self, prices, fee):
         """
@@ -40,4 +42,3 @@ class Solution(object):
         :type fee: int
         :rtype: int
         """
-        

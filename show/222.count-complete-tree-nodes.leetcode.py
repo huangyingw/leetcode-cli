@@ -10,7 +10,7 @@
 # Testcase Example:  '[]'
 #
 # Given a complete binary tree, count the number of nodes.
-# 
+#
 # Definition of a complete binary tree from Wikipedia:
 # In a complete binary tree every level, except possibly the last, is
 # completely filled, and all nodes in the last level are as far left as
@@ -23,10 +23,10 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def countNodes(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
-        

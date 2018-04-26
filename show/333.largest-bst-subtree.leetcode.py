@@ -14,21 +14,21 @@
 # Note:
 # A subtree must include all of its descendants.
 # Here's an example:
-# 
+#
 # ⁠   10
 # ⁠   / \
 # ⁠  5  15
-# ⁠ / \   \ 
+# ⁠ / \   \
 # ⁠1   8   7
-# 
-# The Largest BST Subtree in this case is the highlighted one. 
-# The return value is the subtree's size, which is 3. 
-# 
-# 
-# 
+#
+# The Largest BST Subtree in this case is the highlighted one.
+# The return value is the subtree's size, which is 3.
+#
+#
+#
 # Follow up:
 # Can you figure out ways to solve it with O(n) time complexity?
-# 
+#
 #
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -37,10 +37,10 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def largestBSTSubtree(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
-        

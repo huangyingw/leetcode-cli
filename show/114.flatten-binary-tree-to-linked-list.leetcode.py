@@ -10,20 +10,20 @@
 # Testcase Example:  '[1,2,5,3,4,null,6]'
 #
 # Given a binary tree, flatten it to a linked list in-place.
-# 
+#
 # For example, given the following tree:
-# 
-# 
+#
+#
 # ⁠   1
 # ⁠  / \
 # ⁠ 2   5
 # ⁠/ \   \
 # 3   4   6
-# 
-# 
+#
+#
 # The flattened tree should look like:
-# 
-# 
+#
+#
 # 1
 # ⁠\
 # ⁠ 2
@@ -35,8 +35,8 @@
 # ⁠       5
 # ⁠        \
 # ⁠         6
-# 
-# 
+#
+#
 #
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -45,10 +45,10 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def flatten(self, root):
         """
         :type root: TreeNode
         :rtype: void Do not return anything, modify root in-place instead.
         """
-        

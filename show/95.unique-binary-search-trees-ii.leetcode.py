@@ -11,10 +11,10 @@
 #
 # Given an integer n, generate all structurally unique BST's (binary search
 # trees) that store values 1 ... n.
-# 
+#
 # Example:
-# 
-# 
+#
+#
 # Input: 3
 # Output:
 # [
@@ -26,14 +26,14 @@
 # ]
 # Explanation:
 # The above output corresponds to the 5 unique BST's shown below:
-# 
+#
 # ⁠  1         3     3      2      1
 # ⁠   \       /     /      / \      \
 # ⁠    3     2     1      1   3      2
 # ⁠   /     /       \                 \
 # ⁠  2     1         2                 3
-# 
-# 
+#
+#
 #
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -42,10 +42,10 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def generateTrees(self, n):
         """
         :type n: int
         :rtype: List[TreeNode]
         """
-        

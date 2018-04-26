@@ -9,14 +9,14 @@
 # Total Submissions: 167.4K
 # Testcase Example:  '[0]\nnode with value 0'
 #
-# 
+#
 # Given a binary search tree and a node in it, find the in-order successor of
 # that node in the BST.
-# 
-# 
-# 
+#
+#
+#
 # Note: If the given node has no in-order successor in the tree, return null.
-# 
+#
 #
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -25,6 +25,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def inorderSuccessor(self, root, p):
         """
@@ -32,4 +33,3 @@ class Solution(object):
         :type p: TreeNode
         :rtype: TreeNode
         """
-        

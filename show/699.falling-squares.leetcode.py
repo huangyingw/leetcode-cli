@@ -20,25 +20,25 @@
 # to any positive length surface they touch (either the number line or another
 # square).  Squares dropped adjacent to each other will not stick together
 # prematurely.
-# 
-# 
+#
+#
 # Return a list ans of heights.  Each height ans[i] represents the current
 # highest height of any square we have dropped, after dropping squares
 # represented by positions[0], positions[1], ..., positions[i].
-# 
-# 
+#
+#
 # Example 1:
-# 
+#
 # Input: [[1, 2], [2, 3], [6, 1]]
 # Output: [2, 5, 5]
 # Explanation:
-# 
+#
 # After the first drop of positions[0] = [1, 2]:
 # _aa
 # _aa
 # -------
 # The maximum height of any square is 2.
-# 
+#
 # After the second drop of positions[1] = [2, 3]:
 # __aaa
 # __aaa
@@ -46,10 +46,10 @@
 # _aa__
 # _aa__
 # --------------
-# The maximum height of any square is 5.  
+# The maximum height of any square is 5.
 # The larger square stays on top of the smaller square despite where its center
 # of gravity is, because squares are infinitely sticky on their bottom edge.
-# 
+#
 # After the third drop of positions[1] = [6, 1]:
 # __aaa
 # __aaa
@@ -58,32 +58,33 @@
 # _aa___a
 # --------------
 # The maximum height of any square is still 5.
-# 
+#
 # Thus, we return an answer of [2, 5, 5].
-# 
-# 
-# 
-# 
-# 
+#
+#
+#
+#
+#
 # Example 2:
-# 
+#
 # Input: [[100, 100], [200, 100]]
 # Output: [100, 100]
 # Explanation: Adjacent squares don't get stuck prematurely - only their bottom
 # edge can stick to surfaces.
-# 
-# 
-# 
+#
+#
+#
 # Note:
 # 1 .
 # 1 .
 # 1 .
-# 
 #
+#
+
+
 class Solution(object):
     def fallingSquares(self, positions):
         """
         :type positions: List[List[int]]
         :rtype: List[int]
         """
-        

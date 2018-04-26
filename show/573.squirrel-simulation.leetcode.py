@@ -14,11 +14,11 @@
 # squirrel to collect all the nuts and put them under the tree one by one. The
 # squirrel can only take at most one nut at one time and can move in four
 # directions - up, down, left and right, to the adjacent cell. The distance is
-# represented by the number of moves. 
-# 
+# represented by the number of moves.
+#
 # Example 1:
-# 
-# Input: 
+#
+# Input:
 # Height : 5
 # Width : 7
 # Tree position : [2,2]
@@ -26,21 +26,23 @@
 # Nuts : [[3,0], [2,5]]
 # Output: 12
 # Explanation:
-# 
-# 
-# 
-# 
+#
+#
+#
+#
 # Note:
-# 
+#
 # All given positions won't overlap.
 # The squirrel can take at most one nut at one time.
 # The given positions of nuts have no order.
-# Height and width are positive integers. 3 
+# Height and width are positive integers. 3
 # The given positions contain at least one nut, only one tree and one
 # squirrel.
-# 
-# 
 #
+#
+#
+
+
 class Solution(object):
     def minDistance(self, height, width, tree, squirrel, nuts):
         """
@@ -51,4 +53,3 @@ class Solution(object):
         :type nuts: List[List[int]]
         :rtype: int
         """
-        

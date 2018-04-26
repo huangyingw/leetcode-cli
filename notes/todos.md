@@ -1,7 +1,3 @@
-"../submissions/1.two-sum.102347426.Wrong-Answer.leetcode.java"
-"../submissions/1.two-sum.102737511.Wrong-Answer.leetcode.java"
-"../submissions/1.two-sum.151656639.Wrong-Answer.leetcode.java"
-"../submissions/1.two-sum.151663808.Wrong-Answer.leetcode.py"
 "../submissions/1.two-sum.77987432.Time-Limit-Exceeded.leetcode.java"
 "../submissions/1.two-sum.77989276.Time-Limit-Exceeded.leetcode.java"
 "../submissions/10.regular-expression-matching.33860316.Runtime-Error.leetcode.java"

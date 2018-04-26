@@ -4,4 +4,12 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
 ./build.sh
-leetcode show 10 -gx -l python -o ./show/
+
+doShow () {
+    leetcode show "$1" -gx -l python -o ./show/
+}
+
+while read -r line || [[ -n "$line" ]]
+do
+    doShow "$line"
+done < problems.list

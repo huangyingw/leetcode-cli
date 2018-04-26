@@ -1,6 +1,4 @@
 "./submissions/1.two-sum.77987432.Time-Limit-Exceeded.leetcode.java"
-"./submissions/10.regular-expression-matching.33860316.Runtime-Error.leetcode.java"
-"./submissions/10.regular-expression-matching.33860604.Runtime-Error.leetcode.java"
 "./submissions/100.same-tree.28173058.Runtime-Error.leetcode.java"
 "./submissions/100.same-tree.28173106.Runtime-Error.leetcode.java"
 "./submissions/103.binary-tree-zigzag-level-order-traversal.7712362.Runtime-Error.leetcode.java"

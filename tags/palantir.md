@@ -1,0 +1,6 @@
+    ✔ [303] Range Sum Query - Immutable                                  Easy   (32.36 %)
+    ✔ [220] Contains Duplicate III                                       Medium (18.76 %)
+    ✔ [219] Contains Duplicate II                                        Easy   (32.88 %)
+    ✔ [217] Contains Duplicate                                           Easy   (47.21 %)
+    ✔ [146] LRU Cache                                                    Hard   (19.97 %)
+    ✔ [136] Single Number                                                Easy   (55.51 %)

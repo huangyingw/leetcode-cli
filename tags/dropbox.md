@@ -1,0 +1,6 @@
+    ✔ [290] Word Pattern                                                 Easy   (33.51 %)
+    ✔ [289] Game of Life                                                 Medium (37.25 %)
+    ✔ [140] Word Break II                                                Hard   (24.60 %)
+    ✔ [ 17] Letter Combinations of a Phone Number                        Medium (36.62 %)
+    ✔ [  4] Median of Two Sorted Arrays                                  Hard   (23.14 %)
+    ✔ [  1] Two Sum                                                      Easy   (38.10 %)

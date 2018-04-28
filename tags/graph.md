@@ -1,0 +1,8 @@
+      [685] Redundant Connection II                                      Hard   (27.81 %)
+      [684] Redundant Connection                                         Medium (43.91 %)
+      [399] Evaluate Division                                            Medium (42.45 %)
+    ✔ [332] Reconstruct Itinerary                                        Medium (29.99 %)
+    ✔ [310] Minimum Height Trees                                         Medium (28.99 %)
+    ✔ [210] Course Schedule II                                           Medium (30.36 %)
+    ✔ [207] Course Schedule                                              Medium (33.81 %)
+    ✔ [133] Clone Graph                                                  Medium (25.18 %)

@@ -1,4 +1,4 @@
-      [493] Reverse Pairs                                                Hard   (20.71 %)
-    ✔ [315] Count of Smaller Numbers After Self                          Hard   (35.02 %)
-    ✔ [307] Range Sum Query - Mutable                                    Medium (22.67 %)
-    ✔ [218] The Skyline Problem                                          Hard   (29.12 %)
+      493.reverse-pairs                                                Hard   (20.71 %)
+    ✔ 315.count-of-smaller-numbers-after-self                          Hard   (35.02 %)
+    ✔ 307.range-sum-query-mutable                                      Medium (22.67 %)
+    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)

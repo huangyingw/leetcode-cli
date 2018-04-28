@@ -1,2 +1,2 @@
-      [566] Reshape the Matrix                                           Easy   (57.60 %)
-      [500] Keyboard Row                                                 Easy   (59.95 %)
+      566.reshape-the-matrix                                           Easy   (57.60 %)
+      500.keyboard-row                                                 Easy   (59.95 %)

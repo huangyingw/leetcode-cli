@@ -1,1 +1,1 @@
-      [560] Subarray Sum Equals K                                        Medium (39.93 %)
+      560.subarray-sum-equals-k                                        Medium (39.93 %)

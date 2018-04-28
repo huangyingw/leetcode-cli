@@ -1,3 +1,3 @@
-    ✔ [329] Longest Increasing Path in a Matrix                          Hard   (37.44 %)
-    ✔ [210] Course Schedule II                                           Medium (30.36 %)
-    ✔ [207] Course Schedule                                              Medium (33.81 %)
+    ✔ 329.longest-increasing-path-in-a-matrix                          Hard   (37.44 %)
+    ✔ 210.course-schedule-ii                                           Medium (30.36 %)
+    ✔ 207.course-schedule                                              Medium (33.81 %)

@@ -5,7 +5,7 @@
     url = git@bitbucket.org:huangyingw/leetcode-cli.git
     fetch = +refs/heads/*:refs/remotes/bitbucket/*
 [remote "gitlab"]
-    url = git@gitlab.com:huangyingw/leetcode-cli.git 
+    url = git@gitlab.com:huangyingw/leetcode-cli.git
     fetch = +refs/heads/*:refs/remotes/gitlab/*
 [push]
     remote = bitbucket
@@ -17,3 +17,6 @@
     allow = true
 [commit]
     message = n
+[branch "dev"]
+    remote = bitbucket
+    merge = refs/heads/dev

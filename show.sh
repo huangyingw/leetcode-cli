@@ -13,4 +13,4 @@ while read -r line || [[ -n "$line" ]]
 do
     doShow "$line"
 done < problems.list
-autopep8 --in-place --aggressive --aggressive -r show/
+autopep8 --in-place -r show/

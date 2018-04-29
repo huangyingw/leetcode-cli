@@ -7,5 +7,5 @@ cd "$SCRIPTPATH"
 leetcode user -l
 leetcode submission -a -o submissions
 ~/loadrc/bashrc/jformat.sh
-autopep8 --in-place --aggressive --aggressive -r submissions/
+autopep8 --in-place -r submissions/
 jdupes -1dNr submissions/

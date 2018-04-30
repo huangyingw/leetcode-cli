@@ -40,3 +40,4 @@ tmp/
 *.swp
 .DS_Store
 .env.json
+check_running.sh.lck

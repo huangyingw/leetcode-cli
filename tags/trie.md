@@ -1,12 +1,12 @@
-      744.find-smallest-letter-greater-than-target                     Easy   (44.02 %)
-      720.longest-word-in-dictionary                                   Easy   (41.49 %)
-      692.top-k-frequent-words                                         Medium (41.23 %)
-      677.map-sum-pairs                                                Medium (51.65 %)
-      676.implement-magic-dictionary                                   Medium (48.92 %)
-      648.replace-words                                                Medium (47.95 %)
-      472.concatenated-words                                           Hard   (30.96 %)
-      421.maximum-xor-of-two-numbers-in-an-array                       Medium (48.02 %)
-    ✔ 336.palindrome-pairs                                             Hard   (27.23 %)
-    ✔ 212.word-search-ii                                               Hard   (24.91 %)
-    ✔ 211.add-and-search-word-data-structure-design                    Medium (25.47 %)
-    ✔ 208.implement-trie-prefix-tree                                   Medium (31.08 %)
+744.find-smallest-letter-greater-than-target                     Easy  
+720.longest-word-in-dictionary                                   Easy  
+692.top-k-frequent-words                                         Medium
+677.map-sum-pairs                                                Medium
+676.implement-magic-dictionary                                   Medium
+648.replace-words                                                Medium
+472.concatenated-words                                           Hard  
+421.maximum-xor-of-two-numbers-in-an-array                       Medium
+336.palindrome-pairs                                             Hard  
+212.word-search-ii                                               Hard  
+211.add-and-search-word-data-structure-design                    Medium
+208.implement-trie-prefix-tree                                   Medium

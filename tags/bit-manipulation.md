@@ -1,25 +1,25 @@
-      693.binary-number-with-alternating-bits                          Easy   (55.70 %)
-      477.total-hamming-distance                                       Medium (47.49 %)
-      476.number-complement                                            Easy   (61.15 %)
-      461.hamming-distance                                             Easy   (69.49 %)
-      421.maximum-xor-of-two-numbers-in-an-array                       Medium (48.02 %)
-      405.convert-a-number-to-hexadecimal                              Easy   (41.06 %)
-      401.binary-watch                                                 Easy   (44.76 %)
-      397.integer-replacement                                          Medium (30.49 %)
-      393.utf-8-validation                                             Medium (34.89 %)
-    ✔ 389.find-the-difference                                          Easy   (51.38 %)
-    ✔ 371.sum-of-two-integers                                          Easy   (50.91 %)
-    ✔ 342.power-of-four                                                Easy   (39.21 %)
-    ✔ 338.counting-bits                                                Medium (62.28 %)
-    ✔ 318.maximum-product-of-word-lengths                              Medium (45.78 %)
-    ✔ 268.missing-number                                               Easy   (45.20 %)
-    ✔ 260.single-number-iii                                            Medium (53.31 %)
-    ✔ 231.power-of-two                                                 Easy   (40.79 %)
-    ✔ 201.bitwise-and-of-numbers-range                                 Medium (34.52 %)
-    ✔ 191.number-of-1-bits                                             Easy   (40.50 %)
-    ✔ 190.reverse-bits                                                 Easy   (29.38 %)
-    ✔ 187.repeated-dna-sequences                                       Medium (33.11 %)
-    ✔ 169.majority-element                                             Easy   (48.10 %)
-    ✔ 137.single-number-ii                                             Medium (42.73 %)
-    ✔ 136.single-number                                                Easy   (55.51 %)
-    ✔  78.subsets                                                      Medium (45.03 %)
+693.binary-number-with-alternating-bits                          Easy  
+477.total-hamming-distance                                       Medium
+476.number-complement                                            Easy  
+461.hamming-distance                                             Easy  
+421.maximum-xor-of-two-numbers-in-an-array                       Medium
+405.convert-a-number-to-hexadecimal                              Easy  
+401.binary-watch                                                 Easy  
+397.integer-replacement                                          Medium
+393.utf-8-validation                                             Medium
+389.find-the-difference                                          Easy  
+371.sum-of-two-integers                                          Easy  
+342.power-of-four                                                Easy  
+338.counting-bits                                                Medium
+318.maximum-product-of-word-lengths                              Medium
+268.missing-number                                               Easy  
+260.single-number-iii                                            Medium
+231.power-of-two                                                 Easy  
+201.bitwise-and-of-numbers-range                                 Medium
+191.number-of-1-bits                                             Easy  
+190.reverse-bits                                                 Easy  
+187.repeated-dna-sequences                                       Medium
+169.majority-element                                             Easy  
+137.single-number-ii                                             Medium
+136.single-number                                                Easy  
+ 78.subsets                                                      Medium

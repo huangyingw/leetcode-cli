@@ -1,13 +1,13 @@
-      491.increasing-subsequences                                      Medium (38.81 %)
-      479.largest-palindrome-product                                   Easy   (25.63 %)
-    ✔ 297.serialize-and-deserialize-binary-tree                        Hard   (35.19 %)
-    ✔ 284.peeking-iterator                                             Medium (35.49 %)
-    ✔ 217.contains-duplicate                                           Easy   (47.21 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
-    ✔ 141.linked-list-cycle                                            Easy   (35.03 %)
-    ✔ 139.word-break                                                   Medium (31.59 %)
-    ✔ 104.maximum-depth-of-binary-tree                                 Easy   (55.10 %)
-    ✔  13.roman-to-integer                                             Easy   (48.18 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+491.increasing-subsequences                                      Medium
+479.largest-palindrome-product                                   Easy  
+297.serialize-and-deserialize-binary-tree                        Hard  
+284.peeking-iterator                                             Medium
+217.contains-duplicate                                           Easy  
+206.reverse-linked-list                                          Easy  
+146.lru-cache                                                    Hard  
+141.linked-list-cycle                                            Easy  
+139.word-break                                                   Medium
+104.maximum-depth-of-binary-tree                                 Easy  
+ 13.roman-to-integer                                             Easy  
+  4.median-of-two-sorted-arrays                                  Hard  
+  1.two-sum                                                      Easy  

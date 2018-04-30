@@ -1,7 +1,7 @@
-      721.accounts-merge                                               Medium (32.94 %)
-      685.redundant-connection-ii                                      Hard   (27.81 %)
-      684.redundant-connection                                         Medium (43.91 %)
-      547.friend-circles                                               Medium (49.15 %)
-    ✔ 200.number-of-islands                                            Medium (36.72 %)
-★   ✔ 130.surrounded-regions                                           Medium (19.74 %)
-    ✔ 128.longest-consecutive-sequence                                 Hard   (38.32 %)
+721.accounts-merge                                               Medium
+685.redundant-connection-ii                                      Hard  
+684.redundant-connection                                         Medium
+547.friend-circles                                               Medium
+200.number-of-islands                                            Medium
+130.surrounded-regions                                           Medium
+128.longest-consecutive-sequence                                 Hard  

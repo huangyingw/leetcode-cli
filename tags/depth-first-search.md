@@ -1,53 +1,53 @@
-      748.shortest-completing-word                                     Medium (52.01 %)
-      733.flood-fill                                                   Easy   (47.98 %)
-      721.accounts-merge                                               Medium (32.94 %)
-      695.max-area-of-island                                           Easy   (51.80 %)
-      690.employee-importance                                          Easy   (51.69 %)
-      685.redundant-connection-ii                                      Hard   (27.81 %)
-      679.24-game                                                      Hard   (38.85 %)
-      664.strange-printer                                              Hard   (34.08 %)
-      638.shopping-offers                                              Medium (45.44 %)
-      576.out-of-boundary-paths                                        Medium (30.55 %)
-      547.friend-circles                                               Medium (49.15 %)
-      546.remove-boxes                                                 Hard   (35.76 %)
-      542.01-matrix                                                    Medium (33.04 %)
-      529.minesweeper                                                  Medium (49.49 %)
-    ✔ 515.find-largest-value-in-each-tree-row                          Medium (55.49 %)
-      514.freedom-trail                                                Hard   (39.16 %)
-      513.find-bottom-left-tree-value                                  Medium (56.10 %)
-      494.target-sum                                                   Medium (43.86 %)
-      491.increasing-subsequences                                      Medium (38.81 %)
-      488.zuma-game                                                    Hard   (37.08 %)
-      473.matchsticks-to-square                                        Medium (35.23 %)
-      472.concatenated-words                                           Hard   (30.96 %)
-      417.pacific-atlantic-water-flow                                  Medium (34.81 %)
-    ✔ 394.decode-string                                                Medium (42.08 %)
-    ✔ 337.house-robber-iii                                             Medium (44.78 %)
-    ✔ 332.reconstruct-itinerary                                        Medium (29.99 %)
-    ✔ 329.longest-increasing-path-in-a-matrix                          Hard   (37.44 %)
-    ✔ 301.remove-invalid-parentheses                                   Hard   (35.86 %)
-★   ✔ 257.binary-tree-paths                                            Easy   (41.43 %)
-    ✔ 210.course-schedule-ii                                           Medium (30.36 %)
-    ✔ 207.course-schedule                                              Medium (33.81 %)
-    ✔ 200.number-of-islands                                            Medium (36.72 %)
-    ✔ 199.binary-tree-right-side-view                                  Medium (42.59 %)
-    ✔ 133.clone-graph                                                  Medium (25.18 %)
-★   ✔ 130.surrounded-regions                                           Medium (19.74 %)
-    ✔ 129.sum-root-to-leaf-numbers                                     Medium (37.93 %)
-    ✔ 124.binary-tree-maximum-path-sum                                 Hard   (27.23 %)
-    ✔ 117.populating-next-right-pointers-in-each-node-ii               Medium (33.92 %)
-    ✔ 116.populating-next-right-pointers-in-each-node                  Medium (36.80 %)
-★   ✔ 114.flatten-binary-tree-to-linked-list                           Medium (36.70 %)
-    ✔ 113.path-sum-ii                                                  Medium (35.84 %)
-    ✔ 112.path-sum                                                     Easy   (35.03 %)
-    ✔ 111.minimum-depth-of-binary-tree                                 Easy   (33.60 %)
-    ✔ 110.balanced-binary-tree                                         Easy   (38.51 %)
-    ✔ 109.convert-sorted-list-to-binary-search-tree                    Medium (35.87 %)
-    ✔ 108.convert-sorted-array-to-binary-search-tree                   Easy   (44.78 %)
-    ✔ 106.construct-binary-tree-from-inorder-and-postorder-traversal   Medium (33.82 %)
-    ✔ 105.construct-binary-tree-from-preorder-and-inorder-traversal    Medium (34.38 %)
-    ✔ 104.maximum-depth-of-binary-tree                                 Easy   (55.10 %)
-    ✔ 101.symmetric-tree                                               Easy   (40.51 %)
-    ✔ 100.same-tree                                                    Easy   (47.87 %)
-    ✔  99.recover-binary-search-tree                                   Hard   (31.15 %)
-    ✔  98.validate-binary-search-tree                                  Medium (24.10 %)
+748.shortest-completing-word                                     Medium
+733.flood-fill                                                   Easy  
+721.accounts-merge                                               Medium
+695.max-area-of-island                                           Easy  
+690.employee-importance                                          Easy  
+685.redundant-connection-ii                                      Hard  
+679.24-game                                                      Hard  
+664.strange-printer                                              Hard  
+638.shopping-offers                                              Medium
+576.out-of-boundary-paths                                        Medium
+547.friend-circles                                               Medium
+546.remove-boxes                                                 Hard  
+542.01-matrix                                                    Medium
+529.minesweeper                                                  Medium
+515.find-largest-value-in-each-tree-row                          Medium
+514.freedom-trail                                                Hard  
+513.find-bottom-left-tree-value                                  Medium
+494.target-sum                                                   Medium
+491.increasing-subsequences                                      Medium
+488.zuma-game                                                    Hard  
+473.matchsticks-to-square                                        Medium
+472.concatenated-words                                           Hard  
+417.pacific-atlantic-water-flow                                  Medium
+394.decode-string                                                Medium
+337.house-robber-iii                                             Medium
+332.reconstruct-itinerary                                        Medium
+329.longest-increasing-path-in-a-matrix                          Hard  
+301.remove-invalid-parentheses                                   Hard  
+257.binary-tree-paths                                            Easy  
+210.course-schedule-ii                                           Medium
+207.course-schedule                                              Medium
+200.number-of-islands                                            Medium
+199.binary-tree-right-side-view                                  Medium
+133.clone-graph                                                  Medium
+130.surrounded-regions                                           Medium
+129.sum-root-to-leaf-numbers                                     Medium
+124.binary-tree-maximum-path-sum                                 Hard  
+117.populating-next-right-pointers-in-each-node-ii               Medium
+116.populating-next-right-pointers-in-each-node                  Medium
+114.flatten-binary-tree-to-linked-list                           Medium
+113.path-sum-ii                                                  Medium
+112.path-sum                                                     Easy  
+111.minimum-depth-of-binary-tree                                 Easy  
+110.balanced-binary-tree                                         Easy  
+109.convert-sorted-list-to-binary-search-tree                    Medium
+108.convert-sorted-array-to-binary-search-tree                   Easy  
+106.construct-binary-tree-from-inorder-and-postorder-traversal   Medium
+105.construct-binary-tree-from-preorder-and-inorder-traversal    Medium
+104.maximum-depth-of-binary-tree                                 Easy  
+101.symmetric-tree                                               Easy  
+100.same-tree                                                    Easy  
+ 99.recover-binary-search-tree                                   Hard  
+ 98.validate-binary-search-tree                                  Medium

@@ -1,103 +1,103 @@
-      745.prefix-and-suffix-search                                     Hard   (25.67 %)
-      731.my-calendar-ii                                               Medium (37.73 %)
-      729.my-calendar-i                                                Medium (42.36 %)
-      724.find-pivot-index                                             Easy   (39.46 %)
-      719.find-k-th-smallest-pair-distance                             Hard   (27.24 %)
-      718.maximum-length-of-repeated-subarray                          Medium (41.53 %)
-      717.1-bit-and-2-bit-characters                                   Easy   (49.51 %)
-      715.range-module                                                 Hard   (31.30 %)
-      714.best-time-to-buy-and-sell-stock-with-transaction-fee         Medium (45.82 %)
-      713.subarray-product-less-than-k                                 Medium (33.20 %)
-      697.degree-of-an-array                                           Easy   (46.59 %)
-      695.max-area-of-island                                           Easy   (51.80 %)
-      689.maximum-sum-of-3-non-overlapping-subarrays                   Hard   (40.91 %)
-      674.longest-continuous-increasing-subsequence                    Easy   (42.38 %)
-      670.maximum-swap                                                 Medium (38.56 %)
-      667.beautiful-arrangement-ii                                     Medium (51.52 %)
-      665.non-decreasing-array                                         Easy   (20.21 %)
-      661.image-smoother                                               Easy   (46.06 %)
-      643.maximum-average-subarray-i                                   Easy   (37.58 %)
-      628.maximum-product-of-three-numbers                             Easy   (44.62 %)
-      621.task-scheduler                                               Medium (42.43 %)
-      611.valid-triangle-number                                        Medium (42.02 %)
-      605.can-place-flowers                                            Easy   (30.10 %)
-      581.shortest-unsorted-continuous-subarray                        Easy   (29.40 %)
-      566.reshape-the-matrix                                           Easy   (57.60 %)
-      565.array-nesting                                                Medium (49.42 %)
-      561.array-partition-i                                            Easy   (66.36 %)
-      560.subarray-sum-equals-k                                        Medium (39.93 %)
-      532.k-diff-pairs-in-an-array                                     Easy   (28.12 %)
-      495.teemo-attacking                                              Medium (51.42 %)
-      485.max-consecutive-ones                                         Easy   (53.76 %)
-    ✔ 448.find-all-numbers-disappeared-in-an-array                     Easy   (51.13 %)
-    ✔ 442.find-all-duplicates-in-an-array                              Medium (57.06 %)
-      414.third-maximum-number                                         Easy   (28.10 %)
-    ✔ 381.insert-delete-getrandom-o1-duplicates-allowed                Hard   (29.67 %)
-    ✔ 380.insert-delete-getrandom-o1                                   Medium (39.96 %)
-    ✔ 289.game-of-life                                                 Medium (37.25 %)
-    ✔ 287.find-the-duplicate-number                                    Medium (44.37 %)
-    ✔ 283.move-zeroes                                                  Easy   (51.60 %)
-    ✔ 268.missing-number                                               Easy   (45.20 %)
-★   ✔ 238.product-of-array-except-self                                 Medium (50.35 %)
-    ✔ 229.majority-element-ii                                          Medium (29.23 %)
-    ✔ 228.summary-ranges                                               Medium (32.23 %)
-    ✔ 219.contains-duplicate-ii                                        Easy   (32.88 %)
-    ✔ 217.contains-duplicate                                           Easy   (47.21 %)
-    ✔ 216.combination-sum-iii                                          Medium (47.33 %)
-    ✔ 209.minimum-size-subarray-sum                                    Medium (32.21 %)
-    ✔ 189.rotate-array                                                 Easy   (25.36 %)
-    ✔ 169.majority-element                                             Easy   (48.10 %)
-    ✔ 167.two-sum-ii-input-array-is-sorted                             Easy   (47.27 %)
-    ✔ 162.find-peak-element                                            Medium (39.00 %)
-    ✔ 154.find-minimum-in-rotated-sorted-array-ii                      Hard   (37.90 %)
-    ✔ 153.find-minimum-in-rotated-sorted-array                         Medium (40.93 %)
-    ✔ 152.maximum-product-subarray                                     Medium (26.80 %)
-    ✔ 128.longest-consecutive-sequence                                 Hard   (38.32 %)
-    ✔ 126.word-ladder-ii                                               Hard   (14.92 %)
-    ✔ 123.best-time-to-buy-and-sell-stock-iii                          Hard   (30.42 %)
-★   ✔ 122.best-time-to-buy-and-sell-stock-ii                           Easy   (47.78 %)
-★   ✔ 121.best-time-to-buy-and-sell-stock                              Easy   (43.02 %)
-    ✔ 120.triangle                                                     Medium (35.04 %)
-    ✔ 119.pascals-triangle-ii                                          Easy   (38.34 %)
-    ✔ 118.pascals-triangle                                             Easy   (40.23 %)
-    ✔ 106.construct-binary-tree-from-inorder-and-postorder-traversal   Medium (33.82 %)
-    ✔ 105.construct-binary-tree-from-preorder-and-inorder-traversal    Medium (34.38 %)
-    ✔  90.subsets-ii                                                   Medium (38.43 %)
-★   ✔  88.merge-sorted-array                                           Easy   (32.18 %)
-    ✔  85.maximal-rectangle                                            Hard   (29.71 %)
-    ✔  84.largest-rectangle-in-histogram                               Hard   (27.67 %)
-    ✔  81.search-in-rotated-sorted-array-ii                            Medium (32.66 %)
-    ✔  80.remove-duplicates-from-sorted-array-ii                       Medium (36.93 %)
-    ✔  79.word-search                                                  Medium (28.17 %)
-    ✔  78.subsets                                                      Medium (45.03 %)
-    ✔  75.sort-colors                                                  Medium (39.00 %)
-    ✔  74.search-a-2d-matrix                                           Medium (34.64 %)
-    ✔  73.set-matrix-zeroes                                            Medium (36.59 %)
-★   ✔  66.plus-one                                                     Easy   (39.81 %)
-★   ✔  64.minimum-path-sum                                             Medium (40.98 %)
-    ✔  63.unique-paths-ii                                              Medium (32.22 %)
-    ✔  62.unique-paths                                                 Medium (42.97 %)
-    ✔  59.spiral-matrix-ii                                             Medium (41.18 %)
-    ✔  57.insert-interval                                              Hard   (29.06 %)
-★   ✔  56.merge-intervals                                              Medium (32.07 %)
-    ✔  55.jump-game                                                    Medium (29.56 %)
-    ✔  54.spiral-matrix                                                Medium (27.36 %)
-    ✔  53.maximum-subarray                                             Easy   (40.37 %)
-    ✔  48.rotate-image                                                 Medium (42.03 %)
-    ✔  45.jump-game-ii                                                 Hard   (26.10 %)
-    ✔  42.trapping-rain-water                                          Hard   (37.68 %)
-    ✔  41.first-missing-positive                                       Hard   (25.90 %)
-    ✔  40.combination-sum-ii                                           Medium (36.12 %)
-    ✔  39.combination-sum                                              Medium (41.63 %)
-    ✔  35.search-insert-position                                       Easy   (40.03 %)
-    ✔  34.search-for-a-range                                           Medium (31.63 %)
-    ✔  33.search-in-rotated-sorted-array                               Medium (31.91 %)
-    ✔  31.next-permutation                                             Medium (29.08 %)
-    ✔  27.remove-element                                               Easy   (40.91 %)
-    ✔  26.remove-duplicates-from-sorted-array                          Easy   (36.50 %)
-    ✔  18.4sum                                                         Medium (27.57 %)
-    ✔  16.3sum-closest                                                 Medium (31.72 %)
-    ✔  15.3sum                                                         Medium (21.80 %)
-    ✔  11.container-with-most-water                                    Medium (37.15 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+745.prefix-and-suffix-search                                     Hard  
+731.my-calendar-ii                                               Medium
+729.my-calendar-i                                                Medium
+724.find-pivot-index                                             Easy  
+719.find-k-th-smallest-pair-distance                             Hard  
+718.maximum-length-of-repeated-subarray                          Medium
+717.1-bit-and-2-bit-characters                                   Easy  
+715.range-module                                                 Hard  
+714.best-time-to-buy-and-sell-stock-with-transaction-fee         Medium
+713.subarray-product-less-than-k                                 Medium
+697.degree-of-an-array                                           Easy  
+695.max-area-of-island                                           Easy  
+689.maximum-sum-of-3-non-overlapping-subarrays                   Hard  
+674.longest-continuous-increasing-subsequence                    Easy  
+670.maximum-swap                                                 Medium
+667.beautiful-arrangement-ii                                     Medium
+665.non-decreasing-array                                         Easy  
+661.image-smoother                                               Easy  
+643.maximum-average-subarray-i                                   Easy  
+628.maximum-product-of-three-numbers                             Easy  
+621.task-scheduler                                               Medium
+611.valid-triangle-number                                        Medium
+605.can-place-flowers                                            Easy  
+581.shortest-unsorted-continuous-subarray                        Easy  
+566.reshape-the-matrix                                           Easy  
+565.array-nesting                                                Medium
+561.array-partition-i                                            Easy  
+560.subarray-sum-equals-k                                        Medium
+532.k-diff-pairs-in-an-array                                     Easy  
+495.teemo-attacking                                              Medium
+485.max-consecutive-ones                                         Easy  
+448.find-all-numbers-disappeared-in-an-array                     Easy  
+442.find-all-duplicates-in-an-array                              Medium
+414.third-maximum-number                                         Easy  
+381.insert-delete-getrandom-o1-duplicates-allowed                Hard  
+380.insert-delete-getrandom-o1                                   Medium
+289.game-of-life                                                 Medium
+287.find-the-duplicate-number                                    Medium
+283.move-zeroes                                                  Easy  
+268.missing-number                                               Easy  
+238.product-of-array-except-self                                 Medium
+229.majority-element-ii                                          Medium
+228.summary-ranges                                               Medium
+219.contains-duplicate-ii                                        Easy  
+217.contains-duplicate                                           Easy  
+216.combination-sum-iii                                          Medium
+209.minimum-size-subarray-sum                                    Medium
+189.rotate-array                                                 Easy  
+169.majority-element                                             Easy  
+167.two-sum-ii-input-array-is-sorted                             Easy  
+162.find-peak-element                                            Medium
+154.find-minimum-in-rotated-sorted-array-ii                      Hard  
+153.find-minimum-in-rotated-sorted-array                         Medium
+152.maximum-product-subarray                                     Medium
+128.longest-consecutive-sequence                                 Hard  
+126.word-ladder-ii                                               Hard  
+123.best-time-to-buy-and-sell-stock-iii                          Hard  
+122.best-time-to-buy-and-sell-stock-ii                           Easy  
+121.best-time-to-buy-and-sell-stock                              Easy  
+120.triangle                                                     Medium
+119.pascals-triangle-ii                                          Easy  
+118.pascals-triangle                                             Easy  
+106.construct-binary-tree-from-inorder-and-postorder-traversal   Medium
+105.construct-binary-tree-from-preorder-and-inorder-traversal    Medium
+ 90.subsets-ii                                                   Medium
+ 88.merge-sorted-array                                           Easy  
+ 85.maximal-rectangle                                            Hard  
+ 84.largest-rectangle-in-histogram                               Hard  
+ 81.search-in-rotated-sorted-array-ii                            Medium
+ 80.remove-duplicates-from-sorted-array-ii                       Medium
+ 79.word-search                                                  Medium
+ 78.subsets                                                      Medium
+ 75.sort-colors                                                  Medium
+ 74.search-a-2d-matrix                                           Medium
+ 73.set-matrix-zeroes                                            Medium
+ 66.plus-one                                                     Easy  
+ 64.minimum-path-sum                                             Medium
+ 63.unique-paths-ii                                              Medium
+ 62.unique-paths                                                 Medium
+ 59.spiral-matrix-ii                                             Medium
+ 57.insert-interval                                              Hard  
+ 56.merge-intervals                                              Medium
+ 55.jump-game                                                    Medium
+ 54.spiral-matrix                                                Medium
+ 53.maximum-subarray                                             Easy  
+ 48.rotate-image                                                 Medium
+ 45.jump-game-ii                                                 Hard  
+ 42.trapping-rain-water                                          Hard  
+ 41.first-missing-positive                                       Hard  
+ 40.combination-sum-ii                                           Medium
+ 39.combination-sum                                              Medium
+ 35.search-insert-position                                       Easy  
+ 34.search-for-a-range                                           Medium
+ 33.search-in-rotated-sorted-array                               Medium
+ 31.next-permutation                                             Medium
+ 27.remove-element                                               Easy  
+ 26.remove-duplicates-from-sorted-array                          Easy  
+ 18.4sum                                                         Medium
+ 16.3sum-closest                                                 Medium
+ 15.3sum                                                         Medium
+ 11.container-with-most-water                                    Medium
+  4.median-of-two-sorted-arrays                                  Hard  
+  1.two-sum                                                      Easy  

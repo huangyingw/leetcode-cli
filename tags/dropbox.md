@@ -1,6 +1,6 @@
-    ✔ 290.word-pattern                                                 Easy   (33.51 %)
-    ✔ 289.game-of-life                                                 Medium (37.25 %)
-    ✔ 140.word-break-ii                                                Hard   (24.60 %)
-    ✔  17.letter-combinations-of-a-phone-number                        Medium (36.63 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+290.word-pattern                                                 Easy  
+289.game-of-life                                                 Medium
+140.word-break-ii                                                Hard  
+ 17.letter-combinations-of-a-phone-number                        Medium
+  4.median-of-two-sorted-arrays                                  Hard  
+  1.two-sum                                                      Easy  

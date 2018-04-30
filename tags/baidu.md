@@ -1,8 +1,8 @@
-      576.out-of-boundary-paths                                        Medium (30.55 %)
-      488.zuma-game                                                    Hard   (37.08 %)
-      446.arithmetic-slices-ii-subsequence                             Hard   (28.07 %)
-    ✔ 413.arithmetic-slices                                            Medium (54.55 %)
-      410.split-array-largest-sum                                      Hard   (39.38 %)
-      397.integer-replacement                                          Medium (30.49 %)
-    ✔ 395.longest-substring-with-at-least-k-repeating-characters       Medium (35.67 %)
-    ✔ 124.binary-tree-maximum-path-sum                                 Hard   (27.23 %)
+576.out-of-boundary-paths                                        Medium
+488.zuma-game                                                    Hard  
+446.arithmetic-slices-ii-subsequence                             Hard  
+413.arithmetic-slices                                            Medium
+410.split-array-largest-sum                                      Hard  
+397.integer-replacement                                          Medium
+395.longest-substring-with-at-least-k-repeating-characters       Medium
+124.binary-tree-maximum-path-sum                                 Hard  

@@ -1,29 +1,29 @@
-    ✔ 383.ransom-note                                                  Easy   (47.85 %)
-    ✔ 284.peeking-iterator                                             Medium (35.49 %)
-★   ✔ 257.binary-tree-paths                                            Easy   (41.43 %)
-    ✔ 240.search-a-2d-matrix-ii                                        Medium (39.09 %)
-★   ✔ 238.product-of-array-except-self                                 Medium (50.35 %)
-    ✔ 237.delete-node-in-a-linked-list                                 Easy   (47.26 %)
-    ✔ 236.lowest-common-ancestor-of-a-binary-tree                      Medium (29.91 %)
-    ✔ 221.maximal-square                                               Medium (30.42 %)
-    ✔ 215.kth-largest-element-in-an-array                              Medium (40.77 %)
-    ✔ 207.course-schedule                                              Medium (33.81 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 191.number-of-1-bits                                             Easy   (40.50 %)
-    ✔ 190.reverse-bits                                                 Easy   (29.38 %)
-    ✔ 165.compare-version-numbers                                      Medium (20.87 %)
-    ✔ 151.reverse-words-in-a-string                                    Medium (15.63 %)
-    ✔ 149.max-points-on-a-line                                         Hard   (15.19 %)
-    ✔ 118.pascals-triangle                                             Easy   (40.23 %)
-    ✔ 104.maximum-depth-of-binary-tree                                 Easy   (55.10 %)
-★   ✔ 102.binary-tree-level-order-traversal                            Medium (42.77 %)
-    ✔  70.climbing-stairs                                              Easy   (41.31 %)
-    ✔  69.sqrtx                                                        Easy   (28.93 %)
-    ✔  48.rotate-image                                                 Medium (42.03 %)
-    ✔  42.trapping-rain-water                                          Hard   (37.68 %)
-    ✔  36.valid-sudoku                                                 Medium (37.75 %)
-    ✔  28.implement-strstr                                             Easy   (29.03 %)
-★   ✔  21.merge-two-sorted-lists                                       Easy   (41.33 %)
-    ✔   7.reverse-integer                                              Easy   (24.38 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+383.ransom-note                                                  Easy  
+284.peeking-iterator                                             Medium
+257.binary-tree-paths                                            Easy  
+240.search-a-2d-matrix-ii                                        Medium
+238.product-of-array-except-self                                 Medium
+237.delete-node-in-a-linked-list                                 Easy  
+236.lowest-common-ancestor-of-a-binary-tree                      Medium
+221.maximal-square                                               Medium
+215.kth-largest-element-in-an-array                              Medium
+207.course-schedule                                              Medium
+206.reverse-linked-list                                          Easy  
+191.number-of-1-bits                                             Easy  
+190.reverse-bits                                                 Easy  
+165.compare-version-numbers                                      Medium
+151.reverse-words-in-a-string                                    Medium
+149.max-points-on-a-line                                         Hard  
+118.pascals-triangle                                             Easy  
+104.maximum-depth-of-binary-tree                                 Easy  
+102.binary-tree-level-order-traversal                            Medium
+ 70.climbing-stairs                                              Easy  
+ 69.sqrtx                                                        Easy  
+ 48.rotate-image                                                 Medium
+ 42.trapping-rain-water                                          Hard  
+ 36.valid-sudoku                                                 Medium
+ 28.implement-strstr                                             Easy  
+ 21.merge-two-sorted-lists                                       Easy  
+  7.reverse-integer                                              Easy  
+  4.median-of-two-sorted-arrays                                  Hard  
+  1.two-sum                                                      Easy  

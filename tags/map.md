@@ -1,1 +1,1 @@
-      560.subarray-sum-equals-k                                        Medium (39.93 %)
+560.subarray-sum-equals-k                                        Medium

@@ -1,17 +1,17 @@
-    ✔ 239.sliding-window-maximum                                       Hard   (34.27 %)
-    ✔ 229.majority-element-ii                                          Medium (29.23 %)
-    ✔ 210.course-schedule-ii                                           Medium (30.36 %)
-    ✔ 207.course-schedule                                              Medium (33.81 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 200.number-of-islands                                            Medium (36.72 %)
-    ✔ 169.majority-element                                             Easy   (48.10 %)
-    ✔ 168.excel-sheet-column-title                                     Easy   (27.36 %)
-    ✔ 155.min-stack                                                    Easy   (31.37 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
-★   ✔ 125.valid-palindrome                                             Easy   (27.14 %)
-    ✔ 109.convert-sorted-list-to-binary-search-tree                    Medium (35.87 %)
-    ✔  52.n-queens-ii                                                  Hard   (46.97 %)
-    ✔  42.trapping-rain-water                                          Hard   (37.68 %)
-    ✔  22.generate-parentheses                                         Medium (48.24 %)
-    ✔  20.valid-parentheses                                            Easy   (34.04 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
+239.sliding-window-maximum                                       Hard  
+229.majority-element-ii                                          Medium
+210.course-schedule-ii                                           Medium
+207.course-schedule                                              Medium
+206.reverse-linked-list                                          Easy  
+200.number-of-islands                                            Medium
+169.majority-element                                             Easy  
+168.excel-sheet-column-title                                     Easy  
+155.min-stack                                                    Easy  
+146.lru-cache                                                    Hard  
+125.valid-palindrome                                             Easy  
+109.convert-sorted-list-to-binary-search-tree                    Medium
+ 52.n-queens-ii                                                  Hard  
+ 42.trapping-rain-water                                          Hard  
+ 22.generate-parentheses                                         Medium
+ 20.valid-parentheses                                            Easy  
+  4.median-of-two-sorted-arrays                                  Hard  

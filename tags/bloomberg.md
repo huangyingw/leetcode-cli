@@ -1,66 +1,66 @@
-      714.best-time-to-buy-and-sell-stock-with-transaction-fee         Medium (45.82 %)
-      692.top-k-frequent-words                                         Medium (41.23 %)
-      669.trim-a-binary-search-tree                                    Easy   (58.14 %)
-      556.next-greater-element-iii                                     Medium (28.87 %)
-      547.friend-circles                                               Medium (49.15 %)
-      445.add-two-numbers-ii                                           Medium (46.28 %)
-      443.string-compression                                           Easy   (36.00 %)
-    ✔ 387.first-unique-character-in-a-string                           Easy   (47.15 %)
-    ✔ 386.lexicographical-numbers                                      Medium (42.33 %)
-    ✔ 297.serialize-and-deserialize-binary-tree                        Hard   (35.19 %)
-    ✔ 287.find-the-duplicate-number                                    Medium (44.37 %)
-    ✔ 283.move-zeroes                                                  Easy   (51.60 %)
-    ✔ 274.h-index                                                      Medium (33.76 %)
-    ✔ 268.missing-number                                               Easy   (45.20 %)
-    ✔ 232.implement-queue-using-stacks                                 Easy   (38.19 %)
-    ✔ 230.kth-smallest-element-in-a-bst                                Medium (45.38 %)
-    ✔ 225.implement-stack-using-queues                                 Easy   (34.41 %)
-    ✔ 215.kth-largest-element-in-an-array                              Medium (40.77 %)
-    ✔ 208.implement-trie-prefix-tree                                   Medium (31.08 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 189.rotate-array                                                 Easy   (25.36 %)
-    ✔ 172.factorial-trailing-zeroes                                    Easy   (37.00 %)
-    ✔ 160.intersection-of-two-linked-lists                             Easy   (30.86 %)
-    ✔ 155.min-stack                                                    Easy   (31.37 %)
-    ✔ 151.reverse-words-in-a-string                                    Medium (15.63 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
-    ✔ 141.linked-list-cycle                                            Easy   (35.03 %)
-    ✔ 139.word-break                                                   Medium (31.59 %)
-    ✔ 138.copy-list-with-random-pointer                                Medium (25.81 %)
-    ✔ 131.palindrome-partitioning                                      Medium (35.82 %)
-★   ✔ 122.best-time-to-buy-and-sell-stock-ii                           Easy   (47.78 %)
-★   ✔ 121.best-time-to-buy-and-sell-stock                              Easy   (43.02 %)
-    ✔ 117.populating-next-right-pointers-in-each-node-ii               Medium (33.92 %)
-    ✔ 113.path-sum-ii                                                  Medium (35.84 %)
-    ✔ 110.balanced-binary-tree                                         Easy   (38.51 %)
-    ✔ 105.construct-binary-tree-from-preorder-and-inorder-traversal    Medium (34.38 %)
-    ✔ 103.binary-tree-zigzag-level-order-traversal                     Medium (36.90 %)
-★   ✔ 102.binary-tree-level-order-traversal                            Medium (42.77 %)
-    ✔ 101.symmetric-tree                                               Easy   (40.51 %)
-    ✔ 100.same-tree                                                    Easy   (47.87 %)
-    ✔  98.validate-binary-search-tree                                  Medium (24.10 %)
-★   ✔  88.merge-sorted-array                                           Easy   (32.18 %)
-    ✔  79.word-search                                                  Medium (28.17 %)
-    ✔  78.subsets                                                      Medium (45.03 %)
-    ✔  69.sqrtx                                                        Easy   (28.93 %)
-    ✔  63.unique-paths-ii                                              Medium (32.22 %)
-    ✔  62.unique-paths                                                 Medium (42.97 %)
-★   ✔  56.merge-intervals                                              Medium (32.07 %)
-    ✔  53.maximum-subarray                                             Easy   (40.37 %)
-    ✔  50.powx-n                                                       Medium (26.09 %)
-    ✔  49.group-anagrams                                               Medium (38.71 %)
-    ✔  42.trapping-rain-water                                          Hard   (37.68 %)
-    ✔  33.search-in-rotated-sorted-array                               Medium (31.91 %)
-    ✔  26.remove-duplicates-from-sorted-array                          Easy   (36.50 %)
-    ✔  24.swap-nodes-in-pairs                                          Medium (39.26 %)
-    ✔  20.valid-parentheses                                            Easy   (34.04 %)
-    ✔  16.3sum-closest                                                 Medium (31.72 %)
-    ✔  15.3sum                                                         Medium (21.80 %)
-    ✔  13.roman-to-integer                                             Easy   (48.18 %)
-    ✔  11.container-with-most-water                                    Medium (37.15 %)
-    ✔   8.string-to-integer-atoi                                       Medium (14.09 %)
-    ✔   7.reverse-integer                                              Easy   (24.38 %)
-    ✔   5.longest-palindromic-substring                                Medium (25.34 %)
-    ✔   3.longest-substring-without-repeating-characters               Medium (24.72 %)
-    ✔   2.add-two-numbers                                              Medium (28.69 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+714.best-time-to-buy-and-sell-stock-with-transaction-fee         Medium
+692.top-k-frequent-words                                         Medium
+669.trim-a-binary-search-tree                                    Easy  
+556.next-greater-element-iii                                     Medium
+547.friend-circles                                               Medium
+445.add-two-numbers-ii                                           Medium
+443.string-compression                                           Easy  
+387.first-unique-character-in-a-string                           Easy  
+386.lexicographical-numbers                                      Medium
+297.serialize-and-deserialize-binary-tree                        Hard  
+287.find-the-duplicate-number                                    Medium
+283.move-zeroes                                                  Easy  
+274.h-index                                                      Medium
+268.missing-number                                               Easy  
+232.implement-queue-using-stacks                                 Easy  
+230.kth-smallest-element-in-a-bst                                Medium
+225.implement-stack-using-queues                                 Easy  
+215.kth-largest-element-in-an-array                              Medium
+208.implement-trie-prefix-tree                                   Medium
+206.reverse-linked-list                                          Easy  
+189.rotate-array                                                 Easy  
+172.factorial-trailing-zeroes                                    Easy  
+160.intersection-of-two-linked-lists                             Easy  
+155.min-stack                                                    Easy  
+151.reverse-words-in-a-string                                    Medium
+146.lru-cache                                                    Hard  
+141.linked-list-cycle                                            Easy  
+139.word-break                                                   Medium
+138.copy-list-with-random-pointer                                Medium
+131.palindrome-partitioning                                      Medium
+122.best-time-to-buy-and-sell-stock-ii                           Easy  
+121.best-time-to-buy-and-sell-stock                              Easy  
+117.populating-next-right-pointers-in-each-node-ii               Medium
+113.path-sum-ii                                                  Medium
+110.balanced-binary-tree                                         Easy  
+105.construct-binary-tree-from-preorder-and-inorder-traversal    Medium
+103.binary-tree-zigzag-level-order-traversal                     Medium
+102.binary-tree-level-order-traversal                            Medium
+101.symmetric-tree                                               Easy  
+100.same-tree                                                    Easy  
+ 98.validate-binary-search-tree                                  Medium
+ 88.merge-sorted-array                                           Easy  
+ 79.word-search                                                  Medium
+ 78.subsets                                                      Medium
+ 69.sqrtx                                                        Easy  
+ 63.unique-paths-ii                                              Medium
+ 62.unique-paths                                                 Medium
+ 56.merge-intervals                                              Medium
+ 53.maximum-subarray                                             Easy  
+ 50.powx-n                                                       Medium
+ 49.group-anagrams                                               Medium
+ 42.trapping-rain-water                                          Hard  
+ 33.search-in-rotated-sorted-array                               Medium
+ 26.remove-duplicates-from-sorted-array                          Easy  
+ 24.swap-nodes-in-pairs                                          Medium
+ 20.valid-parentheses                                            Easy  
+ 16.3sum-closest                                                 Medium
+ 15.3sum                                                         Medium
+ 13.roman-to-integer                                             Easy  
+ 11.container-with-most-water                                    Medium
+  8.string-to-integer-atoi                                       Medium
+  7.reverse-integer                                              Easy  
+  5.longest-palindromic-substring                                Medium
+  3.longest-substring-without-repeating-characters               Medium
+  2.add-two-numbers                                              Medium
+  1.two-sum                                                      Easy  

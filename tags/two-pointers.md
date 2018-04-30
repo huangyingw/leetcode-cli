@@ -1,34 +1,34 @@
-      713.subarray-product-less-than-k                                 Medium (33.20 %)
-      632.smallest-range                                               Hard   (41.82 %)
-      567.permutation-in-string                                        Medium (36.34 %)
-      532.k-diff-pairs-in-an-array                                     Easy   (28.12 %)
-      524.longest-word-in-dictionary-through-deleting                  Medium (43.30 %)
-    ✔ 350.intersection-of-two-arrays-ii                                Easy   (44.29 %)
-    ✔ 349.intersection-of-two-arrays                                   Easy   (48.29 %)
-    ✔ 345.reverse-vowels-of-a-string                                   Easy   (39.30 %)
-    ✔ 344.reverse-string                                               Easy   (60.40 %)
-    ✔ 287.find-the-duplicate-number                                    Medium (44.37 %)
-    ✔ 283.move-zeroes                                                  Easy   (51.60 %)
-    ✔ 234.palindrome-linked-list                                       Easy   (33.50 %)
-    ✔ 209.minimum-size-subarray-sum                                    Medium (32.21 %)
-    ✔ 167.two-sum-ii-input-array-is-sorted                             Easy   (47.27 %)
-    ✔ 142.linked-list-cycle-ii                                         Medium (30.56 %)
-    ✔ 141.linked-list-cycle                                            Easy   (35.03 %)
-★   ✔ 125.valid-palindrome                                             Easy   (27.14 %)
-★   ✔  88.merge-sorted-array                                           Easy   (32.18 %)
-    ✔  86.partition-list                                               Medium (33.61 %)
-    ✔  80.remove-duplicates-from-sorted-array-ii                       Medium (36.93 %)
-    ✔  76.minimum-window-substring                                     Hard   (26.89 %)
-    ✔  75.sort-colors                                                  Medium (39.00 %)
-    ✔  61.rotate-list                                                  Medium (24.52 %)
-    ✔  42.trapping-rain-water                                          Hard   (37.68 %)
-    ✔  30.substring-with-concatenation-of-all-words                    Hard   (22.27 %)
-    ✔  28.implement-strstr                                             Easy   (29.03 %)
-    ✔  27.remove-element                                               Easy   (40.91 %)
-    ✔  26.remove-duplicates-from-sorted-array                          Easy   (36.50 %)
-    ✔  19.remove-nth-node-from-end-of-list                             Medium (33.96 %)
-    ✔  18.4sum                                                         Medium (27.57 %)
-    ✔  16.3sum-closest                                                 Medium (31.72 %)
-    ✔  15.3sum                                                         Medium (21.80 %)
-    ✔  11.container-with-most-water                                    Medium (37.15 %)
-    ✔   3.longest-substring-without-repeating-characters               Medium (24.72 %)
+713.subarray-product-less-than-k                                 Medium
+632.smallest-range                                               Hard  
+567.permutation-in-string                                        Medium
+532.k-diff-pairs-in-an-array                                     Easy  
+524.longest-word-in-dictionary-through-deleting                  Medium
+350.intersection-of-two-arrays-ii                                Easy  
+349.intersection-of-two-arrays                                   Easy  
+345.reverse-vowels-of-a-string                                   Easy  
+344.reverse-string                                               Easy  
+287.find-the-duplicate-number                                    Medium
+283.move-zeroes                                                  Easy  
+234.palindrome-linked-list                                       Easy  
+209.minimum-size-subarray-sum                                    Medium
+167.two-sum-ii-input-array-is-sorted                             Easy  
+142.linked-list-cycle-ii                                         Medium
+141.linked-list-cycle                                            Easy  
+125.valid-palindrome                                             Easy  
+ 88.merge-sorted-array                                           Easy  
+ 86.partition-list                                               Medium
+ 80.remove-duplicates-from-sorted-array-ii                       Medium
+ 76.minimum-window-substring                                     Hard  
+ 75.sort-colors                                                  Medium
+ 61.rotate-list                                                  Medium
+ 42.trapping-rain-water                                          Hard  
+ 30.substring-with-concatenation-of-all-words                    Hard  
+ 28.implement-strstr                                             Easy  
+ 27.remove-element                                               Easy  
+ 26.remove-duplicates-from-sorted-array                          Easy  
+ 19.remove-nth-node-from-end-of-list                             Medium
+ 18.4sum                                                         Medium
+ 16.3sum-closest                                                 Medium
+ 15.3sum                                                         Medium
+ 11.container-with-most-water                                    Medium
+  3.longest-substring-without-repeating-characters               Medium

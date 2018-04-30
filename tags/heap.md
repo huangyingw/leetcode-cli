@@ -1,17 +1,17 @@
-      719.find-k-th-smallest-pair-distance                             Hard   (27.24 %)
-      692.top-k-frequent-words                                         Medium (41.23 %)
-      659.split-array-into-consecutive-subsequences                    Medium (37.05 %)
-      502.ipo                                                          Hard   (36.50 %)
-      451.sort-characters-by-frequency                                 Medium (51.80 %)
-      407.trapping-rain-water-ii                                       Hard   (37.86 %)
-    ✔ 378.kth-smallest-element-in-a-sorted-matrix                      Medium (45.51 %)
-    ✔ 373.find-k-pairs-with-smallest-sums                              Medium (31.36 %)
-    ✔ 355.design-twitter                                               Medium (25.82 %)
-    ✔ 347.top-k-frequent-elements                                      Medium (49.64 %)
-    ✔ 313.super-ugly-number                                            Medium (38.26 %)
-    ✔ 295.find-median-from-data-stream                                 Hard   (29.73 %)
-    ✔ 264.ugly-number-ii                                               Medium (33.39 %)
-    ✔ 239.sliding-window-maximum                                       Hard   (34.27 %)
-    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)
-    ✔ 215.kth-largest-element-in-an-array                              Medium (40.77 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
+719.find-k-th-smallest-pair-distance                             Hard  
+692.top-k-frequent-words                                         Medium
+659.split-array-into-consecutive-subsequences                    Medium
+502.ipo                                                          Hard  
+451.sort-characters-by-frequency                                 Medium
+407.trapping-rain-water-ii                                       Hard  
+378.kth-smallest-element-in-a-sorted-matrix                      Medium
+373.find-k-pairs-with-smallest-sums                              Medium
+355.design-twitter                                               Medium
+347.top-k-frequent-elements                                      Medium
+313.super-ugly-number                                            Medium
+295.find-median-from-data-stream                                 Hard  
+264.ugly-number-ii                                               Medium
+239.sliding-window-maximum                                       Hard  
+218.the-skyline-problem                                          Hard  
+215.kth-largest-element-in-an-array                              Medium
+ 23.merge-k-sorted-lists                                         Hard  

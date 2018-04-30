@@ -1,30 +1,30 @@
-      739.daily-temperatures                                           Medium (52.65 %)
-      735.asteroid-collision                                           Medium (37.03 %)
-      726.number-of-atoms                                              Hard   (43.98 %)
-      682.baseball-game                                                Easy   (58.10 %)
-      636.exclusive-time-of-functions                                  Medium (44.49 %)
-      591.tag-validator                                                Hard   (31.11 %)
-      503.next-greater-element-ii                                      Medium (47.96 %)
-      496.next-greater-element-i                                       Easy   (56.54 %)
-      456.132-pattern                                                  Medium (27.76 %)
-    ✔ 402.remove-k-digits                                              Medium (25.80 %)
-    ✔ 394.decode-string                                                Medium (42.08 %)
-    ✔ 385.mini-parser                                                  Medium (30.86 %)
-    ✔ 341.flatten-nested-list-iterator                                 Medium (43.26 %)
-    ✔ 331.verify-preorder-serialization-of-a-binary-tree               Medium (37.15 %)
-    ✔ 316.remove-duplicate-letters                                     Hard   (30.47 %)
-    ✔ 232.implement-queue-using-stacks                                 Easy   (38.19 %)
-    ✔ 225.implement-stack-using-queues                                 Easy   (34.41 %)
-    ✔ 224.basic-calculator                                             Hard   (28.80 %)
-    ✔ 173.binary-search-tree-iterator                                  Medium (43.67 %)
-    ✔ 155.min-stack                                                    Easy   (31.37 %)
-    ✔ 150.evaluate-reverse-polish-notation                             Medium (28.55 %)
-    ✔ 145.binary-tree-postorder-traversal                              Hard   (42.45 %)
-★   ✔ 144.binary-tree-preorder-traversal                               Medium (47.01 %)
-    ✔ 103.binary-tree-zigzag-level-order-traversal                     Medium (36.90 %)
-    ✔  94.binary-tree-inorder-traversal                                Medium (49.98 %)
-    ✔  85.maximal-rectangle                                            Hard   (29.71 %)
-    ✔  84.largest-rectangle-in-histogram                               Hard   (27.67 %)
-    ✔  71.simplify-path                                                Medium (26.38 %)
-    ✔  42.trapping-rain-water                                          Hard   (37.68 %)
-    ✔  20.valid-parentheses                                            Easy   (34.04 %)
+739.daily-temperatures                                           Medium
+735.asteroid-collision                                           Medium
+726.number-of-atoms                                              Hard  
+682.baseball-game                                                Easy  
+636.exclusive-time-of-functions                                  Medium
+591.tag-validator                                                Hard  
+503.next-greater-element-ii                                      Medium
+496.next-greater-element-i                                       Easy  
+456.132-pattern                                                  Medium
+402.remove-k-digits                                              Medium
+394.decode-string                                                Medium
+385.mini-parser                                                  Medium
+341.flatten-nested-list-iterator                                 Medium
+331.verify-preorder-serialization-of-a-binary-tree               Medium
+316.remove-duplicate-letters                                     Hard  
+232.implement-queue-using-stacks                                 Easy  
+225.implement-stack-using-queues                                 Easy  
+224.basic-calculator                                             Hard  
+173.binary-search-tree-iterator                                  Medium
+155.min-stack                                                    Easy  
+150.evaluate-reverse-polish-notation                             Medium
+145.binary-tree-postorder-traversal                              Hard  
+144.binary-tree-preorder-traversal                               Medium
+103.binary-tree-zigzag-level-order-traversal                     Medium
+ 94.binary-tree-inorder-traversal                                Medium
+ 85.maximal-rectangle                                            Hard  
+ 84.largest-rectangle-in-histogram                               Hard  
+ 71.simplify-path                                                Medium
+ 42.trapping-rain-water                                          Hard  
+ 20.valid-parentheses                                            Easy  

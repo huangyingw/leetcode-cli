@@ -1,59 +1,59 @@
-      747.largest-number-at-least-twice-of-others                      Easy   (41.81 %)
-      739.daily-temperatures                                           Medium (52.65 %)
-      726.number-of-atoms                                              Hard   (43.98 %)
-      720.longest-word-in-dictionary                                   Easy   (41.49 %)
-      718.maximum-length-of-repeated-subarray                          Medium (41.53 %)
-      692.top-k-frequent-words                                         Medium (41.23 %)
-      690.employee-importance                                          Easy   (51.69 %)
-      676.implement-magic-dictionary                                   Medium (48.92 %)
-      648.replace-words                                                Medium (47.95 %)
-      645.set-mismatch                                                 Easy   (39.63 %)
-      632.smallest-range                                               Hard   (41.82 %)
-      609.find-duplicate-file-in-system                                Medium (52.06 %)
-      599.minimum-index-sum-of-two-lists                               Easy   (46.40 %)
-      594.longest-harmonious-subsequence                               Easy   (41.08 %)
-      575.distribute-candies                                           Easy   (58.08 %)
-      554.brick-wall                                                   Medium (46.47 %)
-      535.encode-and-decode-tinyurl                                    Medium (73.88 %)
-      525.contiguous-array                                             Medium (41.40 %)
-    ✔ 508.most-frequent-subtree-sum                                    Medium (52.26 %)
-      500.keyboard-row                                                 Easy   (59.95 %)
-      463.island-perimeter                                             Easy   (57.94 %)
-      454.4sum-ii                                                      Medium (47.61 %)
-      451.sort-characters-by-frequency                                 Medium (51.80 %)
-      447.number-of-boomerangs                                         Easy   (46.78 %)
-    ✔ 438.find-all-anagrams-in-a-string                                Easy   (33.88 %)
-    ✔ 409.longest-palindrome                                           Easy   (46.00 %)
-    ✔ 389.find-the-difference                                          Easy   (51.38 %)
-    ✔ 387.first-unique-character-in-a-string                           Easy   (47.15 %)
-    ✔ 381.insert-delete-getrandom-o1-duplicates-allowed                Hard   (29.67 %)
-    ✔ 380.insert-delete-getrandom-o1                                   Medium (39.96 %)
-    ✔ 355.design-twitter                                               Medium (25.82 %)
-    ✔ 350.intersection-of-two-arrays-ii                                Easy   (44.29 %)
-    ✔ 349.intersection-of-two-arrays                                   Easy   (48.29 %)
-    ✔ 347.top-k-frequent-elements                                      Medium (49.64 %)
-    ✔ 336.palindrome-pairs                                             Hard   (27.23 %)
-    ✔ 299.bulls-and-cows                                               Medium (36.04 %)
-    ✔ 290.word-pattern                                                 Easy   (33.51 %)
-    ✔ 274.h-index                                                      Medium (33.76 %)
-    ✔ 242.valid-anagram                                                Easy   (47.62 %)
-    ✔ 219.contains-duplicate-ii                                        Easy   (32.88 %)
-    ✔ 217.contains-duplicate                                           Easy   (47.21 %)
-    ✔ 205.isomorphic-strings                                           Easy   (34.79 %)
-    ✔ 204.count-primes                                                 Easy   (26.50 %)
-    ✔ 202.happy-number                                                 Easy   (41.66 %)
-    ✔ 187.repeated-dna-sequences                                       Medium (33.11 %)
-    ✔ 166.fraction-to-recurring-decimal                                Medium (18.14 %)
-    ✔ 149.max-points-on-a-line                                         Hard   (15.19 %)
-    ✔ 138.copy-list-with-random-pointer                                Medium (25.81 %)
-    ✔ 136.single-number                                                Easy   (55.51 %)
-    ✔  94.binary-tree-inorder-traversal                                Medium (49.98 %)
-    ✔  85.maximal-rectangle                                            Hard   (29.71 %)
-    ✔  76.minimum-window-substring                                     Hard   (26.89 %)
-    ✔  49.group-anagrams                                               Medium (38.71 %)
-    ✔  37.sudoku-solver                                                Hard   (32.21 %)
-    ✔  36.valid-sudoku                                                 Medium (37.75 %)
-    ✔  30.substring-with-concatenation-of-all-words                    Hard   (22.27 %)
-    ✔  18.4sum                                                         Medium (27.57 %)
-    ✔   3.longest-substring-without-repeating-characters               Medium (24.72 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+747.largest-number-at-least-twice-of-others                      Easy  
+739.daily-temperatures                                           Medium
+726.number-of-atoms                                              Hard  
+720.longest-word-in-dictionary                                   Easy  
+718.maximum-length-of-repeated-subarray                          Medium
+692.top-k-frequent-words                                         Medium
+690.employee-importance                                          Easy  
+676.implement-magic-dictionary                                   Medium
+648.replace-words                                                Medium
+645.set-mismatch                                                 Easy  
+632.smallest-range                                               Hard  
+609.find-duplicate-file-in-system                                Medium
+599.minimum-index-sum-of-two-lists                               Easy  
+594.longest-harmonious-subsequence                               Easy  
+575.distribute-candies                                           Easy  
+554.brick-wall                                                   Medium
+535.encode-and-decode-tinyurl                                    Medium
+525.contiguous-array                                             Medium
+508.most-frequent-subtree-sum                                    Medium
+500.keyboard-row                                                 Easy  
+463.island-perimeter                                             Easy  
+454.4sum-ii                                                      Medium
+451.sort-characters-by-frequency                                 Medium
+447.number-of-boomerangs                                         Easy  
+438.find-all-anagrams-in-a-string                                Easy  
+409.longest-palindrome                                           Easy  
+389.find-the-difference                                          Easy  
+387.first-unique-character-in-a-string                           Easy  
+381.insert-delete-getrandom-o1-duplicates-allowed                Hard  
+380.insert-delete-getrandom-o1                                   Medium
+355.design-twitter                                               Medium
+350.intersection-of-two-arrays-ii                                Easy  
+349.intersection-of-two-arrays                                   Easy  
+347.top-k-frequent-elements                                      Medium
+336.palindrome-pairs                                             Hard  
+299.bulls-and-cows                                               Medium
+290.word-pattern                                                 Easy  
+274.h-index                                                      Medium
+242.valid-anagram                                                Easy  
+219.contains-duplicate-ii                                        Easy  
+217.contains-duplicate                                           Easy  
+205.isomorphic-strings                                           Easy  
+204.count-primes                                                 Easy  
+202.happy-number                                                 Easy  
+187.repeated-dna-sequences                                       Medium
+166.fraction-to-recurring-decimal                                Medium
+149.max-points-on-a-line                                         Hard  
+138.copy-list-with-random-pointer                                Medium
+136.single-number                                                Easy  
+ 94.binary-tree-inorder-traversal                                Medium
+ 85.maximal-rectangle                                            Hard  
+ 76.minimum-window-substring                                     Hard  
+ 49.group-anagrams                                               Medium
+ 37.sudoku-solver                                                Hard  
+ 36.valid-sudoku                                                 Medium
+ 30.substring-with-concatenation-of-all-words                    Hard  
+ 18.4sum                                                         Medium
+  3.longest-substring-without-repeating-characters               Medium
+  1.two-sum                                                      Easy  

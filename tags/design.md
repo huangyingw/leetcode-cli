@@ -1,16 +1,16 @@
-    ✔ 460.lfu-cache                                                    Hard   (25.16 %)
-    ✔ 432.all-oone-data-structure                                      Hard   (27.98 %)
-    ✔ 381.insert-delete-getrandom-o1-duplicates-allowed                Hard   (29.67 %)
-    ✔ 380.insert-delete-getrandom-o1                                   Medium (39.96 %)
-    ✔ 355.design-twitter                                               Medium (25.82 %)
-    ✔ 341.flatten-nested-list-iterator                                 Medium (43.26 %)
-    ✔ 297.serialize-and-deserialize-binary-tree                        Hard   (35.19 %)
-    ✔ 295.find-median-from-data-stream                                 Hard   (29.73 %)
-    ✔ 284.peeking-iterator                                             Medium (35.49 %)
-    ✔ 232.implement-queue-using-stacks                                 Easy   (38.19 %)
-    ✔ 225.implement-stack-using-queues                                 Easy   (34.41 %)
-    ✔ 211.add-and-search-word-data-structure-design                    Medium (25.47 %)
-    ✔ 208.implement-trie-prefix-tree                                   Medium (31.08 %)
-    ✔ 173.binary-search-tree-iterator                                  Medium (43.67 %)
-    ✔ 155.min-stack                                                    Easy   (31.37 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
+460.lfu-cache                                                    Hard  
+432.all-oone-data-structure                                      Hard  
+381.insert-delete-getrandom-o1-duplicates-allowed                Hard  
+380.insert-delete-getrandom-o1                                   Medium
+355.design-twitter                                               Medium
+341.flatten-nested-list-iterator                                 Medium
+297.serialize-and-deserialize-binary-tree                        Hard  
+295.find-median-from-data-stream                                 Hard  
+284.peeking-iterator                                             Medium
+232.implement-queue-using-stacks                                 Easy  
+225.implement-stack-using-queues                                 Easy  
+211.add-and-search-word-data-structure-design                    Medium
+208.implement-trie-prefix-tree                                   Medium
+173.binary-search-tree-iterator                                  Medium
+155.min-stack                                                    Easy  
+146.lru-cache                                                    Hard  

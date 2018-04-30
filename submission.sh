@@ -14,6 +14,6 @@ while read -r line || [[ -n "$line" ]]
 do
     doGet "$line"
 done < problems.list
-#~/loadrc/bashrc/jformat.sh
-#autopep8 --in-place -r submissions/
-#jdupes -1dNr submissions/
+~/loadrc/bashrc/jformat.sh
+autopep8 --in-place -r submissions/
+jdupes -1dNr submissions/

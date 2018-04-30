@@ -1,24 +1,24 @@
-      468.validate-ip-address                                          Medium (20.62 %)
-      407.trapping-rain-water-ii                                       Hard   (37.86 %)
-    ✔ 380.insert-delete-getrandom-o1                                   Medium (39.96 %)
-    ✔ 378.kth-smallest-element-in-a-sorted-matrix                      Medium (45.51 %)
-    ✔ 355.design-twitter                                               Medium (25.82 %)
-    ✔ 341.flatten-nested-list-iterator                                 Medium (43.26 %)
-    ✔ 235.lowest-common-ancestor-of-a-binary-search-tree               Easy   (39.85 %)
-    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)
-    ✔ 208.implement-trie-prefix-tree                                   Medium (31.08 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 202.happy-number                                                 Easy   (41.66 %)
-    ✔ 149.max-points-on-a-line                                         Hard   (15.19 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
-    ✔ 140.word-break-ii                                                Hard   (24.60 %)
-    ✔ 118.pascals-triangle                                             Easy   (40.23 %)
-    ✔  60.permutation-sequence                                         Medium (29.60 %)
-★   ✔  56.merge-intervals                                              Medium (32.07 %)
-    ✔  44.wildcard-matching                                            Hard   (21.05 %)
-    ✔  43.multiply-strings                                             Medium (28.06 %)
-    ✔  42.trapping-rain-water                                          Hard   (37.68 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
-    ✔  20.valid-parentheses                                            Easy   (34.04 %)
-    ✔  12.integer-to-roman                                             Medium (46.32 %)
-    ✔  10.regular-expression-matching                                  Hard   (24.33 %)
+468.validate-ip-address                                          Medium
+407.trapping-rain-water-ii                                       Hard  
+380.insert-delete-getrandom-o1                                   Medium
+378.kth-smallest-element-in-a-sorted-matrix                      Medium
+355.design-twitter                                               Medium
+341.flatten-nested-list-iterator                                 Medium
+235.lowest-common-ancestor-of-a-binary-search-tree               Easy  
+218.the-skyline-problem                                          Hard  
+208.implement-trie-prefix-tree                                   Medium
+206.reverse-linked-list                                          Easy  
+202.happy-number                                                 Easy  
+149.max-points-on-a-line                                         Hard  
+146.lru-cache                                                    Hard  
+140.word-break-ii                                                Hard  
+118.pascals-triangle                                             Easy  
+ 60.permutation-sequence                                         Medium
+ 56.merge-intervals                                              Medium
+ 44.wildcard-matching                                            Hard  
+ 43.multiply-strings                                             Medium
+ 42.trapping-rain-water                                          Hard  
+ 23.merge-k-sorted-lists                                         Hard  
+ 20.valid-parentheses                                            Easy  
+ 12.integer-to-roman                                             Medium
+ 10.regular-expression-matching                                  Hard  

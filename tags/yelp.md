@@ -1,20 +1,20 @@
-      692.top-k-frequent-words                                         Medium (41.23 %)
-      599.minimum-index-sum-of-two-lists                               Easy   (46.40 %)
-      564.find-the-closest-palindrome                                  Hard   (17.15 %)
-      443.string-compression                                           Easy   (36.00 %)
-    ✔ 394.decode-string                                                Medium (42.08 %)
-    ✔ 381.insert-delete-getrandom-o1-duplicates-allowed                Hard   (29.67 %)
-    ✔ 380.insert-delete-getrandom-o1                                   Medium (39.96 %)
-    ✔ 347.top-k-frequent-elements                                      Medium (49.64 %)
-    ✔ 242.valid-anagram                                                Easy   (47.62 %)
-    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)
-    ✔ 207.course-schedule                                              Medium (33.81 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 151.reverse-words-in-a-string                                    Medium (15.63 %)
-    ✔ 127.word-ladder                                                  Medium (20.12 %)
-    ✔ 126.word-ladder-ii                                               Hard   (14.92 %)
-★   ✔  56.merge-intervals                                              Medium (32.07 %)
-    ✔  49.group-anagrams                                               Medium (38.71 %)
-    ✔  14.longest-common-prefix                                        Easy   (31.61 %)
-    ✔   3.longest-substring-without-repeating-characters               Medium (24.72 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+692.top-k-frequent-words                                         Medium
+599.minimum-index-sum-of-two-lists                               Easy  
+564.find-the-closest-palindrome                                  Hard  
+443.string-compression                                           Easy  
+394.decode-string                                                Medium
+381.insert-delete-getrandom-o1-duplicates-allowed                Hard  
+380.insert-delete-getrandom-o1                                   Medium
+347.top-k-frequent-elements                                      Medium
+242.valid-anagram                                                Easy  
+218.the-skyline-problem                                          Hard  
+207.course-schedule                                              Medium
+206.reverse-linked-list                                          Easy  
+151.reverse-words-in-a-string                                    Medium
+127.word-ladder                                                  Medium
+126.word-ladder-ii                                               Hard  
+ 56.merge-intervals                                              Medium
+ 49.group-anagrams                                               Medium
+ 14.longest-common-prefix                                        Easy  
+  3.longest-substring-without-repeating-characters               Medium
+  1.two-sum                                                      Easy  

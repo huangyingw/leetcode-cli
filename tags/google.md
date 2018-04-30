@@ -1,145 +1,145 @@
-      731.my-calendar-ii                                               Medium (37.73 %)
-      729.my-calendar-i                                                Medium (42.36 %)
-      726.number-of-atoms                                              Hard   (43.98 %)
-      719.find-k-th-smallest-pair-distance                             Hard   (27.24 %)
-      689.maximum-sum-of-3-non-overlapping-subarrays                   Hard   (40.91 %)
-      687.longest-univalue-path                                        Easy   (32.88 %)
-      686.repeated-string-match                                        Easy   (32.04 %)
-      685.redundant-connection-ii                                      Hard   (27.81 %)
-      684.redundant-connection                                         Medium (43.91 %)
-      679.24-game                                                      Hard   (38.85 %)
-      676.implement-magic-dictionary                                   Medium (48.92 %)
-      668.kth-smallest-number-in-multiplication-table                  Hard   (40.12 %)
-      667.beautiful-arrangement-ii                                     Medium (51.52 %)
-      665.non-decreasing-array                                         Easy   (20.21 %)
-      659.split-array-into-consecutive-subsequences                    Medium (37.05 %)
-      658.find-k-closest-elements                                      Medium (34.86 %)
-      657.judge-route-circle                                           Easy   (68.53 %)
-      652.find-duplicate-subtrees                                      Medium (36.98 %)
-      643.maximum-average-subarray-i                                   Easy   (37.58 %)
-      638.shopping-offers                                              Medium (45.44 %)
-      587.erect-the-fence                                              Hard   (33.57 %)
-      583.delete-operation-for-two-strings                             Medium (44.39 %)
-      581.shortest-unsorted-continuous-subarray                        Easy   (29.40 %)
-      572.subtree-of-another-tree                                      Easy   (40.20 %)
-      560.subarray-sum-equals-k                                        Medium (39.93 %)
-      552.student-attendance-record-ii                                 Hard   (31.66 %)
-    ✔ 551.student-attendance-record-i                                  Easy   (44.63 %)
-      543.diameter-of-binary-tree                                      Easy   (44.91 %)
-      542.01-matrix                                                    Medium (33.04 %)
-      541.reverse-string-ii                                            Easy   (43.91 %)
-      535.encode-and-decode-tinyurl                                    Medium (73.88 %)
-      530.minimum-absolute-difference-in-bst                           Easy   (47.46 %)
-      526.beautiful-arrangement                                        Medium (53.30 %)
-      524.longest-word-in-dictionary-through-deleting                  Medium (43.30 %)
-      522.longest-uncommon-subsequence-ii                              Medium (31.97 %)
-      521.longest-uncommon-subsequence-i                               Easy   (55.73 %)
-      520.detect-capital                                               Easy   (51.91 %)
-      514.freedom-trail                                                Hard   (39.16 %)
-      506.relative-ranks                                               Easy   (46.92 %)
-      503.next-greater-element-ii                                      Medium (47.96 %)
-      501.find-mode-in-binary-search-tree                              Easy   (37.56 %)
-      498.diagonal-traverse                                            Medium (46.22 %)
-      494.target-sum                                                   Medium (43.86 %)
-      493.reverse-pairs                                                Hard   (20.71 %)
-      486.predict-the-winner                                           Medium (45.17 %)
-      485.max-consecutive-ones                                         Easy   (53.76 %)
-      483.smallest-good-base                                           Hard   (33.85 %)
-      482.license-key-formatting                                       Easy   (39.56 %)
-      481.magical-string                                               Medium (45.79 %)
-    ✘ 480.sliding-window-median                                        Hard   (30.87 %)
-      475.heaters                                                      Easy   (29.76 %)
-      474.ones-and-zeroes                                              Medium (38.77 %)
-      463.island-perimeter                                             Easy   (57.94 %)
-    ✔ 460.lfu-cache                                                    Hard   (25.16 %)
-      459.repeated-substring-pattern                                   Easy   (38.21 %)
-      451.sort-characters-by-frequency                                 Medium (51.80 %)
-    ✔ 448.find-all-numbers-disappeared-in-an-array                     Easy   (51.13 %)
-      447.number-of-boomerangs                                         Easy   (46.78 %)
-      421.maximum-xor-of-two-numbers-in-an-array                       Medium (48.02 %)
-      417.pacific-atlantic-water-flow                                  Medium (34.81 %)
-    ✔ 415.add-strings                                                  Easy   (41.72 %)
-    ✔ 409.longest-palindrome                                           Easy   (46.00 %)
-      407.trapping-rain-water-ii                                       Hard   (37.86 %)
-    ✔ 406.queue-reconstruction-by-height                               Medium (56.39 %)
-    ✔ 402.remove-k-digits                                              Medium (25.80 %)
-      401.binary-watch                                                 Easy   (44.76 %)
-      400.nth-digit                                                    Easy   (30.15 %)
-      399.evaluate-division                                            Medium (42.45 %)
-      397.integer-replacement                                          Medium (30.49 %)
-    ✔ 394.decode-string                                                Medium (42.08 %)
-      393.utf-8-validation                                             Medium (34.89 %)
-      391.perfect-rectangle                                            Hard   (27.50 %)
-    ✔ 389.find-the-difference                                          Easy   (51.38 %)
-    ✔ 388.longest-absolute-file-path                                   Medium (37.44 %)
-    ✔ 382.linked-list-random-node                                      Medium (47.48 %)
-    ✔ 380.insert-delete-getrandom-o1                                   Medium (39.96 %)
-    ✔ 378.kth-smallest-element-in-a-sorted-matrix                      Medium (45.51 %)
-    ✔ 377.combination-sum-iv                                           Medium (42.80 %)
-    ✔ 375.guess-number-higher-or-lower-ii                              Medium (36.10 %)
-    ✔ 374.guess-number-higher-or-lower                                 Easy   (36.82 %)
-    ✔ 373.find-k-pairs-with-smallest-sums                              Medium (31.36 %)
-    ✔ 368.largest-divisible-subset                                     Medium (33.93 %)
-    ✔ 363.max-sum-of-rectangle-no-larger-than-k                        Hard   (33.83 %)
-    ✔ 357.count-numbers-with-unique-digits                             Medium (46.12 %)
-    ✔ 354.russian-doll-envelopes                                       Hard   (32.65 %)
-    ✔ 345.reverse-vowels-of-a-string                                   Easy   (39.30 %)
-    ✔ 341.flatten-nested-list-iterator                                 Medium (43.26 %)
-    ✔ 336.palindrome-pairs                                             Hard   (27.23 %)
-    ✔ 332.reconstruct-itinerary                                        Medium (29.99 %)
-    ✔ 331.verify-preorder-serialization-of-a-binary-tree               Medium (37.15 %)
-    ✔ 330.patching-array                                               Hard   (32.70 %)
-    ✔ 329.longest-increasing-path-in-a-matrix                          Hard   (37.44 %)
-    ✔ 327.count-of-range-sum                                           Hard   (30.69 %)
-    ✔ 326.power-of-three                                               Easy   (40.75 %)
-    ✔ 324.wiggle-sort-ii                                               Medium (26.45 %)
-    ✔ 321.create-maximum-number                                        Hard   (24.85 %)
-    ✔ 318.maximum-product-of-word-lengths                              Medium (45.78 %)
-    ✔ 316.remove-duplicate-letters                                     Hard   (30.47 %)
-    ✔ 315.count-of-smaller-numbers-after-self                          Hard   (35.02 %)
-    ✔ 313.super-ugly-number                                            Medium (38.26 %)
-    ✔ 312.burst-balloons                                               Hard   (43.74 %)
-    ✔ 310.minimum-height-trees                                         Medium (28.99 %)
-    ✔ 309.best-time-to-buy-and-sell-stock-with-cooldown                Medium (42.08 %)
-    ✔ 297.serialize-and-deserialize-binary-tree                        Hard   (35.19 %)
-    ✔ 295.find-median-from-data-stream                                 Hard   (29.73 %)
-    ✔ 289.game-of-life                                                 Medium (37.25 %)
-    ✔ 284.peeking-iterator                                             Medium (35.49 %)
-    ✔ 282.expression-add-operators                                     Hard   (30.64 %)
-    ✔ 279.perfect-squares                                              Medium (37.79 %)
-    ✔ 274.h-index                                                      Medium (33.76 %)
-★   ✔ 257.binary-tree-paths                                            Easy   (41.43 %)
-    ✔ 240.search-a-2d-matrix-ii                                        Medium (39.09 %)
-    ✔ 239.sliding-window-maximum                                       Hard   (34.27 %)
-    ✔ 231.power-of-two                                                 Easy   (40.79 %)
-    ✔ 230.kth-smallest-element-in-a-bst                                Medium (45.38 %)
-    ✔ 228.summary-ranges                                               Medium (32.23 %)
-    ✔ 224.basic-calculator                                             Hard   (28.80 %)
-    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)
-    ✔ 214.shortest-palindrome                                          Hard   (25.19 %)
-    ✔ 212.word-search-ii                                               Hard   (24.91 %)
-    ✔ 208.implement-trie-prefix-tree                                   Medium (31.08 %)
-    ✔ 200.number-of-islands                                            Medium (36.72 %)
-    ✔ 173.binary-search-tree-iterator                                  Medium (43.67 %)
-    ✔ 166.fraction-to-recurring-decimal                                Medium (18.14 %)
-    ✔ 162.find-peak-element                                            Medium (39.00 %)
-    ✔ 155.min-stack                                                    Easy   (31.37 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
-    ✔ 140.word-break-ii                                                Hard   (24.60 %)
-    ✔ 139.word-break                                                   Medium (31.59 %)
-    ✔ 133.clone-graph                                                  Medium (25.18 %)
-    ✔ 128.longest-consecutive-sequence                                 Hard   (38.32 %)
-★   ✔  66.plus-one                                                     Easy   (39.81 %)
-    ✔  57.insert-interval                                              Hard   (29.06 %)
-★   ✔  56.merge-intervals                                              Medium (32.07 %)
-    ✔  54.spiral-matrix                                                Medium (27.36 %)
-    ✔  50.powx-n                                                       Medium (26.09 %)
-    ✔  44.wildcard-matching                                            Hard   (21.05 %)
-    ✔  42.trapping-rain-water                                          Hard   (37.68 %)
-    ✔  31.next-permutation                                             Medium (29.08 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
-    ✔  22.generate-parentheses                                         Medium (48.24 %)
-    ✔  20.valid-parentheses                                            Easy   (34.04 %)
-    ✔  17.letter-combinations-of-a-phone-number                        Medium (36.63 %)
-    ✔  10.regular-expression-matching                                  Hard   (24.33 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
+731.my-calendar-ii                                               Medium
+729.my-calendar-i                                                Medium
+726.number-of-atoms                                              Hard  
+719.find-k-th-smallest-pair-distance                             Hard  
+689.maximum-sum-of-3-non-overlapping-subarrays                   Hard  
+687.longest-univalue-path                                        Easy  
+686.repeated-string-match                                        Easy  
+685.redundant-connection-ii                                      Hard  
+684.redundant-connection                                         Medium
+679.24-game                                                      Hard  
+676.implement-magic-dictionary                                   Medium
+668.kth-smallest-number-in-multiplication-table                  Hard  
+667.beautiful-arrangement-ii                                     Medium
+665.non-decreasing-array                                         Easy  
+659.split-array-into-consecutive-subsequences                    Medium
+658.find-k-closest-elements                                      Medium
+657.judge-route-circle                                           Easy  
+652.find-duplicate-subtrees                                      Medium
+643.maximum-average-subarray-i                                   Easy  
+638.shopping-offers                                              Medium
+587.erect-the-fence                                              Hard  
+583.delete-operation-for-two-strings                             Medium
+581.shortest-unsorted-continuous-subarray                        Easy  
+572.subtree-of-another-tree                                      Easy  
+560.subarray-sum-equals-k                                        Medium
+552.student-attendance-record-ii                                 Hard  
+551.student-attendance-record-i                                  Easy  
+543.diameter-of-binary-tree                                      Easy  
+542.01-matrix                                                    Medium
+541.reverse-string-ii                                            Easy  
+535.encode-and-decode-tinyurl                                    Medium
+530.minimum-absolute-difference-in-bst                           Easy  
+526.beautiful-arrangement                                        Medium
+524.longest-word-in-dictionary-through-deleting                  Medium
+522.longest-uncommon-subsequence-ii                              Medium
+521.longest-uncommon-subsequence-i                               Easy  
+520.detect-capital                                               Easy  
+514.freedom-trail                                                Hard  
+506.relative-ranks                                               Easy  
+503.next-greater-element-ii                                      Medium
+501.find-mode-in-binary-search-tree                              Easy  
+498.diagonal-traverse                                            Medium
+494.target-sum                                                   Medium
+493.reverse-pairs                                                Hard  
+486.predict-the-winner                                           Medium
+485.max-consecutive-ones                                         Easy  
+483.smallest-good-base                                           Hard  
+482.license-key-formatting                                       Easy  
+481.magical-string                                               Medium
+480.sliding-window-median                                        Hard  
+475.heaters                                                      Easy  
+474.ones-and-zeroes                                              Medium
+463.island-perimeter                                             Easy  
+460.lfu-cache                                                    Hard  
+459.repeated-substring-pattern                                   Easy  
+451.sort-characters-by-frequency                                 Medium
+448.find-all-numbers-disappeared-in-an-array                     Easy  
+447.number-of-boomerangs                                         Easy  
+421.maximum-xor-of-two-numbers-in-an-array                       Medium
+417.pacific-atlantic-water-flow                                  Medium
+415.add-strings                                                  Easy  
+409.longest-palindrome                                           Easy  
+407.trapping-rain-water-ii                                       Hard  
+406.queue-reconstruction-by-height                               Medium
+402.remove-k-digits                                              Medium
+401.binary-watch                                                 Easy  
+400.nth-digit                                                    Easy  
+399.evaluate-division                                            Medium
+397.integer-replacement                                          Medium
+394.decode-string                                                Medium
+393.utf-8-validation                                             Medium
+391.perfect-rectangle                                            Hard  
+389.find-the-difference                                          Easy  
+388.longest-absolute-file-path                                   Medium
+382.linked-list-random-node                                      Medium
+380.insert-delete-getrandom-o1                                   Medium
+378.kth-smallest-element-in-a-sorted-matrix                      Medium
+377.combination-sum-iv                                           Medium
+375.guess-number-higher-or-lower-ii                              Medium
+374.guess-number-higher-or-lower                                 Easy  
+373.find-k-pairs-with-smallest-sums                              Medium
+368.largest-divisible-subset                                     Medium
+363.max-sum-of-rectangle-no-larger-than-k                        Hard  
+357.count-numbers-with-unique-digits                             Medium
+354.russian-doll-envelopes                                       Hard  
+345.reverse-vowels-of-a-string                                   Easy  
+341.flatten-nested-list-iterator                                 Medium
+336.palindrome-pairs                                             Hard  
+332.reconstruct-itinerary                                        Medium
+331.verify-preorder-serialization-of-a-binary-tree               Medium
+330.patching-array                                               Hard  
+329.longest-increasing-path-in-a-matrix                          Hard  
+327.count-of-range-sum                                           Hard  
+326.power-of-three                                               Easy  
+324.wiggle-sort-ii                                               Medium
+321.create-maximum-number                                        Hard  
+318.maximum-product-of-word-lengths                              Medium
+316.remove-duplicate-letters                                     Hard  
+315.count-of-smaller-numbers-after-self                          Hard  
+313.super-ugly-number                                            Medium
+312.burst-balloons                                               Hard  
+310.minimum-height-trees                                         Medium
+309.best-time-to-buy-and-sell-stock-with-cooldown                Medium
+297.serialize-and-deserialize-binary-tree                        Hard  
+295.find-median-from-data-stream                                 Hard  
+289.game-of-life                                                 Medium
+284.peeking-iterator                                             Medium
+282.expression-add-operators                                     Hard  
+279.perfect-squares                                              Medium
+274.h-index                                                      Medium
+257.binary-tree-paths                                            Easy  
+240.search-a-2d-matrix-ii                                        Medium
+239.sliding-window-maximum                                       Hard  
+231.power-of-two                                                 Easy  
+230.kth-smallest-element-in-a-bst                                Medium
+228.summary-ranges                                               Medium
+224.basic-calculator                                             Hard  
+218.the-skyline-problem                                          Hard  
+214.shortest-palindrome                                          Hard  
+212.word-search-ii                                               Hard  
+208.implement-trie-prefix-tree                                   Medium
+200.number-of-islands                                            Medium
+173.binary-search-tree-iterator                                  Medium
+166.fraction-to-recurring-decimal                                Medium
+162.find-peak-element                                            Medium
+155.min-stack                                                    Easy  
+146.lru-cache                                                    Hard  
+140.word-break-ii                                                Hard  
+139.word-break                                                   Medium
+133.clone-graph                                                  Medium
+128.longest-consecutive-sequence                                 Hard  
+ 66.plus-one                                                     Easy  
+ 57.insert-interval                                              Hard  
+ 56.merge-intervals                                              Medium
+ 54.spiral-matrix                                                Medium
+ 50.powx-n                                                       Medium
+ 44.wildcard-matching                                            Hard  
+ 42.trapping-rain-water                                          Hard  
+ 31.next-permutation                                             Medium
+ 23.merge-k-sorted-lists                                         Hard  
+ 22.generate-parentheses                                         Medium
+ 20.valid-parentheses                                            Easy  
+ 17.letter-combinations-of-a-phone-number                        Medium
+ 10.regular-expression-matching                                  Hard  
+  4.median-of-two-sorted-arrays                                  Hard  

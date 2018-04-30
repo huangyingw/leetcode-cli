@@ -1,86 +1,86 @@
-      722.remove-comments                                              Medium (27.93 %)
-      672.bulb-switcher-ii                                             Medium (49.59 %)
-      654.maximum-binary-tree                                          Medium (70.03 %)
-      650.2-keys-keyboard                                              Medium (44.89 %)
-      591.tag-validator                                                Hard   (31.11 %)
-      567.permutation-in-string                                        Medium (36.34 %)
-      513.find-bottom-left-tree-value                                  Medium (56.10 %)
-      452.minimum-number-of-arrows-to-burst-balloons                   Medium (44.45 %)
-      445.add-two-numbers-ii                                           Medium (46.28 %)
-      443.string-compression                                           Easy   (36.00 %)
-      419.battleships-in-a-board                                       Medium (63.15 %)
-    ✔ 387.first-unique-character-in-a-string                           Easy   (47.15 %)
-    ✔ 365.water-and-jug-problem                                        Medium (28.04 %)
-    ✔ 300.longest-increasing-subsequence                               Medium (38.93 %)
-    ✔ 297.serialize-and-deserialize-binary-tree                        Hard   (35.19 %)
-    ✔ 273.integer-to-english-words                                     Hard   (22.78 %)
-    ✔ 268.missing-number                                               Easy   (45.20 %)
-    ✔ 258.add-digits                                                   Easy   (51.82 %)
-★   ✔ 238.product-of-array-except-self                                 Medium (50.35 %)
-    ✔ 237.delete-node-in-a-linked-list                                 Easy   (47.26 %)
-    ✔ 236.lowest-common-ancestor-of-a-binary-tree                      Medium (29.91 %)
-    ✔ 235.lowest-common-ancestor-of-a-binary-search-tree               Easy   (39.85 %)
-    ✔ 232.implement-queue-using-stacks                                 Easy   (38.19 %)
-    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)
-    ✔ 215.kth-largest-element-in-an-array                              Medium (40.77 %)
-    ✔ 213.house-robber-ii                                              Medium (34.63 %)
-    ✔ 212.word-search-ii                                               Hard   (24.91 %)
-    ✔ 208.implement-trie-prefix-tree                                   Medium (31.08 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 204.count-primes                                                 Easy   (26.50 %)
-    ✔ 200.number-of-islands                                            Medium (36.72 %)
-    ✔ 191.number-of-1-bits                                             Easy   (40.50 %)
-    ✔ 189.rotate-array                                                 Easy   (25.36 %)
-★   ✔ 174.dungeon-game                                                 Hard   (24.29 %)
-    ✔ 173.binary-search-tree-iterator                                  Medium (43.67 %)
-    ✔ 171.excel-sheet-column-number                                    Easy   (48.61 %)
-    ✔ 168.excel-sheet-column-title                                     Easy   (27.36 %)
-    ✔ 165.compare-version-numbers                                      Medium (20.87 %)
-    ✔ 162.find-peak-element                                            Medium (39.00 %)
-    ✔ 160.intersection-of-two-linked-lists                             Easy   (30.86 %)
-    ✔ 153.find-minimum-in-rotated-sorted-array                         Medium (40.93 %)
-    ✔ 151.reverse-words-in-a-string                                    Medium (15.63 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
-    ✔ 141.linked-list-cycle                                            Easy   (35.03 %)
-    ✔ 138.copy-list-with-random-pointer                                Medium (25.81 %)
-★   ✔ 125.valid-palindrome                                             Easy   (27.14 %)
-    ✔ 124.binary-tree-maximum-path-sum                                 Hard   (27.23 %)
-★   ✔ 121.best-time-to-buy-and-sell-stock                              Easy   (43.02 %)
-    ✔ 117.populating-next-right-pointers-in-each-node-ii               Medium (33.92 %)
-    ✔ 116.populating-next-right-pointers-in-each-node                  Medium (36.80 %)
-★   ✔ 114.flatten-binary-tree-to-linked-list                           Medium (36.70 %)
-    ✔ 112.path-sum                                                     Easy   (35.03 %)
-    ✔ 106.construct-binary-tree-from-inorder-and-postorder-traversal   Medium (33.82 %)
-    ✔ 103.binary-tree-zigzag-level-order-traversal                     Medium (36.90 %)
-★   ✔ 102.binary-tree-level-order-traversal                            Medium (42.77 %)
-    ✔ 101.symmetric-tree                                               Easy   (40.51 %)
-    ✔  98.validate-binary-search-tree                                  Medium (24.10 %)
-    ✔  94.binary-tree-inorder-traversal                                Medium (49.98 %)
-    ✔  91.decode-ways                                                  Medium (20.37 %)
-★   ✔  88.merge-sorted-array                                           Easy   (32.18 %)
-    ✔  79.word-search                                                  Medium (28.17 %)
-    ✔  75.sort-colors                                                  Medium (39.00 %)
-    ✔  73.set-matrix-zeroes                                            Medium (36.59 %)
-    ✔  71.simplify-path                                                Medium (26.38 %)
-★   ✔  56.merge-intervals                                              Medium (32.07 %)
-    ✔  55.jump-game                                                    Medium (29.56 %)
-    ✔  54.spiral-matrix                                                Medium (27.36 %)
-    ✔  53.maximum-subarray                                             Easy   (40.37 %)
-    ✔  48.rotate-image                                                 Medium (42.03 %)
-    ✔  47.permutations-ii                                              Medium (35.24 %)
-    ✔  46.permutations                                                 Medium (47.55 %)
-    ✔  33.search-in-rotated-sorted-array                               Medium (31.91 %)
-    ✔  28.implement-strstr                                             Easy   (29.03 %)
-    ✔  26.remove-duplicates-from-sorted-array                          Easy   (36.50 %)
-    ✔  25.reverse-nodes-in-k-group                                     Hard   (31.84 %)
-    ✔  24.swap-nodes-in-pairs                                          Medium (39.26 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
-★   ✔  21.merge-two-sorted-lists                                       Easy   (41.33 %)
-    ✔  20.valid-parentheses                                            Easy   (34.04 %)
-    ✔  15.3sum                                                         Medium (21.80 %)
-    ✔  13.roman-to-integer                                             Easy   (48.18 %)
-    ✔   8.string-to-integer-atoi                                       Medium (14.09 %)
-    ✔   5.longest-palindromic-substring                                Medium (25.34 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
-    ✔   2.add-two-numbers                                              Medium (28.69 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+722.remove-comments                                              Medium
+672.bulb-switcher-ii                                             Medium
+654.maximum-binary-tree                                          Medium
+650.2-keys-keyboard                                              Medium
+591.tag-validator                                                Hard  
+567.permutation-in-string                                        Medium
+513.find-bottom-left-tree-value                                  Medium
+452.minimum-number-of-arrows-to-burst-balloons                   Medium
+445.add-two-numbers-ii                                           Medium
+443.string-compression                                           Easy  
+419.battleships-in-a-board                                       Medium
+387.first-unique-character-in-a-string                           Easy  
+365.water-and-jug-problem                                        Medium
+300.longest-increasing-subsequence                               Medium
+297.serialize-and-deserialize-binary-tree                        Hard  
+273.integer-to-english-words                                     Hard  
+268.missing-number                                               Easy  
+258.add-digits                                                   Easy  
+238.product-of-array-except-self                                 Medium
+237.delete-node-in-a-linked-list                                 Easy  
+236.lowest-common-ancestor-of-a-binary-tree                      Medium
+235.lowest-common-ancestor-of-a-binary-search-tree               Easy  
+232.implement-queue-using-stacks                                 Easy  
+218.the-skyline-problem                                          Hard  
+215.kth-largest-element-in-an-array                              Medium
+213.house-robber-ii                                              Medium
+212.word-search-ii                                               Hard  
+208.implement-trie-prefix-tree                                   Medium
+206.reverse-linked-list                                          Easy  
+204.count-primes                                                 Easy  
+200.number-of-islands                                            Medium
+191.number-of-1-bits                                             Easy  
+189.rotate-array                                                 Easy  
+174.dungeon-game                                                 Hard  
+173.binary-search-tree-iterator                                  Medium
+171.excel-sheet-column-number                                    Easy  
+168.excel-sheet-column-title                                     Easy  
+165.compare-version-numbers                                      Medium
+162.find-peak-element                                            Medium
+160.intersection-of-two-linked-lists                             Easy  
+153.find-minimum-in-rotated-sorted-array                         Medium
+151.reverse-words-in-a-string                                    Medium
+146.lru-cache                                                    Hard  
+141.linked-list-cycle                                            Easy  
+138.copy-list-with-random-pointer                                Medium
+125.valid-palindrome                                             Easy  
+124.binary-tree-maximum-path-sum                                 Hard  
+121.best-time-to-buy-and-sell-stock                              Easy  
+117.populating-next-right-pointers-in-each-node-ii               Medium
+116.populating-next-right-pointers-in-each-node                  Medium
+114.flatten-binary-tree-to-linked-list                           Medium
+112.path-sum                                                     Easy  
+106.construct-binary-tree-from-inorder-and-postorder-traversal   Medium
+103.binary-tree-zigzag-level-order-traversal                     Medium
+102.binary-tree-level-order-traversal                            Medium
+101.symmetric-tree                                               Easy  
+ 98.validate-binary-search-tree                                  Medium
+ 94.binary-tree-inorder-traversal                                Medium
+ 91.decode-ways                                                  Medium
+ 88.merge-sorted-array                                           Easy  
+ 79.word-search                                                  Medium
+ 75.sort-colors                                                  Medium
+ 73.set-matrix-zeroes                                            Medium
+ 71.simplify-path                                                Medium
+ 56.merge-intervals                                              Medium
+ 55.jump-game                                                    Medium
+ 54.spiral-matrix                                                Medium
+ 53.maximum-subarray                                             Easy  
+ 48.rotate-image                                                 Medium
+ 47.permutations-ii                                              Medium
+ 46.permutations                                                 Medium
+ 33.search-in-rotated-sorted-array                               Medium
+ 28.implement-strstr                                             Easy  
+ 26.remove-duplicates-from-sorted-array                          Easy  
+ 25.reverse-nodes-in-k-group                                     Hard  
+ 24.swap-nodes-in-pairs                                          Medium
+ 23.merge-k-sorted-lists                                         Hard  
+ 21.merge-two-sorted-lists                                       Easy  
+ 20.valid-parentheses                                            Easy  
+ 15.3sum                                                         Medium
+ 13.roman-to-integer                                             Easy  
+  8.string-to-integer-atoi                                       Medium
+  5.longest-palindromic-substring                                Medium
+  4.median-of-two-sorted-arrays                                  Hard  
+  2.add-two-numbers                                              Medium
+  1.two-sum                                                      Easy  

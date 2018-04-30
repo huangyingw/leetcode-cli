@@ -1,5 +1,5 @@
-      547.friend-circles                                               Medium (49.15 %)
-    ✔ 349.intersection-of-two-arrays                                   Easy   (48.29 %)
-    ✔ 342.power-of-four                                                Easy   (39.21 %)
-    ✔ 289.game-of-life                                                 Medium (37.25 %)
-    ✔  44.wildcard-matching                                            Hard   (21.05 %)
+547.friend-circles                                               Medium
+349.intersection-of-two-arrays                                   Easy  
+342.power-of-four                                                Easy  
+289.game-of-life                                                 Medium
+ 44.wildcard-matching                                            Hard  

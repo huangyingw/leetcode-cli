@@ -1,39 +1,39 @@
-      730.count-different-palindromic-subsequences                     Hard   (35.37 %)
-      698.partition-to-k-equal-sum-subsets                             Medium (37.86 %)
-      671.second-minimum-node-in-a-binary-tree                         Easy   (41.81 %)
-      647.palindromic-substrings                                       Medium (54.71 %)
-      633.sum-of-square-numbers                                        Easy   (32.31 %)
-      605.can-place-flowers                                            Easy   (30.10 %)
-    ✔ 515.find-largest-value-in-each-tree-row                          Medium (55.49 %)
-    ✔ 464.can-i-win                                                    Medium (25.30 %)
-    ✔ 367.valid-perfect-square                                         Easy   (38.71 %)
-    ✔ 297.serialize-and-deserialize-binary-tree                        Hard   (35.19 %)
-★   ✔ 238.product-of-array-except-self                                 Medium (50.35 %)
-    ✔ 236.lowest-common-ancestor-of-a-binary-tree                      Medium (29.91 %)
-    ✔ 205.isomorphic-strings                                           Easy   (34.79 %)
-    ✔ 198.house-robber                                                 Easy   (40.01 %)
-    ✔ 187.repeated-dna-sequences                                       Medium (33.11 %)
-    ✔ 173.binary-search-tree-iterator                                  Medium (43.67 %)
-    ✔ 152.maximum-product-subarray                                     Medium (26.80 %)
-    ✔ 150.evaluate-reverse-polish-notation                             Medium (28.55 %)
-    ✔ 149.max-points-on-a-line                                         Hard   (15.19 %)
-    ✔ 127.word-ladder                                                  Medium (20.12 %)
-    ✔ 104.maximum-depth-of-binary-tree                                 Easy   (55.10 %)
-    ✔ 103.binary-tree-zigzag-level-order-traversal                     Medium (36.90 %)
-★   ✔ 102.binary-tree-level-order-traversal                            Medium (42.77 %)
-    ✔ 101.symmetric-tree                                               Easy   (40.51 %)
-    ✔  76.minimum-window-substring                                     Hard   (26.89 %)
-    ✔  68.text-justification                                           Hard   (20.08 %)
-    ✔  65.valid-number                                                 Hard   (12.94 %)
-    ✔  57.insert-interval                                              Hard   (29.06 %)
-★   ✔  56.merge-intervals                                              Medium (32.07 %)
-    ✔  53.maximum-subarray                                             Easy   (40.37 %)
-    ✔  50.powx-n                                                       Medium (26.09 %)
-    ✔  47.permutations-ii                                              Medium (35.24 %)
-    ✔  46.permutations                                                 Medium (47.55 %)
-    ✔  34.search-for-a-range                                           Medium (31.63 %)
-    ✔  33.search-in-rotated-sorted-array                               Medium (31.91 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
-★   ✔  21.merge-two-sorted-lists                                       Easy   (41.33 %)
-    ✔  18.4sum                                                         Medium (27.57 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+730.count-different-palindromic-subsequences                     Hard  
+698.partition-to-k-equal-sum-subsets                             Medium
+671.second-minimum-node-in-a-binary-tree                         Easy  
+647.palindromic-substrings                                       Medium
+633.sum-of-square-numbers                                        Easy  
+605.can-place-flowers                                            Easy  
+515.find-largest-value-in-each-tree-row                          Medium
+464.can-i-win                                                    Medium
+367.valid-perfect-square                                         Easy  
+297.serialize-and-deserialize-binary-tree                        Hard  
+238.product-of-array-except-self                                 Medium
+236.lowest-common-ancestor-of-a-binary-tree                      Medium
+205.isomorphic-strings                                           Easy  
+198.house-robber                                                 Easy  
+187.repeated-dna-sequences                                       Medium
+173.binary-search-tree-iterator                                  Medium
+152.maximum-product-subarray                                     Medium
+150.evaluate-reverse-polish-notation                             Medium
+149.max-points-on-a-line                                         Hard  
+127.word-ladder                                                  Medium
+104.maximum-depth-of-binary-tree                                 Easy  
+103.binary-tree-zigzag-level-order-traversal                     Medium
+102.binary-tree-level-order-traversal                            Medium
+101.symmetric-tree                                               Easy  
+ 76.minimum-window-substring                                     Hard  
+ 68.text-justification                                           Hard  
+ 65.valid-number                                                 Hard  
+ 57.insert-interval                                              Hard  
+ 56.merge-intervals                                              Medium
+ 53.maximum-subarray                                             Easy  
+ 50.powx-n                                                       Medium
+ 47.permutations-ii                                              Medium
+ 46.permutations                                                 Medium
+ 34.search-for-a-range                                           Medium
+ 33.search-in-rotated-sorted-array                               Medium
+ 23.merge-k-sorted-lists                                         Hard  
+ 21.merge-two-sorted-lists                                       Easy  
+ 18.4sum                                                         Medium
+  1.two-sum                                                      Easy  

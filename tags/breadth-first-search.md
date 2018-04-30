@@ -1,24 +1,24 @@
-      690.employee-importance                                          Easy   (51.69 %)
-      675.cut-off-trees-for-golf-event                                 Hard   (27.02 %)
-      542.01-matrix                                                    Medium (33.04 %)
-      529.minesweeper                                                  Medium (49.49 %)
-    ✔ 515.find-largest-value-in-each-tree-row                          Medium (55.49 %)
-      513.find-bottom-left-tree-value                                  Medium (56.10 %)
-      417.pacific-atlantic-water-flow                                  Medium (34.81 %)
-      407.trapping-rain-water-ii                                       Hard   (37.86 %)
-    ✔ 310.minimum-height-trees                                         Medium (28.99 %)
-    ✔ 301.remove-invalid-parentheses                                   Hard   (35.86 %)
-    ✔ 279.perfect-squares                                              Medium (37.79 %)
-    ✔ 210.course-schedule-ii                                           Medium (30.36 %)
-    ✔ 207.course-schedule                                              Medium (33.81 %)
-    ✔ 200.number-of-islands                                            Medium (36.72 %)
-    ✔ 199.binary-tree-right-side-view                                  Medium (42.59 %)
-    ✔ 133.clone-graph                                                  Medium (25.18 %)
-★   ✔ 130.surrounded-regions                                           Medium (19.74 %)
-    ✔ 127.word-ladder                                                  Medium (20.12 %)
-    ✔ 126.word-ladder-ii                                               Hard   (14.92 %)
-    ✔ 111.minimum-depth-of-binary-tree                                 Easy   (33.60 %)
-    ✔ 107.binary-tree-level-order-traversal-ii                         Easy   (42.33 %)
-    ✔ 103.binary-tree-zigzag-level-order-traversal                     Medium (36.90 %)
-★   ✔ 102.binary-tree-level-order-traversal                            Medium (42.77 %)
-    ✔ 101.symmetric-tree                                               Easy   (40.51 %)
+690.employee-importance                                          Easy  
+675.cut-off-trees-for-golf-event                                 Hard  
+542.01-matrix                                                    Medium
+529.minesweeper                                                  Medium
+515.find-largest-value-in-each-tree-row                          Medium
+513.find-bottom-left-tree-value                                  Medium
+417.pacific-atlantic-water-flow                                  Medium
+407.trapping-rain-water-ii                                       Hard  
+310.minimum-height-trees                                         Medium
+301.remove-invalid-parentheses                                   Hard  
+279.perfect-squares                                              Medium
+210.course-schedule-ii                                           Medium
+207.course-schedule                                              Medium
+200.number-of-islands                                            Medium
+199.binary-tree-right-side-view                                  Medium
+133.clone-graph                                                  Medium
+130.surrounded-regions                                           Medium
+127.word-ladder                                                  Medium
+126.word-ladder-ii                                               Hard  
+111.minimum-depth-of-binary-tree                                 Easy  
+107.binary-tree-level-order-traversal-ii                         Easy  
+103.binary-tree-zigzag-level-order-traversal                     Medium
+102.binary-tree-level-order-traversal                            Medium
+101.symmetric-tree                                               Easy  

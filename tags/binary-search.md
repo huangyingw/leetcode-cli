@@ -1,41 +1,41 @@
-      743.network-delay-time                                           Medium (35.10 %)
-      719.find-k-th-smallest-pair-distance                             Hard   (27.24 %)
-      718.maximum-length-of-repeated-subarray                          Medium (41.53 %)
-      668.kth-smallest-number-in-multiplication-table                  Hard   (40.12 %)
-      658.find-k-closest-elements                                      Medium (34.86 %)
-      483.smallest-good-base                                           Hard   (33.85 %)
-      475.heaters                                                      Easy   (29.76 %)
-      454.4sum-ii                                                      Medium (47.61 %)
-      441.arranging-coins                                              Easy   (36.47 %)
-      436.find-right-interval                                          Medium (41.59 %)
-      410.split-array-largest-sum                                      Hard   (39.38 %)
-    ✔ 392.is-subsequence                                               Medium (44.68 %)
-    ✔ 378.kth-smallest-element-in-a-sorted-matrix                      Medium (45.51 %)
-    ✔ 374.guess-number-higher-or-lower                                 Easy   (36.82 %)
-    ✔ 367.valid-perfect-square                                         Easy   (38.71 %)
-    ✔ 363.max-sum-of-rectangle-no-larger-than-k                        Hard   (33.83 %)
-    ✔ 354.russian-doll-envelopes                                       Hard   (32.65 %)
-    ✔ 350.intersection-of-two-arrays-ii                                Easy   (44.29 %)
-    ✔ 349.intersection-of-two-arrays                                   Easy   (48.29 %)
-    ✔ 300.longest-increasing-subsequence                               Medium (38.93 %)
-    ✔ 287.find-the-duplicate-number                                    Medium (44.37 %)
-    ✔ 278.first-bad-version                                            Easy   (25.93 %)
-    ✔ 275.h-index-ii                                                   Medium (34.91 %)
-    ✔ 240.search-a-2d-matrix-ii                                        Medium (39.09 %)
-    ✔ 230.kth-smallest-element-in-a-bst                                Medium (45.38 %)
-    ✔ 222.count-complete-tree-nodes                                    Medium (27.73 %)
-    ✔ 209.minimum-size-subarray-sum                                    Medium (32.21 %)
-★   ✔ 174.dungeon-game                                                 Hard   (24.29 %)
-    ✔ 167.two-sum-ii-input-array-is-sorted                             Easy   (47.27 %)
-    ✔ 162.find-peak-element                                            Medium (39.00 %)
-    ✔ 154.find-minimum-in-rotated-sorted-array-ii                      Hard   (37.90 %)
-    ✔ 153.find-minimum-in-rotated-sorted-array                         Medium (40.93 %)
-    ✔  81.search-in-rotated-sorted-array-ii                            Medium (32.66 %)
-    ✔  74.search-a-2d-matrix                                           Medium (34.64 %)
-    ✔  69.sqrtx                                                        Easy   (28.93 %)
-    ✔  50.powx-n                                                       Medium (26.09 %)
-    ✔  35.search-insert-position                                       Easy   (40.03 %)
-    ✔  34.search-for-a-range                                           Medium (31.63 %)
-    ✔  33.search-in-rotated-sorted-array                               Medium (31.91 %)
-    ✔  29.divide-two-integers                                          Medium (15.73 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
+743.network-delay-time                                           Medium
+719.find-k-th-smallest-pair-distance                             Hard  
+718.maximum-length-of-repeated-subarray                          Medium
+668.kth-smallest-number-in-multiplication-table                  Hard  
+658.find-k-closest-elements                                      Medium
+483.smallest-good-base                                           Hard  
+475.heaters                                                      Easy  
+454.4sum-ii                                                      Medium
+441.arranging-coins                                              Easy  
+436.find-right-interval                                          Medium
+410.split-array-largest-sum                                      Hard  
+392.is-subsequence                                               Medium
+378.kth-smallest-element-in-a-sorted-matrix                      Medium
+374.guess-number-higher-or-lower                                 Easy  
+367.valid-perfect-square                                         Easy  
+363.max-sum-of-rectangle-no-larger-than-k                        Hard  
+354.russian-doll-envelopes                                       Hard  
+350.intersection-of-two-arrays-ii                                Easy  
+349.intersection-of-two-arrays                                   Easy  
+300.longest-increasing-subsequence                               Medium
+287.find-the-duplicate-number                                    Medium
+278.first-bad-version                                            Easy  
+275.h-index-ii                                                   Medium
+240.search-a-2d-matrix-ii                                        Medium
+230.kth-smallest-element-in-a-bst                                Medium
+222.count-complete-tree-nodes                                    Medium
+209.minimum-size-subarray-sum                                    Medium
+174.dungeon-game                                                 Hard  
+167.two-sum-ii-input-array-is-sorted                             Easy  
+162.find-peak-element                                            Medium
+154.find-minimum-in-rotated-sorted-array-ii                      Hard  
+153.find-minimum-in-rotated-sorted-array                         Medium
+ 81.search-in-rotated-sorted-array-ii                            Medium
+ 74.search-a-2d-matrix                                           Medium
+ 69.sqrtx                                                        Easy  
+ 50.powx-n                                                       Medium
+ 35.search-insert-position                                       Easy  
+ 34.search-for-a-range                                           Medium
+ 33.search-in-rotated-sorted-array                               Medium
+ 29.divide-two-integers                                          Medium
+  4.median-of-two-sorted-arrays                                  Hard  

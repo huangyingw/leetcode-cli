@@ -1,7 +1,7 @@
-      732.my-calendar-iii                                              Hard   (50.70 %)
-      715.range-module                                                 Hard   (31.30 %)
-      699.falling-squares                                              Hard   (37.42 %)
-      493.reverse-pairs                                                Hard   (20.71 %)
-    ✔ 315.count-of-smaller-numbers-after-self                          Hard   (35.02 %)
-    ✔ 307.range-sum-query-mutable                                      Medium (22.67 %)
-    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)
+732.my-calendar-iii                                              Hard  
+715.range-module                                                 Hard  
+699.falling-squares                                              Hard  
+493.reverse-pairs                                                Hard  
+315.count-of-smaller-numbers-after-self                          Hard  
+307.range-sum-query-mutable                                      Medium
+218.the-skyline-problem                                          Hard  

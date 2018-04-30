@@ -1,16 +1,16 @@
-      524.longest-word-in-dictionary-through-deleting                  Medium (43.30 %)
-    ✔ 350.intersection-of-two-arrays-ii                                Easy   (44.29 %)
-    ✔ 349.intersection-of-two-arrays                                   Easy   (48.29 %)
-    ✔ 329.longest-increasing-path-in-a-matrix                          Hard   (37.44 %)
-    ✔ 324.wiggle-sort-ii                                               Medium (26.45 %)
-    ✔ 274.h-index                                                      Medium (33.76 %)
-    ✔ 242.valid-anagram                                                Easy   (47.62 %)
-    ✔ 210.course-schedule-ii                                           Medium (30.36 %)
-    ✔ 207.course-schedule                                              Medium (33.81 %)
-    ✔ 179.largest-number                                               Medium (23.54 %)
-    ✔ 164.maximum-gap                                                  Hard   (30.09 %)
-    ✔ 148.sort-list                                                    Medium (29.95 %)
-    ✔ 147.insertion-sort-list                                          Medium (33.92 %)
-    ✔  75.sort-colors                                                  Medium (39.00 %)
-    ✔  57.insert-interval                                              Hard   (29.06 %)
-★   ✔  56.merge-intervals                                              Medium (32.07 %)
+524.longest-word-in-dictionary-through-deleting                  Medium
+350.intersection-of-two-arrays-ii                                Easy  
+349.intersection-of-two-arrays                                   Easy  
+329.longest-increasing-path-in-a-matrix                          Hard  
+324.wiggle-sort-ii                                               Medium
+274.h-index                                                      Medium
+242.valid-anagram                                                Easy  
+210.course-schedule-ii                                           Medium
+207.course-schedule                                              Medium
+179.largest-number                                               Medium
+164.maximum-gap                                                  Hard  
+148.sort-list                                                    Medium
+147.insertion-sort-list                                          Medium
+ 75.sort-colors                                                  Medium
+ 57.insert-interval                                              Hard  
+ 56.merge-intervals                                              Medium

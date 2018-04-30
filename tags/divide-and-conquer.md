@@ -1,14 +1,14 @@
-      514.freedom-trail                                                Hard   (39.16 %)
-      493.reverse-pairs                                                Hard   (20.71 %)
-    ✔ 327.count-of-range-sum                                           Hard   (30.69 %)
-    ✔ 315.count-of-smaller-numbers-after-self                          Hard   (35.02 %)
-    ✔ 312.burst-balloons                                               Hard   (43.74 %)
-    ✔ 282.expression-add-operators                                     Hard   (30.64 %)
-    ✔ 241.different-ways-to-add-parentheses                            Medium (46.20 %)
-    ✔ 240.search-a-2d-matrix-ii                                        Medium (39.09 %)
-    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)
-    ✔ 215.kth-largest-element-in-an-array                              Medium (40.77 %)
-    ✔ 169.majority-element                                             Easy   (48.10 %)
-    ✔  53.maximum-subarray                                             Easy   (40.37 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
+514.freedom-trail                                                Hard  
+493.reverse-pairs                                                Hard  
+327.count-of-range-sum                                           Hard  
+315.count-of-smaller-numbers-after-self                          Hard  
+312.burst-balloons                                               Hard  
+282.expression-add-operators                                     Hard  
+241.different-ways-to-add-parentheses                            Medium
+240.search-a-2d-matrix-ii                                        Medium
+218.the-skyline-problem                                          Hard  
+215.kth-largest-element-in-an-array                              Medium
+169.majority-element                                             Easy  
+ 53.maximum-subarray                                             Easy  
+ 23.merge-k-sorted-lists                                         Hard  
+  4.median-of-two-sorted-arrays                                  Hard  

@@ -1,23 +1,23 @@
-      738.monotone-increasing-digits                                   Medium (41.01 %)
-      714.best-time-to-buy-and-sell-stock-with-transaction-fee         Medium (45.82 %)
-      659.split-array-into-consecutive-subsequences                    Medium (37.05 %)
-      649.dota2-senate                                                 Medium (36.78 %)
-      630.course-schedule-iii                                          Hard   (29.43 %)
-      621.task-scheduler                                               Medium (42.43 %)
-      502.ipo                                                          Hard   (36.50 %)
-      455.assign-cookies                                               Easy   (47.28 %)
-      452.minimum-number-of-arrows-to-burst-balloons                   Medium (44.45 %)
-      435.non-overlapping-intervals                                    Medium (41.21 %)
-    ✔ 406.queue-reconstruction-by-height                               Medium (56.39 %)
-    ✔ 402.remove-k-digits                                              Medium (25.80 %)
-    ✔ 392.is-subsequence                                               Medium (44.68 %)
-★   ✔ 376.wiggle-subsequence                                           Medium (36.12 %)
-    ✔ 330.patching-array                                               Hard   (32.70 %)
-    ✔ 321.create-maximum-number                                        Hard   (24.85 %)
-    ✔ 316.remove-duplicate-letters                                     Hard   (30.47 %)
-    ✔ 135.candy                                                        Hard   (25.31 %)
-    ✔ 134.gas-station                                                  Medium (30.07 %)
-★   ✔ 122.best-time-to-buy-and-sell-stock-ii                           Easy   (47.78 %)
-    ✔  55.jump-game                                                    Medium (29.56 %)
-    ✔  45.jump-game-ii                                                 Hard   (26.10 %)
-    ✔  44.wildcard-matching                                            Hard   (21.05 %)
+738.monotone-increasing-digits                                   Medium
+714.best-time-to-buy-and-sell-stock-with-transaction-fee         Medium
+659.split-array-into-consecutive-subsequences                    Medium
+649.dota2-senate                                                 Medium
+630.course-schedule-iii                                          Hard  
+621.task-scheduler                                               Medium
+502.ipo                                                          Hard  
+455.assign-cookies                                               Easy  
+452.minimum-number-of-arrows-to-burst-balloons                   Medium
+435.non-overlapping-intervals                                    Medium
+406.queue-reconstruction-by-height                               Medium
+402.remove-k-digits                                              Medium
+392.is-subsequence                                               Medium
+376.wiggle-subsequence                                           Medium
+330.patching-array                                               Hard  
+321.create-maximum-number                                        Hard  
+316.remove-duplicate-letters                                     Hard  
+135.candy                                                        Hard  
+134.gas-station                                                  Medium
+122.best-time-to-buy-and-sell-stock-ii                           Easy  
+ 55.jump-game                                                    Medium
+ 45.jump-game-ii                                                 Hard  
+ 44.wildcard-matching                                            Hard  

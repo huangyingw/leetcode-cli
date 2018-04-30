@@ -1,19 +1,19 @@
-      443.string-compression                                           Easy   (36.00 %)
-      403.frog-jump                                                    Hard   (32.64 %)
-    ✔ 402.remove-k-digits                                              Medium (25.80 %)
-    ✔ 377.combination-sum-iv                                           Medium (42.80 %)
-    ✔ 312.burst-balloons                                               Hard   (43.74 %)
-    ✔ 289.game-of-life                                                 Medium (37.25 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 155.min-stack                                                    Easy   (31.37 %)
-    ✔ 151.reverse-words-in-a-string                                    Medium (15.63 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
-    ✔ 140.word-break-ii                                                Hard   (24.60 %)
-    ✔ 127.word-ladder                                                  Medium (20.12 %)
-    ✔  96.unique-binary-search-trees                                   Medium (42.04 %)
-    ✔  76.minimum-window-substring                                     Hard   (26.89 %)
-    ✔  44.wildcard-matching                                            Hard   (21.05 %)
-    ✔  40.combination-sum-ii                                           Medium (36.12 %)
-    ✔  39.combination-sum                                              Medium (41.63 %)
-    ✔  37.sudoku-solver                                                Hard   (32.21 %)
-    ✔  36.valid-sudoku                                                 Medium (37.75 %)
+443.string-compression                                           Easy  
+403.frog-jump                                                    Hard  
+402.remove-k-digits                                              Medium
+377.combination-sum-iv                                           Medium
+312.burst-balloons                                               Hard  
+289.game-of-life                                                 Medium
+206.reverse-linked-list                                          Easy  
+155.min-stack                                                    Easy  
+151.reverse-words-in-a-string                                    Medium
+146.lru-cache                                                    Hard  
+140.word-break-ii                                                Hard  
+127.word-ladder                                                  Medium
+ 96.unique-binary-search-trees                                   Medium
+ 76.minimum-window-substring                                     Hard  
+ 44.wildcard-matching                                            Hard  
+ 40.combination-sum-ii                                           Medium
+ 39.combination-sum                                              Medium
+ 37.sudoku-solver                                                Hard  
+ 36.valid-sudoku                                                 Medium

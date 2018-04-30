@@ -1,72 +1,72 @@
-      736.parse-lisp-expression                                        Hard   (42.53 %)
-      730.count-different-palindromic-subsequences                     Hard   (35.37 %)
-      722.remove-comments                                              Medium (27.93 %)
-      696.count-binary-substrings                                      Easy   (50.76 %)
-      686.repeated-string-match                                        Easy   (32.04 %)
-      680.valid-palindrome-ii                                          Easy   (32.26 %)
-      678.valid-parenthesis-string                                     Medium (29.58 %)
-      657.judge-route-circle                                           Easy   (68.53 %)
-      647.palindromic-substrings                                       Medium (54.71 %)
-      632.smallest-range                                               Hard   (41.82 %)
-      609.find-duplicate-file-in-system                                Medium (52.06 %)
-      606.construct-string-from-binary-tree                            Easy   (49.70 %)
-      591.tag-validator                                                Hard   (31.11 %)
-      583.delete-operation-for-two-strings                             Medium (44.39 %)
-      564.find-the-closest-palindrome                                  Hard   (17.15 %)
-      557.reverse-words-in-a-string-iii                                Easy   (60.18 %)
-      556.next-greater-element-iii                                     Medium (28.87 %)
-      553.optimal-division                                             Medium (55.19 %)
-    ✔ 551.student-attendance-record-i                                  Easy   (44.63 %)
-      541.reverse-string-ii                                            Easy   (43.91 %)
-      539.minimum-time-difference                                      Medium (46.11 %)
-      537.complex-number-multiplication                                Medium (63.74 %)
-      522.longest-uncommon-subsequence-ii                              Medium (31.97 %)
-      521.longest-uncommon-subsequence-i                               Easy   (55.73 %)
-      520.detect-capital                                               Easy   (51.91 %)
-      468.validate-ip-address                                          Medium (20.62 %)
-      459.repeated-substring-pattern                                   Easy   (38.21 %)
-      443.string-compression                                           Easy   (36.00 %)
-      434.number-of-segments-in-a-string                               Easy   (36.57 %)
-    ✔ 387.first-unique-character-in-a-string                           Easy   (47.15 %)
-    ✔ 385.mini-parser                                                  Medium (30.86 %)
-    ✔ 383.ransom-note                                                  Easy   (47.85 %)
-    ✔ 345.reverse-vowels-of-a-string                                   Easy   (39.30 %)
-    ✔ 344.reverse-string                                               Easy   (60.40 %)
-    ✔ 336.palindrome-pairs                                             Hard   (27.23 %)
-    ✔ 273.integer-to-english-words                                     Hard   (22.78 %)
-    ✔ 227.basic-calculator-ii                                          Medium (30.18 %)
-    ✔ 214.shortest-palindrome                                          Hard   (25.19 %)
-    ✔ 165.compare-version-numbers                                      Medium (20.87 %)
-    ✔ 151.reverse-words-in-a-string                                    Medium (15.63 %)
-    ✔ 126.word-ladder-ii                                               Hard   (14.92 %)
-★   ✔ 125.valid-palindrome                                             Easy   (27.14 %)
-    ✔ 115.distinct-subsequences                                        Hard   (32.12 %)
-★   ✔  97.interleaving-string                                          Hard   (25.28 %)
-    ✔  93.restore-ip-addresses                                         Medium (28.53 %)
-    ✔  91.decode-ways                                                  Medium (20.37 %)
-    ✔  87.scramble-string                                              Hard   (29.76 %)
-    ✔  76.minimum-window-substring                                     Hard   (26.89 %)
-    ✔  72.edit-distance                                                Hard   (32.65 %)
-    ✔  71.simplify-path                                                Medium (26.38 %)
-    ✔  68.text-justification                                           Hard   (20.08 %)
-    ✔  67.add-binary                                                   Easy   (34.17 %)
-    ✔  65.valid-number                                                 Hard   (12.94 %)
-    ✔  58.length-of-last-word                                          Easy   (32.06 %)
-    ✔  49.group-anagrams                                               Medium (38.71 %)
-    ✔  44.wildcard-matching                                            Hard   (21.05 %)
-    ✔  43.multiply-strings                                             Medium (28.06 %)
-    ✔  38.count-and-say                                                Easy   (36.87 %)
-    ✔  32.longest-valid-parentheses                                    Hard   (23.22 %)
-    ✔  30.substring-with-concatenation-of-all-words                    Hard   (22.27 %)
-    ✔  28.implement-strstr                                             Easy   (29.03 %)
-    ✔  22.generate-parentheses                                         Medium (48.24 %)
-    ✔  20.valid-parentheses                                            Easy   (34.04 %)
-    ✔  17.letter-combinations-of-a-phone-number                        Medium (36.63 %)
-    ✔  14.longest-common-prefix                                        Easy   (31.61 %)
-    ✔  13.roman-to-integer                                             Easy   (48.18 %)
-    ✔  12.integer-to-roman                                             Medium (46.32 %)
-    ✔  10.regular-expression-matching                                  Hard   (24.33 %)
-    ✔   8.string-to-integer-atoi                                       Medium (14.09 %)
-    ✔   6.zigzag-conversion                                            Medium (27.41 %)
-    ✔   5.longest-palindromic-substring                                Medium (25.34 %)
-    ✔   3.longest-substring-without-repeating-characters               Medium (24.72 %)
+736.parse-lisp-expression                                        Hard  
+730.count-different-palindromic-subsequences                     Hard  
+722.remove-comments                                              Medium
+696.count-binary-substrings                                      Easy  
+686.repeated-string-match                                        Easy  
+680.valid-palindrome-ii                                          Easy  
+678.valid-parenthesis-string                                     Medium
+657.judge-route-circle                                           Easy  
+647.palindromic-substrings                                       Medium
+632.smallest-range                                               Hard  
+609.find-duplicate-file-in-system                                Medium
+606.construct-string-from-binary-tree                            Easy  
+591.tag-validator                                                Hard  
+583.delete-operation-for-two-strings                             Medium
+564.find-the-closest-palindrome                                  Hard  
+557.reverse-words-in-a-string-iii                                Easy  
+556.next-greater-element-iii                                     Medium
+553.optimal-division                                             Medium
+551.student-attendance-record-i                                  Easy  
+541.reverse-string-ii                                            Easy  
+539.minimum-time-difference                                      Medium
+537.complex-number-multiplication                                Medium
+522.longest-uncommon-subsequence-ii                              Medium
+521.longest-uncommon-subsequence-i                               Easy  
+520.detect-capital                                               Easy  
+468.validate-ip-address                                          Medium
+459.repeated-substring-pattern                                   Easy  
+443.string-compression                                           Easy  
+434.number-of-segments-in-a-string                               Easy  
+387.first-unique-character-in-a-string                           Easy  
+385.mini-parser                                                  Medium
+383.ransom-note                                                  Easy  
+345.reverse-vowels-of-a-string                                   Easy  
+344.reverse-string                                               Easy  
+336.palindrome-pairs                                             Hard  
+273.integer-to-english-words                                     Hard  
+227.basic-calculator-ii                                          Medium
+214.shortest-palindrome                                          Hard  
+165.compare-version-numbers                                      Medium
+151.reverse-words-in-a-string                                    Medium
+126.word-ladder-ii                                               Hard  
+125.valid-palindrome                                             Easy  
+115.distinct-subsequences                                        Hard  
+ 97.interleaving-string                                          Hard  
+ 93.restore-ip-addresses                                         Medium
+ 91.decode-ways                                                  Medium
+ 87.scramble-string                                              Hard  
+ 76.minimum-window-substring                                     Hard  
+ 72.edit-distance                                                Hard  
+ 71.simplify-path                                                Medium
+ 68.text-justification                                           Hard  
+ 67.add-binary                                                   Easy  
+ 65.valid-number                                                 Hard  
+ 58.length-of-last-word                                          Easy  
+ 49.group-anagrams                                               Medium
+ 44.wildcard-matching                                            Hard  
+ 43.multiply-strings                                             Medium
+ 38.count-and-say                                                Easy  
+ 32.longest-valid-parentheses                                    Hard  
+ 30.substring-with-concatenation-of-all-words                    Hard  
+ 28.implement-strstr                                             Easy  
+ 22.generate-parentheses                                         Medium
+ 20.valid-parentheses                                            Easy  
+ 17.letter-combinations-of-a-phone-number                        Medium
+ 14.longest-common-prefix                                        Easy  
+ 13.roman-to-integer                                             Easy  
+ 12.integer-to-roman                                             Medium
+ 10.regular-expression-matching                                  Hard  
+  8.string-to-integer-atoi                                       Medium
+  6.zigzag-conversion                                            Medium
+  5.longest-palindromic-substring                                Medium
+  3.longest-substring-without-repeating-characters               Medium

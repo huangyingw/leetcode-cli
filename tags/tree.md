@@ -1,68 +1,68 @@
-      732.my-calendar-iii                                              Hard   (50.70 %)
-      715.range-module                                                 Hard   (31.30 %)
-      699.falling-squares                                              Hard   (37.42 %)
-      687.longest-univalue-path                                        Easy   (32.88 %)
-      685.redundant-connection-ii                                      Hard   (27.81 %)
-      684.redundant-connection                                         Medium (43.91 %)
-      671.second-minimum-node-in-a-binary-tree                         Easy   (41.81 %)
-      669.trim-a-binary-search-tree                                    Easy   (58.14 %)
-      662.maximum-width-of-binary-tree                                 Medium (38.07 %)
-      655.print-binary-tree                                            Medium (49.17 %)
-      654.maximum-binary-tree                                          Medium (70.03 %)
-      653.two-sum-iv-input-is-a-bst                                    Easy   (50.06 %)
-      652.find-duplicate-subtrees                                      Medium (36.98 %)
-      637.average-of-levels-in-binary-tree                             Easy   (55.87 %)
-      623.add-one-row-to-tree                                          Medium (46.12 %)
-      617.merge-two-binary-trees                                       Easy   (67.55 %)
-      606.construct-string-from-binary-tree                            Easy   (49.70 %)
-      572.subtree-of-another-tree                                      Easy   (40.20 %)
-      563.binary-tree-tilt                                             Easy   (47.10 %)
-      543.diameter-of-binary-tree                                      Easy   (44.91 %)
-      538.convert-bst-to-greater-tree                                  Easy   (48.62 %)
-    ✔ 515.find-largest-value-in-each-tree-row                          Medium (55.49 %)
-      513.find-bottom-left-tree-value                                  Medium (56.10 %)
-    ✔ 508.most-frequent-subtree-sum                                    Medium (52.26 %)
-      501.find-mode-in-binary-search-tree                              Easy   (37.56 %)
-      493.reverse-pairs                                                Hard   (20.71 %)
-    ✔ 450.delete-node-in-a-bst                                         Medium (37.78 %)
-      449.serialize-and-deserialize-bst                                Medium (43.07 %)
-      437.path-sum-iii                                                 Easy   (40.17 %)
-    ✔ 404.sum-of-left-leaves                                           Easy   (47.57 %)
-    ✔ 337.house-robber-iii                                             Medium (44.78 %)
-    ✔ 315.count-of-smaller-numbers-after-self                          Hard   (35.02 %)
-    ✔ 307.range-sum-query-mutable                                      Medium (22.67 %)
-    ✔ 297.serialize-and-deserialize-binary-tree                        Hard   (35.19 %)
-★   ✔ 257.binary-tree-paths                                            Easy   (41.43 %)
-    ✔ 236.lowest-common-ancestor-of-a-binary-tree                      Medium (29.91 %)
-    ✔ 235.lowest-common-ancestor-of-a-binary-search-tree               Easy   (39.85 %)
-    ✔ 230.kth-smallest-element-in-a-bst                                Medium (45.38 %)
-    ✔ 226.invert-binary-tree                                           Easy   (53.45 %)
-    ✔ 222.count-complete-tree-nodes                                    Medium (27.73 %)
-    ✔ 218.the-skyline-problem                                          Hard   (29.12 %)
-    ✔ 199.binary-tree-right-side-view                                  Medium (42.59 %)
-    ✔ 173.binary-search-tree-iterator                                  Medium (43.67 %)
-    ✔ 145.binary-tree-postorder-traversal                              Hard   (42.45 %)
-★   ✔ 144.binary-tree-preorder-traversal                               Medium (47.01 %)
-    ✔ 129.sum-root-to-leaf-numbers                                     Medium (37.93 %)
-    ✔ 124.binary-tree-maximum-path-sum                                 Hard   (27.23 %)
-    ✔ 117.populating-next-right-pointers-in-each-node-ii               Medium (33.92 %)
-    ✔ 116.populating-next-right-pointers-in-each-node                  Medium (36.80 %)
-★   ✔ 114.flatten-binary-tree-to-linked-list                           Medium (36.70 %)
-    ✔ 113.path-sum-ii                                                  Medium (35.84 %)
-    ✔ 112.path-sum                                                     Easy   (35.03 %)
-    ✔ 111.minimum-depth-of-binary-tree                                 Easy   (33.60 %)
-    ✔ 110.balanced-binary-tree                                         Easy   (38.51 %)
-    ✔ 108.convert-sorted-array-to-binary-search-tree                   Easy   (44.78 %)
-    ✔ 107.binary-tree-level-order-traversal-ii                         Easy   (42.33 %)
-    ✔ 106.construct-binary-tree-from-inorder-and-postorder-traversal   Medium (33.82 %)
-    ✔ 105.construct-binary-tree-from-preorder-and-inorder-traversal    Medium (34.38 %)
-    ✔ 104.maximum-depth-of-binary-tree                                 Easy   (55.10 %)
-    ✔ 103.binary-tree-zigzag-level-order-traversal                     Medium (36.90 %)
-★   ✔ 102.binary-tree-level-order-traversal                            Medium (42.77 %)
-    ✔ 101.symmetric-tree                                               Easy   (40.51 %)
-    ✔ 100.same-tree                                                    Easy   (47.87 %)
-    ✔  99.recover-binary-search-tree                                   Hard   (31.15 %)
-    ✔  98.validate-binary-search-tree                                  Medium (24.10 %)
-    ✔  96.unique-binary-search-trees                                   Medium (42.04 %)
-    ✔  95.unique-binary-search-trees-ii                                Medium (32.35 %)
-    ✔  94.binary-tree-inorder-traversal                                Medium (49.98 %)
+732.my-calendar-iii                                              Hard  
+715.range-module                                                 Hard  
+699.falling-squares                                              Hard  
+687.longest-univalue-path                                        Easy  
+685.redundant-connection-ii                                      Hard  
+684.redundant-connection                                         Medium
+671.second-minimum-node-in-a-binary-tree                         Easy  
+669.trim-a-binary-search-tree                                    Easy  
+662.maximum-width-of-binary-tree                                 Medium
+655.print-binary-tree                                            Medium
+654.maximum-binary-tree                                          Medium
+653.two-sum-iv-input-is-a-bst                                    Easy  
+652.find-duplicate-subtrees                                      Medium
+637.average-of-levels-in-binary-tree                             Easy  
+623.add-one-row-to-tree                                          Medium
+617.merge-two-binary-trees                                       Easy  
+606.construct-string-from-binary-tree                            Easy  
+572.subtree-of-another-tree                                      Easy  
+563.binary-tree-tilt                                             Easy  
+543.diameter-of-binary-tree                                      Easy  
+538.convert-bst-to-greater-tree                                  Easy  
+515.find-largest-value-in-each-tree-row                          Medium
+513.find-bottom-left-tree-value                                  Medium
+508.most-frequent-subtree-sum                                    Medium
+501.find-mode-in-binary-search-tree                              Easy  
+493.reverse-pairs                                                Hard  
+450.delete-node-in-a-bst                                         Medium
+449.serialize-and-deserialize-bst                                Medium
+437.path-sum-iii                                                 Easy  
+404.sum-of-left-leaves                                           Easy  
+337.house-robber-iii                                             Medium
+315.count-of-smaller-numbers-after-self                          Hard  
+307.range-sum-query-mutable                                      Medium
+297.serialize-and-deserialize-binary-tree                        Hard  
+257.binary-tree-paths                                            Easy  
+236.lowest-common-ancestor-of-a-binary-tree                      Medium
+235.lowest-common-ancestor-of-a-binary-search-tree               Easy  
+230.kth-smallest-element-in-a-bst                                Medium
+226.invert-binary-tree                                           Easy  
+222.count-complete-tree-nodes                                    Medium
+218.the-skyline-problem                                          Hard  
+199.binary-tree-right-side-view                                  Medium
+173.binary-search-tree-iterator                                  Medium
+145.binary-tree-postorder-traversal                              Hard  
+144.binary-tree-preorder-traversal                               Medium
+129.sum-root-to-leaf-numbers                                     Medium
+124.binary-tree-maximum-path-sum                                 Hard  
+117.populating-next-right-pointers-in-each-node-ii               Medium
+116.populating-next-right-pointers-in-each-node                  Medium
+114.flatten-binary-tree-to-linked-list                           Medium
+113.path-sum-ii                                                  Medium
+112.path-sum                                                     Easy  
+111.minimum-depth-of-binary-tree                                 Easy  
+110.balanced-binary-tree                                         Easy  
+108.convert-sorted-array-to-binary-search-tree                   Easy  
+107.binary-tree-level-order-traversal-ii                         Easy  
+106.construct-binary-tree-from-inorder-and-postorder-traversal   Medium
+105.construct-binary-tree-from-preorder-and-inorder-traversal    Medium
+104.maximum-depth-of-binary-tree                                 Easy  
+103.binary-tree-zigzag-level-order-traversal                     Medium
+102.binary-tree-level-order-traversal                            Medium
+101.symmetric-tree                                               Easy  
+100.same-tree                                                    Easy  
+ 99.recover-binary-search-tree                                   Hard  
+ 98.validate-binary-search-tree                                  Medium
+ 96.unique-binary-search-trees                                   Medium
+ 95.unique-binary-search-trees-ii                                Medium
+ 94.binary-tree-inorder-traversal                                Medium

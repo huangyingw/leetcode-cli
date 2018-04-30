@@ -1,26 +1,26 @@
-      725.split-linked-list-in-parts                                   Medium (47.08 %)
-      445.add-two-numbers-ii                                           Medium (46.28 %)
-    ✔ 328.odd-even-linked-list                                         Medium (44.81 %)
-    ✔ 237.delete-node-in-a-linked-list                                 Easy   (47.26 %)
-    ✔ 234.palindrome-linked-list                                       Easy   (33.50 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 203.remove-linked-list-elements                                  Easy   (33.51 %)
-    ✔ 160.intersection-of-two-linked-lists                             Easy   (30.86 %)
-    ✔ 148.sort-list                                                    Medium (29.95 %)
-    ✔ 147.insertion-sort-list                                          Medium (33.92 %)
-    ✔ 143.reorder-list                                                 Medium (26.88 %)
-    ✔ 142.linked-list-cycle-ii                                         Medium (30.56 %)
-    ✔ 141.linked-list-cycle                                            Easy   (35.03 %)
-    ✔ 138.copy-list-with-random-pointer                                Medium (25.81 %)
-    ✔ 109.convert-sorted-list-to-binary-search-tree                    Medium (35.87 %)
-    ✔  92.reverse-linked-list-ii                                       Medium (31.46 %)
-    ✔  86.partition-list                                               Medium (33.61 %)
-    ✔  83.remove-duplicates-from-sorted-list                           Easy   (40.31 %)
-    ✔  82.remove-duplicates-from-sorted-list-ii                        Medium (30.02 %)
-    ✔  61.rotate-list                                                  Medium (24.52 %)
-    ✔  25.reverse-nodes-in-k-group                                     Hard   (31.84 %)
-    ✔  24.swap-nodes-in-pairs                                          Medium (39.26 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
-★   ✔  21.merge-two-sorted-lists                                       Easy   (41.33 %)
-    ✔  19.remove-nth-node-from-end-of-list                             Medium (33.96 %)
-    ✔   2.add-two-numbers                                              Medium (28.69 %)
+725.split-linked-list-in-parts                                   Medium
+445.add-two-numbers-ii                                           Medium
+328.odd-even-linked-list                                         Medium
+237.delete-node-in-a-linked-list                                 Easy  
+234.palindrome-linked-list                                       Easy  
+206.reverse-linked-list                                          Easy  
+203.remove-linked-list-elements                                  Easy  
+160.intersection-of-two-linked-lists                             Easy  
+148.sort-list                                                    Medium
+147.insertion-sort-list                                          Medium
+143.reorder-list                                                 Medium
+142.linked-list-cycle-ii                                         Medium
+141.linked-list-cycle                                            Easy  
+138.copy-list-with-random-pointer                                Medium
+109.convert-sorted-list-to-binary-search-tree                    Medium
+ 92.reverse-linked-list-ii                                       Medium
+ 86.partition-list                                               Medium
+ 83.remove-duplicates-from-sorted-list                           Easy  
+ 82.remove-duplicates-from-sorted-list-ii                        Medium
+ 61.rotate-list                                                  Medium
+ 25.reverse-nodes-in-k-group                                     Hard  
+ 24.swap-nodes-in-pairs                                          Medium
+ 23.merge-k-sorted-lists                                         Hard  
+ 21.merge-two-sorted-lists                                       Easy  
+ 19.remove-nth-node-from-end-of-list                             Medium
+  2.add-two-numbers                                              Medium

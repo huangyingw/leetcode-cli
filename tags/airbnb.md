@@ -1,21 +1,21 @@
-    ✔ 415.add-strings                                                  Easy   (41.72 %)
-    ✔ 385.mini-parser                                                  Medium (30.86 %)
-    ✔ 336.palindrome-pairs                                             Hard   (27.23 %)
-    ✔ 227.basic-calculator-ii                                          Medium (30.18 %)
-    ✔ 221.maximal-square                                               Medium (30.42 %)
-    ✔ 220.contains-duplicate-iii                                       Medium (18.76 %)
-    ✔ 219.contains-duplicate-ii                                        Easy   (32.88 %)
-    ✔ 217.contains-duplicate                                           Easy   (47.21 %)
-    ✔ 212.word-search-ii                                               Hard   (24.91 %)
-    ✔ 202.happy-number                                                 Easy   (41.66 %)
-    ✔ 198.house-robber                                                 Easy   (40.01 %)
-    ✔ 190.reverse-bits                                                 Easy   (29.38 %)
-    ✔ 160.intersection-of-two-linked-lists                             Easy   (30.86 %)
-    ✔ 136.single-number                                                Easy   (55.51 %)
-    ✔ 108.convert-sorted-array-to-binary-search-tree                   Easy   (44.78 %)
-    ✔  68.text-justification                                           Hard   (20.08 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
-    ✔  20.valid-parentheses                                            Easy   (34.04 %)
-    ✔  10.regular-expression-matching                                  Hard   (24.33 %)
-    ✔   2.add-two-numbers                                              Medium (28.69 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+415.add-strings                                                  Easy  
+385.mini-parser                                                  Medium
+336.palindrome-pairs                                             Hard  
+227.basic-calculator-ii                                          Medium
+221.maximal-square                                               Medium
+220.contains-duplicate-iii                                       Medium
+219.contains-duplicate-ii                                        Easy  
+217.contains-duplicate                                           Easy  
+212.word-search-ii                                               Hard  
+202.happy-number                                                 Easy  
+198.house-robber                                                 Easy  
+190.reverse-bits                                                 Easy  
+160.intersection-of-two-linked-lists                             Easy  
+136.single-number                                                Easy  
+108.convert-sorted-array-to-binary-search-tree                   Easy  
+ 68.text-justification                                           Hard  
+ 23.merge-k-sorted-lists                                         Hard  
+ 20.valid-parentheses                                            Easy  
+ 10.regular-expression-matching                                  Hard  
+  2.add-two-numbers                                              Medium
+  1.two-sum                                                      Easy  

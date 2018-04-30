@@ -1,48 +1,48 @@
-      699.falling-squares                                              Hard   (37.42 %)
-      692.top-k-frequent-words                                         Medium (41.23 %)
-      690.employee-importance                                          Easy   (51.69 %)
-      648.replace-words                                                Medium (47.95 %)
-      636.exclusive-time-of-functions                                  Medium (44.49 %)
-      535.encode-and-decode-tinyurl                                    Medium (73.88 %)
-      516.longest-palindromic-subsequence                              Medium (42.81 %)
-    ✔ 450.delete-node-in-a-bst                                         Medium (37.78 %)
-    ✔ 432.all-oone-data-structure                                      Hard   (27.98 %)
-    ✔ 380.insert-delete-getrandom-o1                                   Medium (39.96 %)
-    ✔ 373.find-k-pairs-with-smallest-sums                              Medium (31.36 %)
-    ✔ 337.house-robber-iii                                             Medium (44.78 %)
-    ✔ 297.serialize-and-deserialize-binary-tree                        Hard   (35.19 %)
-    ✔ 290.word-pattern                                                 Easy   (33.51 %)
-      262.trips-and-users                                              Hard   (19.77 %)
-    ✔ 242.valid-anagram                                                Easy   (47.62 %)
-    ✔ 230.kth-smallest-element-in-a-bst                                Medium (45.38 %)
-    ✔ 208.implement-trie-prefix-tree                                   Medium (31.08 %)
-    ✔ 207.course-schedule                                              Medium (33.81 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-    ✔ 202.happy-number                                                 Easy   (41.66 %)
-    ✔ 171.excel-sheet-column-number                                    Easy   (48.61 %)
-    ✔ 155.min-stack                                                    Easy   (31.37 %)
-    ✔ 146.lru-cache                                                    Hard   (19.97 %)
-    ✔ 140.word-break-ii                                                Hard   (24.60 %)
-    ✔ 139.word-break                                                   Medium (31.59 %)
-    ✔ 138.copy-list-with-random-pointer                                Medium (25.81 %)
-    ✔ 133.clone-graph                                                  Medium (25.18 %)
-★   ✔ 125.valid-palindrome                                             Easy   (27.14 %)
-★   ✔ 121.best-time-to-buy-and-sell-stock                              Easy   (43.02 %)
-    ✔ 104.maximum-depth-of-binary-tree                                 Easy   (55.10 %)
-    ✔  91.decode-ways                                                  Medium (20.37 %)
-    ✔  78.subsets                                                      Medium (45.03 %)
-    ✔  76.minimum-window-substring                                     Hard   (26.89 %)
-    ✔  54.spiral-matrix                                                Medium (27.36 %)
-    ✔  49.group-anagrams                                               Medium (38.71 %)
-    ✔  39.combination-sum                                              Medium (41.63 %)
-    ✔  37.sudoku-solver                                                Hard   (32.21 %)
-    ✔  36.valid-sudoku                                                 Medium (37.75 %)
-    ✔  33.search-in-rotated-sorted-array                               Medium (31.91 %)
-    ✔  24.swap-nodes-in-pairs                                          Medium (39.26 %)
-    ✔  23.merge-k-sorted-lists                                         Hard   (28.26 %)
-    ✔  22.generate-parentheses                                         Medium (48.24 %)
-    ✔  17.letter-combinations-of-a-phone-number                        Medium (36.63 %)
-    ✔  13.roman-to-integer                                             Easy   (48.18 %)
-    ✔  10.regular-expression-matching                                  Hard   (24.33 %)
-    ✔   8.string-to-integer-atoi                                       Medium (14.09 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+699.falling-squares                                              Hard  
+692.top-k-frequent-words                                         Medium
+690.employee-importance                                          Easy  
+648.replace-words                                                Medium
+636.exclusive-time-of-functions                                  Medium
+535.encode-and-decode-tinyurl                                    Medium
+516.longest-palindromic-subsequence                              Medium
+450.delete-node-in-a-bst                                         Medium
+432.all-oone-data-structure                                      Hard  
+380.insert-delete-getrandom-o1                                   Medium
+373.find-k-pairs-with-smallest-sums                              Medium
+337.house-robber-iii                                             Medium
+297.serialize-and-deserialize-binary-tree                        Hard  
+290.word-pattern                                                 Easy  
+262.trips-and-users                                              Hard  
+242.valid-anagram                                                Easy  
+230.kth-smallest-element-in-a-bst                                Medium
+208.implement-trie-prefix-tree                                   Medium
+207.course-schedule                                              Medium
+206.reverse-linked-list                                          Easy  
+202.happy-number                                                 Easy  
+171.excel-sheet-column-number                                    Easy  
+155.min-stack                                                    Easy  
+146.lru-cache                                                    Hard  
+140.word-break-ii                                                Hard  
+139.word-break                                                   Medium
+138.copy-list-with-random-pointer                                Medium
+133.clone-graph                                                  Medium
+125.valid-palindrome                                             Easy  
+121.best-time-to-buy-and-sell-stock                              Easy  
+104.maximum-depth-of-binary-tree                                 Easy  
+ 91.decode-ways                                                  Medium
+ 78.subsets                                                      Medium
+ 76.minimum-window-substring                                     Hard  
+ 54.spiral-matrix                                                Medium
+ 49.group-anagrams                                               Medium
+ 39.combination-sum                                              Medium
+ 37.sudoku-solver                                                Hard  
+ 36.valid-sudoku                                                 Medium
+ 33.search-in-rotated-sorted-array                               Medium
+ 24.swap-nodes-in-pairs                                          Medium
+ 23.merge-k-sorted-lists                                         Hard  
+ 22.generate-parentheses                                         Medium
+ 17.letter-combinations-of-a-phone-number                        Medium
+ 13.roman-to-integer                                             Easy  
+ 10.regular-expression-matching                                  Hard  
+  8.string-to-integer-atoi                                       Medium
+  1.two-sum                                                      Easy  

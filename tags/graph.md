@@ -1,8 +1,8 @@
-      685.redundant-connection-ii                                      Hard   (27.81 %)
-      684.redundant-connection                                         Medium (43.91 %)
-      399.evaluate-division                                            Medium (42.45 %)
-    ✔ 332.reconstruct-itinerary                                        Medium (29.99 %)
-    ✔ 310.minimum-height-trees                                         Medium (28.99 %)
-    ✔ 210.course-schedule-ii                                           Medium (30.36 %)
-    ✔ 207.course-schedule                                              Medium (33.81 %)
-    ✔ 133.clone-graph                                                  Medium (25.18 %)
+685.redundant-connection-ii                                      Hard  
+684.redundant-connection                                         Medium
+399.evaluate-division                                            Medium
+332.reconstruct-itinerary                                        Medium
+310.minimum-height-trees                                         Medium
+210.course-schedule-ii                                           Medium
+207.course-schedule                                              Medium
+133.clone-graph                                                  Medium

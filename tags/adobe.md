@@ -1,12 +1,12 @@
-    ✔ 292.nim-game                                                     Easy   (55.38 %)
-    ✔ 258.add-digits                                                   Easy   (51.82 %)
-    ✔ 237.delete-node-in-a-linked-list                                 Easy   (47.26 %)
-★   ✔ 206.reverse-linked-list                                          Easy   (46.79 %)
-      195.tenth-line                                                   Easy   (33.57 %)
-    ✔ 169.majority-element                                             Easy   (48.10 %)
-    ✔  70.climbing-stairs                                              Easy   (41.31 %)
-    ✔  15.3sum                                                         Medium (21.80 %)
-    ✔   4.median-of-two-sorted-arrays                                  Hard   (23.14 %)
-    ✔   3.longest-substring-without-repeating-characters               Medium (24.72 %)
-    ✔   2.add-two-numbers                                              Medium (28.69 %)
-    ✔   1.two-sum                                                      Easy   (38.10 %)
+292.nim-game                                                     Easy  
+258.add-digits                                                   Easy  
+237.delete-node-in-a-linked-list                                 Easy  
+206.reverse-linked-list                                          Easy  
+195.tenth-line                                                   Easy  
+169.majority-element                                             Easy  
+ 70.climbing-stairs                                              Easy  
+ 15.3sum                                                         Medium
+  4.median-of-two-sorted-arrays                                  Hard  
+  3.longest-substring-without-repeating-characters               Medium
+  2.add-two-numbers                                              Medium
+  1.two-sum                                                      Easy  

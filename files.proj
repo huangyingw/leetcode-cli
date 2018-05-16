@@ -4,7 +4,6 @@
 "./boring.md"
 "./build.sh"
 "./check_running.sh"
-"./check_running.sh.lck"
 "./colors/blue.json"
 "./colors/dark.json"
 "./colors/default.json"

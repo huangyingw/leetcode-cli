@@ -2,4 +2,5 @@
 "./show/121.best-time-to-buy-and-sell-stock.leetcode.py"
 "./show/122.best-time-to-buy-and-sell-stock-ii.leetcode.py"
 "./show/139.word-break.leetcode.py"
+"./show/34.search-for-a-range.leetcode.py"
 "./show/78.subsets.leetcode.py"

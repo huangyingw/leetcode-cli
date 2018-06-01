@@ -29,6 +29,7 @@
 "./.env.json"
 "./.eslintrc.js"
 "./excludeFile"
+"./files.proj"
 "./get.sh"
 "./get_tags.sh"
 "./.git/config"

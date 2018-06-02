@@ -16,3 +16,4 @@ do
 done < problems.list
 ~/loadrc/bashrc/jformat.sh
 autopep8 --in-place -r submissions/
+./commit.sh

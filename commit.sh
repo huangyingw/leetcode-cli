@@ -7,6 +7,6 @@ cd "$SCRIPTPATH"
 ./backup.sh
 ./remove_dup.sh
 ~/loadrc/bashrc/cscope.sh
-git add ./submissions/ files.proj
+git add ./submissions/
 ~/loadrc/gitrc/g.sh
 ./restore.sh

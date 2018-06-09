@@ -5,7 +5,7 @@ cd "$SCRIPTPATH"
 
 ~/loadrc/gitrc/grsh.sh
 ./backup.sh
-./restore.sh
 ./remove_dup.sh
 git add ./submissions/
 ~/loadrc/gitrc/g.sh
+./restore.sh

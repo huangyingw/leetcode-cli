@@ -3,7 +3,7 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-git co ./submissions/
+~/loadrc/gitrc/grsh.sh
 ./backup.sh
 ./restore.sh
 ./remove_dup.sh

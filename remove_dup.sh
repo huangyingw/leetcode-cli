@@ -7,4 +7,5 @@ cd "$SCRIPTPATH"
 ~/loadrc/bashrc/jformat.sh
 autopep8 --in-place -r submissions/
 find . -type f \( -name \*.orig -o -name \*.bak \) -delete
+./backup.sh
 jdupes -1dNr submissions/

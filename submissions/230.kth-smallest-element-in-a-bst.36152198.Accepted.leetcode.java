@@ -18,7 +18,7 @@ public class Solution
         }
 
         inorderTraversal(root.left, k);
-        counter++ ;
+        counter++;
 
         if (k == counter)
         {
@@ -29,4 +29,3 @@ public class Solution
         inorderTraversal(root.right, k);
     }
 }
-

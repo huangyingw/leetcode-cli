@@ -7,8 +7,7 @@ public class Solution
         return new ArrayList<Integer>(treeMap.values());
     }
 
-    public void inorderTraversal(Map<Integer, Integer> treeMap, TreeNode root,
-                                 int level)
+    public void inorderTraversal(Map<Integer, Integer> treeMap, TreeNode root, int level)
     {
         if (root == null)
         {
@@ -20,4 +19,3 @@ public class Solution
         inorderTraversal(treeMap, root.right, level + 1);
     }
 }
-

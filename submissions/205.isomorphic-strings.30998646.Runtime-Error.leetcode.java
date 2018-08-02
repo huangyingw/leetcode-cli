@@ -2,10 +2,8 @@ public class Solution
 {
     public boolean isIsomorphic(String s, String t)
     {
-        HashMap<Character, Character> sourceMap =
-            new HashMap<Character, Character>();
-        HashMap<Character, Character> targetMap =
-            new HashMap<Character, Character>();
+        HashMap<Character, Character> sourceMap = new HashMap<Character, Character>();
+        HashMap<Character, Character> targetMap = new HashMap<Character, Character>();
 
         for (int i = 0; i < s.length(); i++)
         {
@@ -26,4 +24,3 @@ public class Solution
         return true;
     }
 }
-

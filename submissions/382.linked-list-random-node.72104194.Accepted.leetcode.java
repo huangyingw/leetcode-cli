@@ -27,11 +27,10 @@ public class Solution
                 result = p.val;
             }
 
-            count++ ;
+            count++;
             p = p.next;
         }
 
         return result;
     }
 }
-

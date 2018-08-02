@@ -8,4 +8,3 @@ leetcode user -l
 leetcode test \
     ./139.word-break.90221939.Wrong-Answer.leetcode.java \
     -t '"aaaaaaa"\n["aaaa","aaa"]'
-

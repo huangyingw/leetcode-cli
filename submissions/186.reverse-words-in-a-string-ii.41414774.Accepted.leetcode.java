@@ -15,7 +15,7 @@ public class Solution
                     end++;
                 }
 
-                begin = end ;
+                begin = end;
             }
         }
     }
@@ -30,4 +30,3 @@ public class Solution
         }
     }
 }
-

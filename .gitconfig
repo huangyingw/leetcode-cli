@@ -17,6 +17,9 @@
     allow = true
 [commit]
     message = n
+[branch "lc/dev"]
+    remote = bitbucket
+    merge = refs/heads/lc/dev
 [branch "dev"]
     remote = bitbucket
     merge = refs/heads/dev

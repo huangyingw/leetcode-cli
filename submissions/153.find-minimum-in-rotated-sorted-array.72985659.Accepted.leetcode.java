@@ -29,11 +29,10 @@ public class Solution
             }
             else
             {
-                right-- ;
+                right--;
             }
         }
 
         return nums[left];
     }
 }
-

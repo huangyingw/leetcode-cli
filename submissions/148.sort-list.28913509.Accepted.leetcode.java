@@ -14,7 +14,7 @@ public class Solution
         while (run != null)
         {
             run = run.next;
-            len++ ;
+            len++;
         }
 
         while (listLen < len)
@@ -33,7 +33,7 @@ public class Solution
                 while (run != null && count < listLen)
                 {
                     run = run.next;
-                    count++ ;
+                    count++;
                 }
 
                 list2 = run;
@@ -42,7 +42,7 @@ public class Solution
                 while (run != null && count < listLen)
                 {
                     run = run.next;
-                    count++ ;
+                    count++;
                 }
 
                 ListNode pretmp = merge(list1, list2, pre, run, listLen);
@@ -53,18 +53,17 @@ public class Solution
                 }
 
                 pre = pretmp;
-                coup++ ;
+                coup++;
             }
 
-            level++ ;
+            level++;
             listLen = 1 << level;
         }
 
         return head;
     }
 
-    public ListNode merge(ListNode l1, ListNode l2, ListNode pre,
-                          ListNode tail, int len)
+    public ListNode merge(ListNode l1, ListNode l2, ListNode pre, ListNode tail, int len)
     {
         int c1 = 0, c2 = 0;
         ListNode head = new ListNode(-1);
@@ -76,13 +75,13 @@ public class Solution
             {
                 run.next = l1;
                 l1 = l1.next;
-                c1++ ;
+                c1++;
             }
             else
             {
                 run.next = l2;
                 l2 = l2.next;
-                c2++ ;
+                c2++;
             }
 
             run = run.next;
@@ -93,7 +92,7 @@ public class Solution
         {
             run.next = l1;
             l1 = l1.next;
-            c1++ ;
+            c1++;
             run = run.next;
         }
 
@@ -101,7 +100,7 @@ public class Solution
         {
             run.next = l2;
             l2 = l2.next;
-            c2++ ;
+            c2++;
             run = run.next;
         }
 
@@ -110,4 +109,3 @@ public class Solution
         return run;
     }
 }
-

@@ -19,15 +19,14 @@ public class Solution
 
             if (result == num)
             {
-                count++ ;
+                count++;
             }
             else
             {
-                count-- ;
+                count--;
             }
         }
 
         return result;
     }
 }
-

@@ -26,7 +26,7 @@ public class Solution
                 break;
             }
 
-            pos++ ;
+            pos++;
         }
 
         if (pos == 81)
@@ -59,4 +59,3 @@ public class Solution
         search(board, 0);
     }
 }
-

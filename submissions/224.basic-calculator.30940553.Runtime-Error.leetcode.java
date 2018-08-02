@@ -18,7 +18,7 @@ public class Solution
                 while (j < s.length() && Character.isDigit(s.charAt(j)))
                 {
                     num = 10 * num + (s.charAt(j) - '0');
-                    j++ ;
+                    j++;
                 }
 
                 res += stack.pop() * num;
@@ -41,4 +41,3 @@ public class Solution
         return res;
     }
 }
-

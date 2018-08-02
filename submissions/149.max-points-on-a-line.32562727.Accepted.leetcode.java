@@ -17,23 +17,20 @@ public class Solution
 
             for (int j = i + 1; j < points.length; j++)
             {
-                // handle duplicates and vertical
                 if (points[i].x == points[j].x)
                 {
                     if (points[i].y == points[j].y)
                     {
-                        duplicate++ ;
+                        duplicate++;
                     }
                     else
                     {
-                        vertical++ ;
+                        vertical++;
                     }
                 }
                 else
                 {
-                    double slope = points[j].y == points[i].y ? 0.0
-                                   : (1.0 * (points[j].y - points[i].y))
-                                   / (points[j].x - points[i].x);
+                    double slope = points[j].y == points[i].y ? 0.0 : (1.0 * (points[j].y - points[i].y)) / (points[j].x - points[i].x);
 
                     if (result.get(slope) != null)
                     {
@@ -61,4 +58,3 @@ public class Solution
         return max;
     }
 }
-

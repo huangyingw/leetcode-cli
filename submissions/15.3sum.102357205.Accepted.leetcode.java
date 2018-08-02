@@ -13,7 +13,7 @@ public class Solution
 
         for (int i = 0; i + 2 < num.length; i++)
         {
-            if (i > 0 && num[i] == num[i - 1])
+            if (i - 1 >= 0 && num[i] == num[i - 1])
             {
                 continue;
             }
@@ -24,33 +24,33 @@ public class Solution
             {
                 if (k + 1 < num.length && num[k] == num[k + 1])
                 {
-                    k-- ;
+                    k--;
                     continue;
                 }
 
                 if (j - 1 > i && num[j] == num[j - 1])
                 {
-                    j++ ;
+                    j++;
                     continue;
                 }
 
-                if (num[j] + num[k] + num[i] == 0)
+                if (num[i] + num[j] + num[k] == 0)
                 {
                     ArrayList<Integer> temp = new ArrayList<Integer>();
                     temp.add(num[i]);
                     temp.add(num[j]);
                     temp.add(num[k]);
                     res.add(temp);
-                    k-- ;
-                    j++ ;
+                    k--;
+                    j++;
                 }
-                else if (num[j] + num[k] + num[i] > 0)
+                else if (num[i] + num[j] + num[k] > 0)
                 {
-                    k-- ;
+                    k--;
                 }
                 else
                 {
-                    j++ ;
+                    j++;
                 }
             }
         }

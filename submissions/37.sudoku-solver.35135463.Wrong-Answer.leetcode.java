@@ -18,7 +18,7 @@ public class Solution
     {
         while (pos < 81 && board[pos / 9][pos % 9] != '.')
         {
-            pos++ ;
+            pos++;
         }
 
         if (pos == 81)
@@ -50,4 +50,3 @@ public class Solution
         dfs(board, 0);
     }
 }
-

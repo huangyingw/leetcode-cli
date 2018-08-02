@@ -22,15 +22,14 @@ public class Solution
             }
             else if (cur > target)
             {
-                row-- ;
+                row--;
             }
             else
             {
-                col++ ;
+                col++;
             }
         }
 
         return false;
     }
 }
-

@@ -15,7 +15,7 @@ public class Solution
         {
             if (A[index] == 0)
             {
-                swap(A, index++, redIndex++);   // index cannot be less than redIndex
+                swap(A, index++, redIndex++);
             }
             else if (A[index] == 2)
             {
@@ -23,7 +23,7 @@ public class Solution
             }
             else
             {
-                index++ ;
+                index++;
             }
         }
     }
@@ -35,4 +35,3 @@ public class Solution
         a[blueIndex] ^= a[index];
     }
 }
-

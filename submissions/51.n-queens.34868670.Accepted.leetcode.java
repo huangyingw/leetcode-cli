@@ -2,51 +2,51 @@ public class Solution
 {
     public List<List<String>> solveNQueens(int n)
     {
-        List<List<String>> res = new ArrayList<List<String>>();
-        solveNQ(n, 0, new int[n], res);
-        return res;
+        List<List<String>> result = new ArrayList<List<String>>();
+        dfs(result, new int[n], 0, n);
+        return result;
     }
 
-    private void solveNQ(int n, int row, int[] queens, List<List<String>> res)
+    public void dfs(List<List<String>> result, int[] columnForRow, int curRow, int n)
     {
-        if (row == n)
+        if (curRow == n)
         {
-            List<String> strs = new ArrayList<String>();
-            char[] arr = new char[n];
-            Arrays.fill(arr, '.');
+            List<String> board = new ArrayList<String>();
+            char[] strRow = new char[n];
+            Arrays.fill(strRow, '.');
 
-            for (int i = 0; i < n; i++)
+            for (int row = 0; row < n; row++)
             {
-                arr[queens[i]] = 'Q';
-                strs.add(new String(arr));
-                arr[queens[i]] = '.';
+                strRow[columnForRow[row]] = 'Q';
+                board.add(new String(strRow));
+                strRow[columnForRow[row]] = '.';
             }
 
-            res.add(strs);
+            result.add(board);
             return;
         }
 
         for (int col = 0; col < n; col++)
         {
-            if (fit(n, queens, row, col))
+            if (isValid(columnForRow, curRow, col))
             {
-                queens[row] = col;
-                solveNQ(n, row + 1, queens, res);
+                columnForRow[curRow] = col;
+                dfs(result, columnForRow, curRow + 1, n);
             }
         }
     }
 
-    private boolean fit(int n, int[] queens, int row, int col)
+    public boolean isValid(int[] columnForRow, int curRow, int col)
     {
         int leftTop = col;
         int rightTop = col;
 
-        for (int i = row - 1; i >= 0; i--)
+        for (int row = curRow - 1; row >= 0; row--)
         {
-            leftTop-- ;
-            rightTop++ ;
+            leftTop--;
+            rightTop++;
 
-            if (queens[i] == col || queens[i] == leftTop || queens[i] == rightTop)
+            if (columnForRow[row] == col || columnForRow[row] == leftTop || columnForRow[row] == rightTop)
             {
                 return false;
             }
@@ -55,4 +55,3 @@ public class Solution
         return true;
     }
 }
-

@@ -13,7 +13,7 @@ public class Solution
         {
             while (end + 1 < nums.length && nums[end + 1] == nums[end] + 1)
             {
-                end++ ;
+                end++;
             }
 
             if (start == end)
@@ -30,4 +30,3 @@ public class Solution
         return res;
     }
 }
-

@@ -14,7 +14,7 @@ public class Solution
 
         while (head != null)
         {
-            i++ ;
+            i++;
 
             if (i % k == 0)
             {
@@ -46,4 +46,3 @@ public class Solution
         return last;
     }
 }
-

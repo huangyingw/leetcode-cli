@@ -19,7 +19,7 @@ public class Solution
         {
             if (A[i] == A[i + 1])
             {
-                j++ ;
+                j++;
             }
             else
             {
@@ -35,4 +35,3 @@ public class Solution
         return A[A.length - 1];
     }
 }
-

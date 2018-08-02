@@ -10,10 +10,7 @@
 "./Dockerfile"
 "./LICENSE"
 "./README.md"
-<<<<<<< HEAD
-=======
 "./backup.sh"
->>>>>>> lc/dev
 "./bin/entrypoint"
 "./bin/install"
 "./bin/leetcode"
@@ -39,11 +36,8 @@
 "./docs/install.md"
 "./docs/releases.md"
 "./done.md"
-<<<<<<< HEAD
-=======
 "./excludeFile"
 "./find_prints.ignore"
->>>>>>> lc/dev
 "./get.sh"
 "./get_tags.sh"
 "./hard.md"
@@ -94,9 +88,6 @@
 "./restore.sh"
 "./setup.cfg"
 "./show.sh"
-<<<<<<< HEAD
-"./submission.sh"
-=======
 "./show/1.two-sum.leetcode.py"
 "./show/10.regular-expression-matching.leetcode.py"
 "./show/100.same-tree.leetcode.py"
@@ -1620,7 +1611,6 @@
 "./submissions/206.reverse-linked-list.165696151.Accepted.leetcode.java"
 "./submissions/206.reverse-linked-list.81479362.Runtime-Error.leetcode.java"
 "./submissions/206.reverse-linked-list.85286451.Wrong-Answer.leetcode.java"
-"./submissions/207.course-schedule.165699897.Accepted.leetcode.java"
 "./submissions/207.course-schedule.165709021.Runtime-Error.leetcode.py"
 "./submissions/207.course-schedule.165709264.Runtime-Error.leetcode.py"
 "./submissions/207.course-schedule.165709319.Runtime-Error.leetcode.py"
@@ -1672,12 +1662,14 @@
 "./submissions/210.course-schedule-ii.166347201.Wrong-Answer.leetcode.java"
 "./submissions/210.course-schedule-ii.166352324.Accepted.leetcode.py"
 "./submissions/210.course-schedule-ii.31071029.Accepted.leetcode.java"
+"./submissions/211.add-and-search-word-data-structure-design.102779605.Accepted.leetcode.java"
 "./submissions/211.add-and-search-word-data-structure-design.31072807.Time-Limit-Exceeded.leetcode.java"
 "./submissions/211.add-and-search-word-data-structure-design.31073192.Time-Limit-Exceeded.leetcode.java"
 "./submissions/211.add-and-search-word-data-structure-design.31073423.Time-Limit-Exceeded.leetcode.java"
 "./submissions/211.add-and-search-word-data-structure-design.31073594.Time-Limit-Exceeded.leetcode.java"
 "./submissions/211.add-and-search-word-data-structure-design.31073630.Accepted.leetcode.java"
 "./submissions/211.add-and-search-word-data-structure-design.31143151.Wrong-Answer.leetcode.java"
+"./submissions/211.add-and-search-word-data-structure-design.39953263.Accepted.leetcode.java"
 "./submissions/211.add-and-search-word-data-structure-design.39955840.Accepted.leetcode.java"
 "./submissions/212.word-search-ii.89940460.Wrong-Answer.leetcode.java"
 "./submissions/212.word-search-ii.89941227.Accepted.leetcode.java"
@@ -2669,6 +2661,8 @@
 "./submissions/78.subsets.80108732.Wrong-Answer.leetcode.java"
 "./submissions/79.word-search.102827670.Wrong-Answer.leetcode.java"
 "./submissions/79.word-search.102827718.Wrong-Answer.leetcode.java"
+"./submissions/79.word-search.166533042.Runtime-Error.leetcode.java"
+"./submissions/79.word-search.166533138.Wrong-Answer.leetcode.java"
 "./submissions/79.word-search.87139648.Runtime-Error.leetcode.java"
 "./submissions/79.word-search.87146035.Runtime-Error.leetcode.java"
 "./submissions/79.word-search.87146700.Wrong-Answer.leetcode.java"
@@ -2780,7 +2774,6 @@
 "./submissions/98.validate-binary-search-tree.79962430.Wrong-Answer.leetcode.java"
 "./submissions/98.validate-binary-search-tree.79963105.Accepted.leetcode.java"
 "./submissions/99.recover-binary-search-tree.31082288.Accepted.leetcode.java"
->>>>>>> lc/dev
 "./tags.list"
 "./tags/adobe.md"
 "./tags/airbnb.md"

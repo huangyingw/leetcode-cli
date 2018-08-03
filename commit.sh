@@ -5,7 +5,7 @@ cd "$SCRIPTPATH"
 
 cd ./submissions/
 git co .
-./remove_dup.sh
+../remove_dup.sh
 git add .
 ~/loadrc/gitrc/g.sh
 cd -

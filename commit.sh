@@ -5,6 +5,7 @@ cd "$SCRIPTPATH"
 
 ./remove_dup.sh
 cd ./submissions/
+git add .
 ~/loadrc/gitrc/gci.sh
 cd -
 ./restore.sh

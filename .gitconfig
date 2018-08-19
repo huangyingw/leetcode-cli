@@ -23,3 +23,5 @@
 [branch "dev"]
     remote = bitbucket
     merge = refs/heads/dev
+[vrun]
+    silent = false

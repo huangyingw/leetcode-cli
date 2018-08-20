@@ -24,4 +24,5 @@
     remote = bitbucket
     merge = refs/heads/dev
 [vrun]
-    silent = false
+    silent = true
+    async = false

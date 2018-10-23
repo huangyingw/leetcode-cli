@@ -3,4 +3,4 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-watch ./check_running.sh
+watch ~/loadrc/bashrc/check_running.sh ./submission.sh

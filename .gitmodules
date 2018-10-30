@@ -2,5 +2,5 @@
     path = submissions
     url = https://github.com/huangyingw/submissions.git
 [submodule "show"]
-	path = show
-	url = git@bitbucket.org:huangyingw/show.git
+    path = show
+    url = git@bitbucket.org:huangyingw/show.git

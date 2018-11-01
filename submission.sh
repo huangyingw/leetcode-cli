@@ -4,9 +4,9 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
 ./build.sh
-leetcode user -l
 
 doGet () {
+    leetcode user -l
     leetcode submission "$1" -o submissions
 }
 

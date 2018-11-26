@@ -26,3 +26,18 @@
 [vrun]
     silent = false
     async = false
+[gdif]
+    ignore = *.md
+    ignore = *.sh
+    ignore = .gitmodules
+    ignore = companies.list
+    ignore = excludeFile
+    ignore = lib/plugins/company.js
+    ignore = lib/plugins/solution.discuss.js
+    ignore = package-lock.json
+    ignore = problems.list
+    ignore = setup.cfg
+    ignore = show
+    ignore = submissions
+    ignore = tags.list
+    ignore = tags/*

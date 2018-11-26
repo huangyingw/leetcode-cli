@@ -13,7 +13,7 @@ const th = require('./helper');
 const Plugin = rewire('../lib/plugin');
 
 describe('plugin', function() {
-  let h;
+  let file;
   let cache;
 
   const NOOP = () => {};
@@ -23,9 +23,9 @@ describe('plugin', function() {
     chalk.init();
     config.init();
 
-    h = rewire('../lib/helper');
+    file = rewire('../lib/file');
     cache = rewire('../lib/cache');
-    Plugin.__set__('h', h);
+    Plugin.__set__('file', file);
     Plugin.__set__('cache', cache);
   });
 
@@ -35,17 +35,17 @@ describe('plugin', function() {
   });
 
   describe('#Plugin.init', function() {
-    const p1 = new Plugin(0, 'Leetcode', '2.0');
-    const p2 = new Plugin(1, 'Cache', '1.0');
-    const p3 = new Plugin(2, 'Retry', '3.0');
-    const p4 = new Plugin(3, 'Core', '4.0');
+    const p1 = new Plugin(0, 'leetcode', '2.0');
+    const p2 = new Plugin(1, 'cache', '1.0');
+    const p3 = new Plugin(2, 'retry', '3.0');
+    const p4 = new Plugin(3, 'core', '4.0');
 
     before(function() {
       p1.init = p2.init = p3.init = p4.init = NOOP;
-      h.getCodeDirData = function() {
+      file.listCodeDir = function() {
         return [
           {name: 'cache', data: p2, file: 'cache.js'},
-          {name: 'leetcode', data: p1, file: '.leetcode.js'},  // disabled
+          {name: 'leetcode', data: p1, file: 'leetcode.js'},
           {name: 'retry', data: p3, file: 'retry.js'},
           {name: 'bad', data: null}
         ];
@@ -53,6 +53,9 @@ describe('plugin', function() {
     });
 
     it('should init ok', function() {
+      cache.get = () => {
+        return {cache: true, leetcode: false, retry: true};
+      };
       assert.deepEqual(Plugin.plugins, []);
 
       const res = Plugin.init(p4);
@@ -60,7 +63,7 @@ describe('plugin', function() {
       assert.deepEqual(Plugin.plugins.length, 3);
 
       const names = Plugin.plugins.map(p => p.name);
-      assert.deepEqual(names, ['Retry', 'Cache', 'Leetcode']);
+      assert.deepEqual(names, ['retry', 'cache', 'leetcode']);
 
       assert.equal(p4.next, p3);
       assert.equal(p3.next, p2);
@@ -70,7 +73,7 @@ describe('plugin', function() {
 
     it('should find missing ok', function() {
       cache.get = () => {
-        return {company: true, solution: true};
+        return {company: true, leetcode: false, solution: true};
       };
 
       const res = Plugin.init(p4);
@@ -78,7 +81,7 @@ describe('plugin', function() {
       assert.deepEqual(Plugin.plugins.length, 5);
 
       const names = Plugin.plugins.map(p => p.name);
-      assert.deepEqual(names, ['Retry', 'Cache', 'Leetcode', 'company', 'solution']);
+      assert.deepEqual(names, ['retry', 'cache', 'leetcode', 'company', 'solution']);
 
       assert.equal(p4.next, p3);
       assert.equal(p3.next, p2);
@@ -123,7 +126,7 @@ describe('plugin', function() {
     const DST = path.resolve(th.DIR, 'copy.test.js');
 
     before(function() {
-      h.getPluginFile = () => DST;
+      file.pluginFile = () => DST;
     });
 
     it('should copy from http error', function(done) {
@@ -143,9 +146,9 @@ describe('plugin', function() {
       ];
       fs.writeFileSync(SRC, data.join('\n'));
 
-      Plugin.install(SRC, function(e, p) {
+      Plugin.copy(SRC, function(e, fullpath) {
         assert.notExists(e);
-        assert.equal(p.x, 123);
+        assert.equal(fullpath, DST);
         assert.equal(fs.existsSync(DST), true);
         done();
       });
@@ -162,7 +165,7 @@ describe('plugin', function() {
 
     beforeEach(function() {
       expected = [];
-      h.getPluginFile = x => th.DIR + x;
+      file.pluginFile = x => th.DIR + x;
       Plugin.install = (name, cb) => {
         expected.push(name);
         return cb(null, PLUGINS[+name]);
@@ -179,36 +182,9 @@ describe('plugin', function() {
     });
   }); // #Plugin.installMissings
 
-  describe('#enable', function() {
-    const FILE = path.resolve(th.DIR, 'leetcode.js');
-
-    before(function() {
-      h.getPluginFile = () => FILE;
-    });
-
-    it('should ok', function() {
-      const p = new Plugin(0, 'Leetcode', '2.0', '');
-      assert.equal(p.enabled, true);
-
-      p.setFile('.leetcode.js');
-      fs.writeFileSync(FILE, '');
-      assert.equal(p.enabled, false);
-      assert.equal(p.file, '.leetcode.js');
-      p.enable(false);
-      assert.equal(p.enabled, false);
-      assert.equal(p.file, '.leetcode.js');
-      p.enable(true);
-      assert.equal(p.enabled, true);
-      assert.equal(p.file, 'leetcode.js');
-      p.enable(false);
-      assert.equal(p.enabled, false);
-      assert.equal(p.file, '.leetcode.js');
-    });
-  }); // #enable
-
   describe('#delete', function() {
     it('should ok', function() {
-      h.getPluginFile = x => th.DIR + x;
+      file.pluginFile = x => th.DIR + x;
 
       const p = new Plugin(0, '0', '2018.01.01');
       p.file = '0.js';

@@ -4,11 +4,11 @@ const rewire = require('rewire');
 
 describe('icon', function() {
   let icon;
-  let h;
+  let file;
 
   beforeEach(function() {
-    h = rewire('../lib/helper');
-    h.getCodeDirData = function() {
+    file = rewire('../lib/file');
+    file.listCodeDir = function() {
       return [
         {name: 'mac', data: {yes: 'yes', no: 'no', lock: 'lock', like: 'like', unlike: 'unlike'}},
         {name: 'win7', data: {yes: 'YES', no: 'NO', lock: 'LOCK', like: 'LIKE', unlike: 'UNLIKE'}}
@@ -16,7 +16,7 @@ describe('icon', function() {
     };
 
     icon = rewire('../lib/icon');
-    icon.__set__('h', h);
+    icon.__set__('file', file);
     icon.init();
   });
 
@@ -30,7 +30,9 @@ describe('icon', function() {
       assert.equal(icon.unlike, 'unlike');
     });
 
-    it('should ok with unknown theme', function() {
+    it('should ok with unknown theme on linux', function() {
+      file.isWindows = () => false;
+
       icon.setTheme('non-exist');
       assert.equal(icon.yes, '✔');
       assert.equal(icon.no, '✘');
@@ -40,7 +42,7 @@ describe('icon', function() {
     });
 
     it('should ok with unknown theme on windows', function() {
-      h.isWindows = () => true;
+      file.isWindows = () => true;
 
       icon.setTheme('non-exist');
       assert.equal(icon.yes, 'YES');

@@ -93,16 +93,16 @@ describe('log', function() {
 
     it('should ok with log.fail', function() {
       log.fail({msg: 'some error', statusCode: 500});
-      assert.equal(expected, chalk.red('[ERROR] some error [500]'));
+      assert.equal(expected, chalk.red('[ERROR] some error [code=500]'));
 
       log.fail('some error');
-      assert.equal(expected, chalk.red('[ERROR] some error [0]'));
+      assert.equal(expected, chalk.red('[ERROR] some error'));
     });
   }); // #levels
 
   describe('#printf', function() {
     it('should ok', function() {
-      log.printf('%s and %d and %%', 'string', 100);
+      log.printf('%s and %s and %%', 'string', 100);
       assert.equal(expected, 'string and 100 and %');
     });
   }); // #printf

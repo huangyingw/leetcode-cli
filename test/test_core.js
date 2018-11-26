@@ -142,7 +142,17 @@ describe('core', function() {
   }); // #starProblem
 
   describe('#exportProblem', function() {
+    let file;
+
+    beforeEach(function() {
+      file = rewire('../lib/file');
+      file.init();
+      core.__set__('file', file);
+    });
+
     it('should codeonly ok', function() {
+      file.isWindows = () => false;
+
       const expected = [
         '/**',
         ' * Definition for singly-linked list.',
@@ -171,9 +181,7 @@ describe('core', function() {
     });
 
     it('should codeonly ok in windows', function() {
-      const h = rewire('../lib/helper');
-      h.isWindows = () => true;
-      core.__set__('h', h);
+      file.isWindows = () => true;
 
       const expected = [
         '/**',
@@ -203,8 +211,12 @@ describe('core', function() {
     });
 
     it('should detailed ok with cpp', function() {
+      file.isWindows = () => false;
+
       const expected = [
         '/*',
+        ' * @lc app=leetcode id=2 lang=cpp',
+        ' *',
         ' * [2] Add Two Numbers',
         ' *',
         ' * https://leetcode.com/problems/add-two-numbers',
@@ -249,7 +261,11 @@ describe('core', function() {
     });
 
     it('should detailed ok with ruby', function() {
+      file.isWindows = () => false;
+
       const expected = [
+        '#',
+        '# @lc app=leetcode id=2 lang=ruby',
         '#',
         '# [2] Add Two Numbers',
         '#',

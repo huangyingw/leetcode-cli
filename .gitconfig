@@ -1,6 +1,6 @@
-[remote "skygragon"]
+[remote "origin"]
     url = https://github.com/skygragon/leetcode-cli.git
-    fetch = +refs/heads/*:refs/remotes/skygragon/*
+    fetch = +refs/heads/*:refs/remotes/origin/*
 [remote "bitbucket"]
     url = git@bitbucket.org:huangyingw/leetcode-cli.git
     fetch = +refs/heads/*:refs/remotes/bitbucket/*
@@ -11,7 +11,7 @@
     remote = bitbucket
     remote = gitlab
 [gsync]
-    remote = skygragon
+    remote = origin
     branch = master
 [merge]
     allow = true

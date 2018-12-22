@@ -14,4 +14,5 @@ while read -r line || [[ -n "$line" ]]
 do
     doGet "$line"
 done < problems.list
-./commit.sh
+./remove_dup.sh
+./restore.sh

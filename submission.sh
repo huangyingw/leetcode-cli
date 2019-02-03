@@ -4,6 +4,7 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
 ./build.sh
+./restore.sh
 
 doGet () {
     leetcode user -l
@@ -15,4 +16,3 @@ do
     doGet "$line"
 done < problems.list
 ./remove_dup.sh
-./restore.sh

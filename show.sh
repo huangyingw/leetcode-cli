@@ -4,6 +4,7 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
 ./build.sh
+rm  ./show/*.py
 rm -fr ~/.lc/leetcode/cache/*.json
 
 doShow () {

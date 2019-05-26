@@ -83,7 +83,6 @@
 "./lib/sprintf.js"
 "./list.sh"
 "./not_testable.md"
-"./package-lock.json"
 "./package.json"
 "./problems.list"
 "./prunefile.conf"

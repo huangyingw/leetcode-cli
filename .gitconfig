@@ -41,3 +41,5 @@
     ignore = submissions
     ignore = tags.list
     ignore = tags/*
+[leetcode]
+    submit = true

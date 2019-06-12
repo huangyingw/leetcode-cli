@@ -43,3 +43,4 @@ tmp/
 .env.json
 check_running.sh.lck
 package-lock.json
+files.proj.sort

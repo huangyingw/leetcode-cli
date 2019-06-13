@@ -11,8 +11,8 @@ doGet () {
     leetcode submission "$1" -o submissions
 }
 
-while read -r line || [[ -n "$line" ]]
+for (( c=1; c<=1500; c++ ))
 do
-    doGet "$line"
-done < problems.list
+    doGet "$c"
+done
 ./remove_dup.sh

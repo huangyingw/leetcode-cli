@@ -43,3 +43,6 @@
     ignore = tags/*
 [leetcode]
     submit = true
+[deploy]
+    host = localhost
+    path = ~/myproject/git/interview/skygragon/leetcode-cli/

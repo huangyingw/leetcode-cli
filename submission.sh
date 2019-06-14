@@ -4,6 +4,7 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
 ./build.sh
+find ~/.lc -type f -name problems.json -delete
 ./restore.sh
 
 doGet () {

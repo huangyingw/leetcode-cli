@@ -9,5 +9,5 @@ IFS=$'\r\n' GLOBIGNORE='*' command eval  'files=($(cat files.proj.sort))'
 
 for f in "${files[@]}"
 do
-    echo $(gstat -c %w -- "$f")$'\t'"$f"
+    echo $(gstat -c %y -- "$f")$'\t'"$f"
 done | sort -nk1,1

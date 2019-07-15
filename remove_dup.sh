@@ -9,10 +9,6 @@ then
     exit 1
 fi
 
-cd ./submissions
-git diff --quiet || exit 1
-cd -
-
 ./remove_prints.sh
 ~/loadrc/bashrc/jformat.sh
 autopep8 --in-place -r submissions/

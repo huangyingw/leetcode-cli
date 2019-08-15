@@ -5,6 +5,7 @@ cd "$SCRIPTPATH"
 
 ./build.sh
 find ~/.lc -type f -name problems.json -delete
+./backup.sh
 ./restore.sh
 
 doGet () {

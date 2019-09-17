@@ -1126,6 +1126,7 @@
 "./show/998.maximum-binary-tree-ii.py"
 "./show/999.available-captures-for-rook.py"
 "./show/response.html"
+"./sort_accepts.py"
 "./sort_submissions.sh"
 "./submission.sh"
 "./submissions/.gitconfig"

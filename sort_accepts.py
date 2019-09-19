@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 import re
+import os
+
+myCmd = 'cd submissions/ ; git checkout \*Accepted\* ; cd -'
+os.system(myCmd)
 
 fileName = 'files.proj'
 lines = [line.rstrip('\n') for line in open(fileName) if 'Accepted' in line]

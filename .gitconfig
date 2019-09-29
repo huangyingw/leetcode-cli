@@ -10,9 +10,6 @@
 [push]
     remote = origin
     remote = gitlab
-[gsync]
-    remote = skygragon
-    branch = master
 [merge]
     allow = true
 [commit]

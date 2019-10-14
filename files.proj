@@ -1130,6 +1130,7 @@
 "./sort_non_accepts.py"
 "./sort_submissions.sh"
 "./submission.sh"
+"./submission_test.sh"
 "./submissions/.gitconfig"
 "./submissions/1.two-sum.151671571.Accepted.leetcode.py"
 "./submissions/1.two-sum.194028805.Accepted.leetcode.py"

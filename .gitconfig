@@ -10,9 +10,6 @@
 [push]
     remote = origin
     remote = gitlab
-[gsync]
-    remote = skygragon
-    branch = master
 [merge]
     allow = true
 [commit]
@@ -41,8 +38,6 @@
     ignore = submissions
     ignore = tags.list
     ignore = tags/*
-[leetcode]
-    submit = true
 [deploy]
     host = localhost
     path = ~/myproject/git/interview/skygragon/leetcode-cli/

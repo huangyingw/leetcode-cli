@@ -43,3 +43,6 @@
     path = ~/myproject/git/interview/skygragon/leetcode-cli/
 [leetcode]
     submit = true
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master

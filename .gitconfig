@@ -41,3 +41,5 @@
 [deploy]
     host = localhost
     path = ~/myproject/git/interview/skygragon/leetcode-cli/
+[leetcode]
+    submit = true

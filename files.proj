@@ -48,6 +48,7 @@
 "./icons/default.json"
 "./icons/win7.json"
 "./includefile.conf"
+"./install_chrome_plugin.sh"
 "./interesting.md"
 "./lib/cache.js"
 "./lib/chalk.js"

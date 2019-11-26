@@ -1,5 +1,4 @@
 "./.dockerignore"
-"./.env.json"
 "./.eslintrc.js"
 "./.git/config"
 "./.git/modules/show/config"
@@ -75,6 +74,7 @@
 "./lib/plugin.js"
 "./lib/plugins/cache.js"
 "./lib/plugins/company.js"
+"./lib/plugins/cookie.chrome.js"
 "./lib/plugins/leetcode.js"
 "./lib/plugins/retry.js"
 "./lib/plugins/solution.discuss.js"

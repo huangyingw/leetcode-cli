@@ -10,6 +10,9 @@
 [push]
     remote = origin
     remote = gitlab
+[gsync]
+    remote = skygragon
+    branch = master
 [merge]
     allow = true
 [commit]
@@ -41,5 +44,3 @@
 [deploy]
     host = localhost
     path = ~/myproject/git/interview/skygragon/leetcode-cli/
-[leetcode]
-    submit = true

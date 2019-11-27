@@ -4963,5 +4963,4 @@
 "./test/test_session.js"
 "./test/test_sprintf.js"
 "./todos.md"
-"./update.sh"
 "./watch.sh"

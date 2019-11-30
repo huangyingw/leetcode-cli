@@ -32,6 +32,7 @@
     ignore = .gitignore
     ignore = .gitmodules
     ignore = companies.list
+    ignore = error
     ignore = excludeFile
     ignore = lib/plugins/company.js
     ignore = lib/plugins/cookie.chrome.js

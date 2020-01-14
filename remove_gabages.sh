@@ -8,5 +8,5 @@ do
     ~/loadrc/pythonrc/remove_comments.py "$ss"
     mv -fv "$ss.strip" "$ss"
     autopep8 --in-place "$ss"
-    sed -i.bak '/print.*(/d;/^_author_/d;/^_project_/d;/\bprint\b/d;/^$/d;/^\s*$/d' "$ss"
+    sed -i.bak '/print.*(/d;/^_author_/d;/^_project_/d;/\bprint\b/d;/\s*#/d;/^$/d;/^\s*$/d' "$ss"
 done

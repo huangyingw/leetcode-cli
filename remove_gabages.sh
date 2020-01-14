@@ -3,7 +3,7 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-find ./submissions/ -type f -name \*.py | while read ss
+find ./submissions -type f -name \*.py | while read ss
 do
     ~/loadrc/pythonrc/remove_comments.py "$ss"
     mv -fv "$ss.strip" "$ss"

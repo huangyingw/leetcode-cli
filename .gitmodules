@@ -4,3 +4,6 @@
 [submodule "show"]
     path = show
     url = git@bitbucket.org:huangyingw/show.git
+[submodule "remove_comments"]
+	path = remove_comments
+	url = git@github.com:huangyingw/remove_comments.git

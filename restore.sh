@@ -5,5 +5,5 @@ cd "$SCRIPTPATH"
 
 rsync -aHv --progress \
     --exclude-from=./excludeFile \
-    ../leetcode-cli.bak/submissions/ \
+    ../leetcode-cli.orig/submissions/ \
     ./submissions/

@@ -3,6 +3,7 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
+mkdir -p remove_comments
 find ./submissions -type f -name \*.py | while read ss
 do
     autopep8 --in-place "$ss"

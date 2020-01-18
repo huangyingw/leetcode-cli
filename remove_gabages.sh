@@ -12,6 +12,7 @@ do
         sed -i.bak '/print.*(/d;/^_author_/d;/__main__/d;/ = Solution()/d;/^_project_/d;/\bprint\b/d;s/#--//g;s/##//g;/^$/d;/^\s*$/d' "$ss"
         autopep8 --in-place "$ss"
     else
+        rm "$ss.strip"
         mv -v "$ss" $(echo "$ss" | sed 's/submissions/remove_comments/g')
     fi
 done

@@ -7,3 +7,4 @@ cd "$SCRIPTPATH"
 ./remove_gabages.sh
 find . -type f \( -name \*.orig -o -name \*.bak \) -delete
 jdupes -1dNr submissions/
+./backup.sh

@@ -4,7 +4,6 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
 find ~/.lc -type f -name problems.json -delete
-./backup.sh
 ./restore.sh
 
 doGet () {
@@ -16,4 +15,5 @@ for (( c=1; c<=1500; c++ ))
 do
     doGet "$c"
 done
+
 ./remove_dup.sh

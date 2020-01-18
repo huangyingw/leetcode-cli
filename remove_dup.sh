@@ -3,7 +3,7 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
+./backup_orig.sh
 ./remove_gabages.sh
 find . -type f \( -name \*.orig -o -name \*.bak \) -delete
-./backup.sh
 jdupes -1dNr submissions/

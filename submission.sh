@@ -15,5 +15,3 @@ for (( c=1; c<=1500; c++ ))
 do
     doGet "$c"
 done
-
-./remove_dup.sh

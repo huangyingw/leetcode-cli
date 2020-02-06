@@ -6,7 +6,7 @@ myCmd = 'cd submissions/ ; git checkout \*Accepted\* ; cd -'
 os.system(myCmd)
 
 fileName = 'files.proj'
-lines = [line.rstrip('\n') for line in open(fileName) if 'Accepted' in line]
+lines = [line.rstrip('\n') for line in open(fileName) if 'Accepted' in line and 'submissions' in line]
 
 non_accepts = {}
 for line in lines:
@@ -14,7 +14,7 @@ for line in lines:
     non_accepts[num] = []
 
 
-lines = [line.rstrip('\n') for line in open(fileName) if 'Accepted' not in line]
+lines = [line.rstrip('\n') for line in open(fileName) if 'Accepted' not in line and 'submissions' in line]
 
 for line in lines:
     matches = re.findall(r'submissions\/(\d+)', line)

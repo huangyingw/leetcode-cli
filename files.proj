@@ -1,5 +1,4 @@
 "./.dockerignore"
-"./.env.json"
 "./.eslintrc.js"
 "./.git/config"
 "./.git/modules/remove_comments/config"

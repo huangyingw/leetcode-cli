@@ -10,7 +10,10 @@ doGet () {
     leetcode submission "$1" -o downloads
 }
 
-for (( c=1; c<=1500; c++ ))
+while true
 do
-    doGet "$c"
+    for (( c=1; c<=1500; c++ ))
+    do
+        doGet "$c"
+    done
 done

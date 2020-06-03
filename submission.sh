@@ -16,5 +16,4 @@ do
     do
         doGet "$c"
     done
-    ./restore.sh
 done

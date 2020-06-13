@@ -1,8 +1,16 @@
 diff --git a/lib/commands/list.js b/lib/commands/list.js
-index c010de86..bff8b57c 100644
+index c010de86..9d4e9d90 100644
 --- ./lib/commands/list.js
 +++ ./lib/commands/list.js
-@@ -66,14 +66,11 @@ cmd.handler = function(argv) {
+@@ -7,6 +7,7 @@ var icon = require('../icon');
+ var log = require('../log');
+ var core = require('../core');
+ var session = require('../session');
++var sprintf = require('../sprintf'); 
+ 
+ const cmd = {
+   command: 'list [keyword]',
+@@ -66,14 +67,11 @@ cmd.handler = function(argv) {
        if (problem.locked) ++stat.locked;
        if (problem.starred) ++stat.starred;
  
@@ -21,7 +29,7 @@ index c010de86..bff8b57c 100644
  
        if (argv.extra) {
          let badges = [problem.category];
-@@ -98,9 +95,9 @@ cmd.handler = function(argv) {
+@@ -98,9 +96,9 @@ cmd.handler = function(argv) {
  
      if (argv.stat) {
        log.info();
@@ -223,7 +231,7 @@ index de0449a3..7b3c9008 100644
          });
          return;
 diff --git a/lib/commands/submit.js b/lib/commands/submit.js
-index 56f5ed04..420527a0 100644
+index 56f5ed04..26b8d602 100644
 --- ./lib/commands/submit.js
 +++ ./lib/commands/submit.js
 @@ -1,6 +1,6 @@
@@ -247,6 +255,15 @@ index 56f5ed04..420527a0 100644
              .positional('filename', {
                  type: 'string',
                  describe: 'Code file to submit',
+@@ -29,7 +35,7 @@ function printResult(actual, k) {
+     const v = actual[k] || '';
+     const lines = Array.isArray(v) ? v : [v];
+     for (let line of lines) {
+-    if (k !== 'state') line = k + ': ' + line;
++        if (k !== 'state') line = k + ': \n' + line;
+         log.info('  ' + h.prettyText(' ' + line, actual.ok));
+     }
+ }
 @@ -63,6 +69,24 @@ cmd.handler = function(argv) {
              printLine(result, '%d/%d cases passed (%s)',
                  result.passed, result.total, result.runtime);
@@ -452,14 +469,14 @@ index 24331ec6..1143052e 100644
      });
  };
 diff --git a/package.json b/package.json
-index a9af9f7c..1d4a897d 100644
+index a9af9f7c..601d997d 100644
 --- ./package.json
 +++ ./package.json
 @@ -53,12 +53,15 @@
      "ansi-styles": "3.2.1",
      "cheerio": "0.20.0",
      "he": "1.2.0",
-+    "keytar": "^5.0.0",
++    "keytar": "^5.6.0",
      "mkdirp": "0.5.1",
      "moment": "^2.20.1",
      "nconf": "0.10.0",
@@ -467,7 +484,7 @@ index a9af9f7c..1d4a897d 100644
      "prompt": "1.0.0",
      "request": "2.88.0",
 +    "sprintf-js": "^1.1.1",
-+    "sqlite3": "^4.1.0",
++    "sqlite3": "^4.2.0",
      "supports-color": "5.5.0",
      "underscore": "1.9.1",
      "wordwrap": "1.0.0",

@@ -32,13 +32,16 @@
     ignore = .gitignore
     ignore = .gitmodules
     ignore = companies.list
+    ignore = downloads
     ignore = error
     ignore = excludeFile
+    ignore = fdocs.list
     ignore = lib/plugins/company.js
     ignore = lib/plugins/cookie.chrome.js
     ignore = lib/plugins/solution.discuss.js
     ignore = package-lock.json
     ignore = problems.list
+    ignore = remove_comments
     ignore = setup.cfg
     ignore = show
     ignore = sort_accepts.py

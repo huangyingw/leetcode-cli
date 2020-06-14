@@ -317,13 +317,14 @@ index 56f5ed04..26b8d602 100644
              } else {
                  printResult(result, 'error');
 diff --git a/lib/commands/test.js b/lib/commands/test.js
-index 21c4a4eb..24ad9dc3 100644
+index 21c4a4eb..6d73f14a 100644
 --- ./lib/commands/test.js
 +++ ./lib/commands/test.js
-@@ -84,10 +84,14 @@ function runTest(argv) {
+@@ -84,11 +84,17 @@ function runTest(argv) {
          log.info();
          log.info(chalk.yellow(results[i].type));
  
++                log.info('\n stdout: ');
 +                let stdouts = results[i]['stdout'];
 +                stdouts = stdouts.replace(/\'/g, '').split('\\n');
 +                for (let stdout of stdouts) {
@@ -334,8 +335,10 @@ index 21c4a4eb..24ad9dc3 100644
          printResult(results[i], results[i + 1], 'answer');
 -        printResult(results[i], results[i + 1], 'stdout');
          printResult(results[i], null, 'error');
++        printResult(results[i], null, 'expected_answer');
        }
      });
+   });
 diff --git a/lib/commands/user.js b/lib/commands/user.js
 index 4cd903cd..28e3cf02 100644
 --- ./lib/commands/user.js
@@ -407,7 +410,7 @@ index 8806086e..f8e98e6b 100644
    {lang: 'rust',       ext: '.rs',         style: 'c'},
    {lang: 'scala',      ext: '.scala',      style: 'c'},
 diff --git a/lib/plugins/leetcode.js b/lib/plugins/leetcode.js
-index 24331ec6..1143052e 100644
+index 24331ec6..d19e9620 100644
 --- ./lib/plugins/leetcode.js
 +++ ./lib/plugins/leetcode.js
 @@ -121,7 +121,6 @@ plugin.getCategoryProblems = function(category, cb) {
@@ -418,7 +421,12 @@ index 24331ec6..1143052e 100644
  
      const opts = plugin.makeOpts(config.sys.urls.graphql);
      opts.headers.Origin = config.sys.urls.base;
-@@ -248,6 +247,10 @@ function formatResult(result) {
+@@ -244,10 +243,15 @@ function formatResult(result) {
+     const x = {
+         ok:       result.run_success,
+         answer:   result.code_answer || '',
++        expected_answer:   result.expected_code_answer || '',
+         runtime:  result.status_runtime || '',
          state:    h.statusToName(result.status_code),
          testcase: util.inspect(result.input || result.last_testcase || ''),
          passed:   result.total_correct || 0,
@@ -429,27 +437,31 @@ index 24331ec6..1143052e 100644
          total:    result.total_testcases || 0
      };
  
-@@ -256,19 +259,9 @@ function formatResult(result) {
+@@ -256,11 +260,12 @@ function formatResult(result) {
          .values()
          .value();
  
 -  if (result.judge_type === 'large') {
-     x.answer = result.code_output;
-     x.expected_answer = result.expected_output;
-     x.stdout = result.std_output;
--  } else {
--    if (typeof(result.code_output) === 'string') {
--        x.stdout = util.inspect(result.code_output);
--    } else if (Array.isArray(result.code_output)) {
--        x.stdout = util.inspect(result.code_output.join('\n'));
--    } else {
--        x.stdout = util.inspect('');
--    }
--  }
++    if (result.total_testcases > 0) {
+         x.answer = result.code_output;
+         x.expected_answer = result.expected_output;
+         x.stdout = result.std_output;
+     } else {
++        x.ok = result.code_answer === result.expected_code_answer;
+         if (typeof(result.code_output) === 'string') {
+             x.stdout = util.inspect(result.code_output);
+         } else if (Array.isArray(result.code_output)) {
+@@ -287,8 +292,7 @@ plugin.testProblem = function(problem, cb) {
+         if (e) return cb(e);
  
-     // make sure we pass eveything!
-     if (x.passed !== x.total) x.ok = false;
-@@ -342,8 +335,17 @@ plugin.getSubmission = function(submission, cb) {
+         const tasks = [
+-      {type: 'Actual', id: task.interpret_id},
+-      {type: 'Expected', id: task.interpret_expected_id}
++            {type: 'Actual', id: task.interpret_id}
+         ];
+         const q = new Queue(tasks, {opts: opts, results: []}, verifyResult);
+         q.run(null, function(e, ctx) {
+@@ -342,8 +346,17 @@ plugin.getSubmission = function(submission, cb) {
          let re = body.match(/submissionCode:\s('[^']*')/);
          if (re) submission.code = eval(re[1]);
  

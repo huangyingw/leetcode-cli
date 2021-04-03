@@ -1,8 +1,15 @@
 diff --git a/lib/commands/list.js b/lib/commands/list.js
-index c010de86..9d4e9d90 100644
+index dee9714f..9d4e9d90 100644
 --- ./lib/commands/list.js
 +++ ./lib/commands/list.js
-@@ -7,6 +7,7 @@ var icon = require('../icon');
+@@ -1,12 +1,13 @@
+ 'use strict';
+ var _ = require('underscore');
+-var sprintf = require('sprintf-js').sprintf;
++
+ var h = require('../helper');
+ var chalk = require('../chalk');
+ var icon = require('../icon');
  var log = require('../log');
  var core = require('../core');
  var session = require('../session');
@@ -10,377 +17,321 @@ index c010de86..9d4e9d90 100644
  
  const cmd = {
    command: 'list [keyword]',
-@@ -66,14 +67,11 @@ cmd.handler = function(argv) {
-       if (problem.locked) ++stat.locked;
-       if (problem.starred) ++stat.starred;
- 
--      log.printf('%s %s %s [%=4s] %-60s %-6s (%s %%)',
--          (problem.starred ? chalk.yellow(icon.like) : icon.empty),
--          (problem.locked ? chalk.red(icon.lock) : icon.nolock),
--          h.prettyState(problem.state),
-+        log.printf('%3d.%, %-6s',
-             problem.fid,
--          problem.name,
--          h.prettyLevel(problem.level),
--          problem.percent.toFixed(2));
-+            problem.slug,
-+            h.prettyLevel(sprintf('%-6s', problem.level))
-+        );
- 
-       if (argv.extra) {
-         let badges = [problem.category];
-@@ -98,9 +96,9 @@ cmd.handler = function(argv) {
- 
-     if (argv.stat) {
-       log.info();
--      log.printf('      Listed: %-9s Locked:  %-9s Starred: %-9s', problems.length, stat.locked, stat.starred);
--      log.printf('      Accept: %-9s Not-AC:  %-9s Remain:  %-9s', stat.ac, stat.notac, stat.None);
--      log.printf('      Easy:   %-9s Medium:  %-9s Hard:    %-9s', stat.Easy, stat.Medium, stat.Hard);
-+      log.printf('      Listed: %-9d Locked:  %-9d Starred: %-9d', problems.length, stat.locked, stat.starred);
-+      log.printf('      Accept: %-9d Not-AC:  %-9d Remain:  %-9d', stat.ac, stat.notac, stat.None);
-+      log.printf('      Easy:   %-9d Medium:  %-9d Hard:    %-9d', stat.Easy, stat.Medium, stat.Hard);
-     }
-   });
- };
-diff --git a/lib/commands/show.js b/lib/commands/show.js
-index 7c66204a..7f15ef36 100644
---- ./lib/commands/show.js
-+++ ./lib/commands/show.js
-@@ -19,6 +19,12 @@ const cmd = {
-   desc:    'Show question',
+@@ -15,12 +16,6 @@ const cmd = {
    builder: function(yargs) {
      return yargs
-+            .option('a', {
-+                alias: 'all',
-+                type: 'boolean',
-+                default: false,
-+                describe: 'show all questions'
-+            })
-       .option('c', {
-         alias:    'codeonly',
+       .option('q', core.filters.query)
+-            .option('n', {
+-                alias:    'none',
+-                type:     'boolean',
+-                default:  false,
+-                describe: 'Show only remain questions'
+-            })
+       .option('s', {
+         alias:    'stat',
          type:     'boolean',
-@@ -75,18 +81,12 @@ const cmd = {
- function genFileName(problem, opts) {
-   const path = require('path');
-   const params = [
--    file.fmt(config.file.show, problem),
--    '',
-+        problem.fid,
-+        problem.slug,
-     h.langToExt(opts.lang)
-   ];
+@@ -66,9 +61,6 @@ cmd.handler = function(argv) {
+     for (let x of ['locked', 'starred', 'ac', 'notac', 'None', 'Easy', 'Medium', 'Hard']) stat[x] = 0;
  
--  // try new name to avoid overwrite by mistake
--  for (let i = 0; ; ++i) {
--    const name = path.join(opts.outdir, params.join('.').replace(/\.+/g, '.'));
--    if (!file.exist(name))
--      return name;
--    params[1] = i;
--  }
-+    return path.join(opts.outdir, params.join('.').replace(/\.+/g, '.'));
- }
- 
- function showProblem(problem, argv) {
-@@ -122,13 +122,9 @@ function showProblem(problem, argv) {
-   if (argv.gen) {
-     file.mkdir(argv.outdir);
-     filename = genFileName(problem, argv);
--    file.write(filename, code);
- 
--    if (argv.editor !== undefined) {
--      childProcess.spawn(argv.editor || config.code.editor, [filename], {
--        // in case your editor of choice is vim or emacs
--        stdio: 'inherit'
--      });
-+        if (!file.exist(filename)) {
-+    file.write(filename, code);
-     }
-   } else {
-     if (argv.codeonly) {
-@@ -137,7 +133,7 @@ function showProblem(problem, argv) {
-     }
-   }
- 
--  log.printf('[%s] %s %s', problem.fid, problem.name,
-+    log.printf('[%d] %s %s', problem.fid, problem.name,
-       (problem.starred ? chalk.yellow(icon.like) : icon.empty));
-   log.info();
-   log.info(chalk.underline(problem.link));
-@@ -150,7 +146,7 @@ function showProblem(problem, argv) {
- 
-   log.info();
-   log.printf('* %s', problem.category);
--  log.printf('* %s (%s%%)', h.prettyLevel(problem.level), problem.percent.toFixed(2));
-+    log.printf('* %s (%.2f%%)', h.prettyLevel(problem.level), problem.percent);
- 
-   if (filename)
-     log.printf('* Source Code:       %s', chalk.yellow.underline(filename));
-@@ -167,32 +163,26 @@ function showProblem(problem, argv) {
- 
- cmd.handler = function(argv) {
-   session.argv = argv;
--  if (argv.keyword.length > 0) {
--    // show specific one
--    core.getProblem(argv.keyword, function(e, problem) {
-+    if (argv.all) {
-+        core.getProblems(function(e, problems) {
-+            if (e) return log.fail(e);
-+
-+            for (let problem of problems) {
-+                core.getProblem(problem.fid, function(e, problem) {
-       if (e) return log.fail(e);
-       showProblem(problem, argv);
-     });
--  } else {
--    // show random one
--    core.filterProblems(argv, function(e, problems) {
--      if (e) return log.fail(e);
--
--      // random select one that not AC-ed yet
--      const user = session.getUser();
--      problems = problems.filter(function(x) {
--        if (x.state === 'ac') return false;
--        if (!user.paid && x.locked) return false;
--        return true;
-+            }
-       });
--      if (problems.length === 0) return log.fail('Problem not found!');
-+        return;
-+    }
- 
--      const problem = _.sample(problems);
--      core.getProblem(problem, function(e, problem) {
-+    if (argv.keyword.length > 0) {
-+        // show specific one
-+        core.getProblem(argv.keyword, function(e, problem) {
-         if (e) return log.fail(e);
-         showProblem(problem, argv);
-       });
--    });
-   }
- };
- 
+     problems = _.sortBy(problems, x => -x.fid);
+-        if (argv.none) {
+-            problems = problems.filter(x => x.state === 'None');
+-        }
+     for (let problem of problems) {
+       stat[problem.level] = (stat[problem.level] || 0) + 1;
+       stat[problem.state] = (stat[problem.state] || 0) + 1;
 diff --git a/lib/commands/stat.js b/lib/commands/stat.js
-index 772499c4..910d8de5 100644
+index 3c51ab98..910d8de5 100644
 --- ./lib/commands/stat.js
 +++ ./lib/commands/stat.js
-@@ -104,7 +104,7 @@ function showGraph(problems) {
+@@ -104,7 +104,8 @@ function showGraph(problems) {
    for (let problem of problems)
      graph[problem.fid] = ICONS[problem.state] || ICONS.none;
  
--  let rowNumFormat = ' %04s';
+-  let line = [sprintf(' %03s', 0)];
 +  let rowNumFormat = ' %03s';
-   let line = [sprintf(rowNumFormat, 0)];
++  let line = [sprintf(rowNumFormat, 0)];
    for (let i = 1, n = graph.length; i <= n; ++i) {
      // padding before group
+     if (i % 10 === 1) line.push(' ');
+@@ -114,7 +115,7 @@ function showGraph(problems) {
+     // time to start new row
+     if (i % (10 * groups) === 0 || i === n) {
+       log.info(line.join(' '));
+-      line = [sprintf(' %03s', i)];
++      line = [sprintf(rowNumFormat, i)];
+     }
+   }
+ 
 diff --git a/lib/commands/submission.js b/lib/commands/submission.js
-index de0449a3..7b3c9008 100644
+index 5cf1e40a..7b3c9008 100644
 --- ./lib/commands/submission.js
 +++ ./lib/commands/submission.js
-@@ -1,6 +1,6 @@
+@@ -1,10 +1,12 @@
  'use strict';
- var path = require('path');
+-var fs = require('fs');
 -
-+var sprintf = require('sprintf-js').sprintf;
- var _ = require('underscore');
++var path = require('path');
+ var sprintf = require('sprintf-js').sprintf;
++var _ = require('underscore');
  
  var h = require('../helper');
-@@ -85,19 +85,19 @@ function exportSubmission(problem, argv, cb) {
-             return cb('No submissions?');
++var file = require('../file');
+ var chalk = require('../chalk');
++var config = require('../config');
+ var log = require('../log');
+ var Queue = require('../queue');
+ var core = require('../core');
+@@ -60,7 +62,7 @@ function doTask(problem, queue, cb) {
+         // - green: accepted, fresh download
+         // - yellow: not ac-ed, fresh download
+         // - white: existed already, skip download
+-        log.printf('[%3d] %-60s %s', problem.fid, problem.name,
++        log.printf('[%=4s] %-60s %s', problem.fid, problem.name,
+             (e ? chalk.red('ERROR: ' + (e.msg || e)) : msg));
+         if (cb) cb(e);
+     }
+@@ -97,11 +99,10 @@ function exportSubmission(problem, argv, cb) {
+                 submission.status_display.replace(/ /g, "-"),
+                 h.langToExt(submission.lang));
  
-         // get obj list contain required filetype
--    submissions = submissions.filter(x => argv.lang === 'all' || argv.lang === x.lang);
-+        submissions = submissions.filter(x => x.status_display !== 'Compile Error');
-         if (submissions.length === 0)
-             return cb('No submissions in required language.');
- 
--    // if no accepted, use the latest non-accepted one
--    const submission = submissions.find(x => x.status_display === 'Accepted') || submissions[0];
--    submission.ac = (submission.status_display === 'Accepted');
-+        for (let submission of submissions) {
- 
--    const data = _.extend({}, submission, problem);
--    data.sid = submission.id;
--    data.ac = submission.ac ? 'ac' : 'notac';
--    const basename = file.fmt(config.file.submission, data);
--    const f = path.join(argv.outdir, basename + h.langToExt(submission.lang));
-+            const f = sprintf('%s/%d.%s.%s.%s%s',
-+                argv.outdir,
-+                problem.fid,
-+                problem.slug,
-+                submission.id,
-+                submission.status_display.replace(/ /g, "-"),
-+                h.langToExt(submission.lang));
- 
-             file.mkdir(argv.outdir);
+-            h.mkdir(argv.outdir);
++            file.mkdir(argv.outdir);
              // skip the existing cached submissions
-@@ -116,6 +116,7 @@ function exportSubmission(problem, argv, cb) {
-                 cb(null, submission.ac ? chalk.green.underline(f)
-                     : chalk.yellow.underline(f));
-             });
-+        }
-     });
- }
+-            if (fs.existsSync(f)) {
+-                continue;
+-            }
++            if (file.exist(f))
++                return cb(null, chalk.underline(f));
  
-@@ -126,7 +127,6 @@ cmd.handler = function(argv) {
+             core.getSubmission(submission, function(e, submission) {
+                 if (e) return cb(e);
+@@ -111,9 +112,9 @@ function exportSubmission(problem, argv, cb) {
+                     code: submission.code,
+                     tpl:  argv.extra ? 'detailed' : 'codeonly'
+                 };
+-                fs.writeFileSync(f, core.exportProblem(problem, opts));
+-                cb(null, submission.ac ? chalk.green.underline(f) :
+-                    chalk.yellow.underline(f));
++                file.write(f, core.exportProblem(problem, opts));
++                cb(null, submission.ac ? chalk.green.underline(f)
++                    : chalk.yellow.underline(f));
+             });
+         }
+     });
+@@ -121,9 +122,7 @@ function exportSubmission(problem, argv, cb) {
+ 
+ cmd.handler = function(argv) {
+     session.argv = argv;
+-    const q = new Queue(null, {
+-        argv: argv
+-    }, doTask);
++    const q = new Queue(null, {argv: argv}, doTask);
+ 
      if (argv.all) {
          core.getProblems(function(e, problems) {
-             if (e) return log.fail(e);
--      problems = problems.filter(x => x.state === 'ac' || x.state === 'notac');
-             q.addTasks(problems).run();
-         });
-         return;
 diff --git a/lib/commands/submit.js b/lib/commands/submit.js
-index 56f5ed04..26b8d602 100644
+index 13150c9e..26b8d602 100644
 --- ./lib/commands/submit.js
 +++ ./lib/commands/submit.js
-@@ -1,6 +1,6 @@
- 'use strict';
- var util = require('util');
+@@ -1,46 +1,42 @@
+-"use strict";
+-var util = require("util");
 -
-+const fs = require("fs");
- var h = require('../helper');
- var file = require('../file');
- var chalk = require('../chalk');
-@@ -14,6 +14,12 @@ const cmd = {
-     desc:    'Submit code',
+-var h = require("../helper");
+-var file = require("../file");
+-var chalk = require("../chalk");
+-var log = require("../log");
+-var core = require("../core");
+-var session = require("../session");
++'use strict';
++var util = require('util');
+ const fs = require("fs");
++var h = require('../helper');
++var file = require('../file');
++var chalk = require('../chalk');
++var log = require('../log');
++var core = require('../core');
++var session = require('../session');
+ 
+ const cmd = {
+-    command: "submit <filename>",
+-    aliases: ["push", "commit"],
+-    desc: "Submit code",
++    command: 'submit <filename>',
++    aliases: ['push', 'commit'],
++    desc:    'Submit code',
      builder: function(yargs) {
          return yargs
+-            .option("d", {
+-                alias: "delete",
+-                type: "boolean",
 +            .option('d', {
 +                alias: 'delete',
 +                type: 'boolean',
-+                default: false,
+                 default: false,
+-                describe: "delete the already submitted file"
 +                describe: 'delete the already submitted file'
-+            })
-             .positional('filename', {
-                 type: 'string',
-                 describe: 'Code file to submit',
-@@ -29,7 +35,7 @@ function printResult(actual, k) {
-     const v = actual[k] || '';
+             })
+-            .positional("filename", {
+-                type: "string",
+-                describe: "Code file to submit",
+-                default: ""
++            .positional('filename', {
++                type: 'string',
++                describe: 'Code file to submit',
++                default: ''
+             })
+-            .example(
+-                chalk.yellow("leetcode submit 1.two-sum.cpp"),
+-                "Submit code"
+-            );
++            .example(chalk.yellow('leetcode submit 1.two-sum.cpp'), 'Submit code');
+     }
+ };
+ 
+ function printResult(actual, k) {
+     if (!actual.hasOwnProperty(k)) return;
+ 
+-    const v = actual[k] || "";
++    const v = actual[k] || '';
      const lines = Array.isArray(v) ? v : [v];
      for (let line of lines) {
--    if (k !== 'state') line = k + ': ' + line;
+-        if (k !== "state") line = k + ": \n" + line;
+-        log.info("  " + h.prettyText(" " + line, actual.ok));
 +        if (k !== 'state') line = k + ': \n' + line;
-         log.info('  ' + h.prettyText(' ' + line, actual.ok));
++        log.info('  ' + h.prettyText(' ' + line, actual.ok));
      }
  }
-@@ -63,6 +69,24 @@ cmd.handler = function(argv) {
-             printLine(result, '%d/%d cases passed (%s)',
-                 result.passed, result.total, result.runtime);
  
-+            if (argv.delete) {
-+                try {
-+                    fs.unlinkSync(argv.filename);
-+
-+                    function wait(ms) {
-+                        var start = new Date().getTime();
-+                        var end = start;
-+                        while (end < start + ms) {
-+                            end = new Date().getTime();
-+                        }
-+                    }
-+
-+                    wait(12000);
-+                } catch (err) {
-+                    console.error(err);
-+                }
-+            }
-+
+@@ -48,13 +44,13 @@ function printLine() {
+     const args = Array.from(arguments);
+     const actual = args.shift();
+     const line = util.format.apply(util, args);
+-    log.info("  " + h.prettyText(" " + line, actual.ok));
++    log.info('  ' + h.prettyText(' ' + line, actual.ok));
+ }
+ 
+ cmd.handler = function(argv) {
+     session.argv = argv;
+     if (!file.exist(argv.filename))
+-        return log.fatal("File " + argv.filename + " not exist!");
++        return log.fatal('File ' + argv.filename + ' not exist!');
+ 
+     const meta = file.meta(argv.filename);
+ 
+@@ -69,14 +65,9 @@ cmd.handler = function(argv) {
+ 
+             const result = results[0];
+ 
+-            printResult(result, "state");
+-            printLine(
+-                result,
+-                "%d/%d cases passed (%s)",
+-                result.passed,
+-                result.total,
+-                result.runtime
+-            );
++            printResult(result, 'state');
++            printLine(result, '%d/%d cases passed (%s)',
++                result.passed, result.total, result.runtime);
+ 
+             if (argv.delete) {
+                 try {
+@@ -97,11 +88,11 @@ cmd.handler = function(argv) {
+             }
+ 
              if (result.ok) {
-                 session.updateStat('ac', 1);
-                 session.updateStat('ac.set', problem.fid);
-@@ -74,14 +98,18 @@ cmd.handler = function(argv) {
-                     const scores = submission.distributionChart.distribution;
-                     const myRuntime = parseFloat(result.runtime);
+-                session.updateStat("ac", 1);
+-                session.updateStat("ac.set", problem.fid);
++                session.updateStat('ac', 1);
++                session.updateStat('ac.set', problem.fid);
+                 core.getSubmission({id: result.id}, function(e, submission) {
+                     if (e || !submission || !submission.distributionChart)
+-                        return log.warn("Failed to get submission beat ratio.");
++                        return log.warn('Failed to get submission beat ratio.');
  
--          let ratio = 0.0;
--          for (let score of scores) {
--            if (parseFloat(score[0]) >= myRuntime)
--              ratio += parseFloat(score[1]);
--          }
--
--          printLine(result, 'Your runtime beats %d %% of %s submissions',
--              ratio.toFixed(2), lang);
-+                    printLine(
-+                        result,
-+                        "Your runtime beats %d %% of %s submissions",
-+                        result.runtime_percentile,
-+                        lang
-+                    );
-+                    printLine(
-+                        result,
-+                        "Your memory beats %d %% of %s submissions",
-+                        result.memory_percentile,
-+                        lang
-+                    );
+                     const lang = submission.distributionChart.lang;
+                     const scores = submission.distributionChart.distribution;
+@@ -121,15 +112,15 @@ cmd.handler = function(argv) {
+                     );
                  });
              } else {
-                 printResult(result, 'error');
+-                printResult(result, "error");
+-                printResult(result, "testcase");
+-                printResult(result, "answer");
+-                printResult(result, "expected_answer");
+-                printResult(result, "std_output");
++                printResult(result, 'error');
++                printResult(result, 'testcase');
++                printResult(result, 'answer');
++                printResult(result, 'expected_answer');
++                printResult(result, 'stdout');
+             }
+ 
+             // update this problem status in local cache
+-            core.updateProblem(problem, { state: result.ok ? "ac" : "notac" });
++            core.updateProblem(problem, {state: (result.ok ? 'ac' : 'notac')});
+         });
+     });
+ };
 diff --git a/lib/commands/test.js b/lib/commands/test.js
-index 21c4a4eb..6d73f14a 100644
+index 24ad9dc3..76643bd4 100644
 --- ./lib/commands/test.js
 +++ ./lib/commands/test.js
-@@ -84,11 +84,17 @@ function runTest(argv) {
+@@ -84,15 +84,18 @@ function runTest(argv) {
          log.info();
          log.info(chalk.yellow(results[i].type));
  
-+                log.info('\n stdout: ');
-+                let stdouts = results[i]['stdout'];
-+                stdouts = stdouts.replace(/\'/g, '').split('\\n');
-+                for (let stdout of stdouts) {
-+                    log.printf('%s', stdout);
-+                }
++                log.info('\nstdouts: ');
+                 let stdouts = results[i]['stdout'];
+-                stdouts = stdouts.replace(/\'/g, '').split('\\n');
++                stdouts = stdouts.replace(/\'/g, '').replace(/"/g, '').split('\\n');
+                 for (let stdout of stdouts) {
++                    stdout = stdout.replace(/\s+\+\n\s+/g, '');
+                     log.printf('%s', stdout);
+                 }
          printResult(results[i], null, 'state');
          printResult(results[i], null, 'runtime');
          printResult(results[i], results[i + 1], 'answer');
--        printResult(results[i], results[i + 1], 'stdout');
          printResult(results[i], null, 'error');
 +        printResult(results[i], null, 'expected_answer');
        }
      });
    });
-diff --git a/lib/commands/user.js b/lib/commands/user.js
-index 4cd903cd..28e3cf02 100644
---- ./lib/commands/user.js
-+++ ./lib/commands/user.js
-@@ -35,23 +35,15 @@ const cmd = {
+diff --git a/lib/config.js b/lib/config.js
+index 15ca0901..373b9f0f 100644
+--- ./lib/config.js
++++ ./lib/config.js
+@@ -22,6 +22,7 @@ const DEFAULT_CONFIG = {
+       'javascript',
+       'kotlin',
+       'mysql',
++      'php',
+       'python',
+       'python3',
+       'ruby',
+@@ -49,12 +50,12 @@ const DEFAULT_CONFIG = {
  
- cmd.handler = function(argv) {
-     session.argv = argv;
--  let user = null;
-+    const user = {};
-     if (argv.login) {
-         // login
--    prompt.colors = false;
--    prompt.message = '';
--    prompt.start();
--    prompt.get([
--      {name: 'login', required: true},
--      {name: 'pass', required: true, hidden: true}
--    ], function(e, user) {
--      if (e) return log.fail(e);
--
-+        user.login = 'huangyingw@gmail.com';
-+        user.pass = '1qaz@WSX';
-         core.login(user, function(e, user) {
-             if (e) return log.fail(e);
-             log.info('Successfully login as', chalk.yellow(user.name));
-         });
--    });
-     } else if (argv.logout) {
-         // logout
-         user = core.logout(user, true);
+   // but you will want change these
+   autologin: {
+-    enable: true,
++    enable: false,
+     retry:  2
+   },
+   code: {
+     editor: 'vim',
+-    lang:   'all'
++    lang:   'cpp'
+   },
+   file: {
+     show:       '${fid}.${slug}',
 diff --git a/lib/file.js b/lib/file.js
-index 51ea21c3..3643cf39 100644
+index 7b1acada..3643cf39 100644
 --- ./lib/file.js
 +++ ./lib/file.js
-@@ -129,10 +129,11 @@ file.metaByName = function(filename) {
- 
-     // expect the 1st section in filename as id
-     // e.g. 1.two-sum.cpp
--  m.id = file.name(filename).split('.')[0];
-+    let fidRegexp = /(?<fid>\d+)/;
-+    m.id = file.name(filename).match(fidRegexp).groups.fid;
+@@ -133,7 +133,7 @@ file.metaByName = function(filename) {
+     m.id = file.name(filename).match(fidRegexp).groups.fid;
  
      // HACK: compatible with old ext
 -  if (filename.endsWith('.py3') || filename.endsWith('.python3.py'))
@@ -389,128 +340,827 @@ index 51ea21c3..3643cf39 100644
      else
          m.lang = require('./helper').extToLang(filename);
 diff --git a/lib/helper.js b/lib/helper.js
-index 8806086e..f8e98e6b 100644
+index a23fabc4..f8e98e6b 100644
 --- ./lib/helper.js
 +++ ./lib/helper.js
-@@ -35,13 +35,13 @@ const LANGS = [
-   {lang: 'cpp',        ext: '.cpp',        style: 'c'},
-   {lang: 'csharp',     ext: '.cs',         style: 'c'},
-   {lang: 'golang',     ext: '.go',         style: 'c'},
--  {lang: 'java',       ext: '.java',       style: 'c'},
-+  {lang: 'java',       ext: '.leetcode.java',       style: 'c'},
+@@ -1,9 +1,5 @@
+ 'use strict';
+-var fs = require('fs');
+-var path = require('path');
+-
+ var _ = require('underscore');
+-var mkdirp = require('mkdirp');
+ var ora = require('ora');
+ 
+ var file = require('./file');
+@@ -42,9 +38,10 @@ const LANGS = [
+   {lang: 'java',       ext: '.leetcode.java',       style: 'c'},
    {lang: 'javascript', ext: '.js',         style: 'c'},
    {lang: 'kotlin',     ext: '.kt',         style: 'c'},
-   {lang: 'mysql',      ext: '.sql',        style: '--'},
-   {lang: 'php',        ext: '.php',        style: 'c'},
+-  {lang: 'mysql',      ext: '.sql',        style: '#'},
 -  {lang: 'python',     ext: '.py',         style: '#'},
--  {lang: 'python3',    ext: '.py',         style: '#'},
+-  {lang: 'python3',    ext: '.python3.py', style: '#'},
++  {lang: 'mysql',      ext: '.sql',        style: '--'},
++  {lang: 'php',        ext: '.php',        style: 'c'},
 +  {lang: 'python',     ext: '.leetcode.py',         style: '#'},
 +  {lang: 'python3',    ext: '.leetcode.python3.py', style: '#'},
    {lang: 'ruby',       ext: '.rb',         style: '#'},
    {lang: 'rust',       ext: '.rs',         style: 'c'},
    {lang: 'scala',      ext: '.scala',      style: 'c'},
+@@ -61,10 +58,6 @@ h.KEYS = {
+   problem:  p => p.fid + '.' + p.slug + '.' + p.category
+ };
+ 
+-h.isWindows = function() {
+-  return process.platform === 'win32';
+-};
+-
+ h.prettyState = function(state) {
+   switch (state) {
+     case 'ac':    return this.prettyText('', true);
+@@ -133,85 +126,16 @@ h.langToExt = function(lang) {
+ };
+ 
+ h.extToLang = function(fullpath) {
+-  // HACK: compatible with old ext
+-  if (fullpath.endsWith('.py3')) return 'python3';
+-
+-  const res = _.chain(LANGS)
+-    .filter(x => fullpath.endsWith(x.ext))
+-    .sortBy(x => -x.ext.length)
+-    .value();
+-  return res.length ? res[0].lang : 'unknown';
++  const res = LANGS.find(x => fullpath.endsWith(x.ext));
++  return res ? res.lang : 'unknown';
+ };
+ 
+ h.langToCommentStyle = function(lang) {
+   const res = LANGS.find(x => x.lang === lang);
+ 
+-  return (res && res.style === '#') ?
+-  {start: '#',  line: '#',  end: '#'} :
+-  {start: '/*', line: ' *', end: ' */'};
+-};
+-
+-h.mkdir = function(fullpath) {
+-  if (fs.existsSync(fullpath)) return;
+-  mkdirp.sync(fullpath);
+-};
+-
+-h.getCodeDirData = function(dir) {
+-  dir = h.getCodeDir(dir);
+-  return fs.readdirSync(dir).map(function(file) {
+-    const fullpath = path.join(dir, file);
+-    const ext = path.extname(file);
+-
+-    const name = path.basename(file, ext);
+-    let data = null;
+-
+-    switch (ext) {
+-      case '.js':   data = require(fullpath); break;
+-      case '.json': data = JSON.parse(h.getFileData(fullpath)); break;
+-    }
+-    return {name: name, data: data, file: file};
+-  });
+-};
+-
+-h.getFilename = function(fullpath) {
+-  return path.basename(fullpath, path.extname(fullpath));
+-};
+-
+-h.getFileData = function(fullpath) {
+-  return fs.existsSync(fullpath) ? fs.readFileSync(fullpath).toString() : null;
+-};
+-
+-h.getUserHomeDir = function() {
+-  return process.env.HOME || process.env.USERPROFILE;
+-};
+-
+-h.getHomeDir = function() {
+-  return path.join(this.getUserHomeDir(), '.lc');
+-};
+-
+-h.getAppDir = function() {
+-  const config = require('./config');
+-  return path.join(this.getHomeDir(), config.app || 'leetcode');
+-};
+-
+-h.getCacheDir = function() {
+-  return path.join(this.getAppDir(), 'cache');
+-};
+-
+-h.getCodeDir = function(dir) {
+-  return path.join(__dirname, '..', dir || '');
+-};
+-
+-h.getCacheFile = function(k) {
+-  return path.join(this.getCacheDir(), k + '.json');
+-};
+-
+-h.getConfigFile = function() {
+-  return path.join(this.getHomeDir(), 'config.json');
+-};
+-
+-h.getPluginFile = function(name) {
+-  return path.join(this.getCodeDir('lib/plugins'), path.basename(name));
++  return (res && res.style === 'c') ?
++    {start: '/*', line: ' *', end: ' */'} :
++    {start: res.style,  line: res.style,  end: res.style};
+ };
+ 
+ h.readStdin = function(cb) {
+@@ -219,13 +143,13 @@ h.readStdin = function(cb) {
+   const bufs = [];
+ 
+   console.log('NOTE: to finish the input, press ' +
+-      (this.isWindows() ? '<Ctrl-D> and <Return>' : '<Ctrl-D>'));
++      (file.isWindows() ? '<Ctrl-D> and <Return>' : '<Ctrl-D>'));
+ 
+   stdin.on('readable', function() {
+     const data = stdin.read();
+     if (data) {
+       // windows doesn't treat ctrl-D as EOF
+-      if (h.isWindows() && data.toString() === '\x04\r\n') {
++      if (file.isWindows() && data.toString() === '\x04\r\n') {
+         stdin.emit('end');
+       } else {
+         bufs.push(data);
 diff --git a/lib/plugins/leetcode.js b/lib/plugins/leetcode.js
-index 24331ec6..d19e9620 100644
+index cfa6ce4f..d19e9620 100644
 --- ./lib/plugins/leetcode.js
 +++ ./lib/plugins/leetcode.js
-@@ -121,7 +121,6 @@ plugin.getCategoryProblems = function(category, cb) {
- plugin.getProblem = function(problem, cb) {
-     log.debug('running leetcode.getProblem');
-     const user = session.getUser();
--  if (problem.locked && !user.paid) return cb('failed to load locked problem!');
+@@ -1,38 +1,30 @@
+-"use strict";
+-var util = require("util");
+-
+-var _ = require("underscore");
+-var cheerio = require("cheerio");
+-var he = require("he");
+-var request = require("request");
+-
+-var config = require("../config");
+-var h = require("../helper");
+-var file = require("../file");
+-var log = require("../log");
+-var Plugin = require("../plugin");
+-var Queue = require("../queue");
+-var session = require("../session");
+-
+-const plugin = new Plugin(
+-    10,
+-    "leetcode",
+-    "",
+-    "Plugin to talk with leetcode APIs."
+-);
++'use strict';
++var util = require('util');
++
++var _ = require('underscore');
++var cheerio = require('cheerio');
++var he = require('he');
++var request = require('request');
++
++var config = require('../config');
++var h = require('../helper');
++var file = require('../file');
++var log = require('../log');
++var Plugin = require('../plugin');
++var Queue = require('../queue');
++var session = require('../session');
++
++const plugin = new Plugin(10, 'leetcode', '',
++    'Plugin to talk with leetcode APIs.');
  
-     const opts = plugin.makeOpts(config.sys.urls.graphql);
-     opts.headers.Origin = config.sys.urls.base;
-@@ -244,10 +243,15 @@ function formatResult(result) {
-     const x = {
-         ok:       result.run_success,
-         answer:   result.code_answer || '',
-+        expected_answer:   result.expected_code_answer || '',
-         runtime:  result.status_runtime || '',
-         state:    h.statusToName(result.status_code),
-         testcase: util.inspect(result.input || result.last_testcase || ''),
-         passed:   result.total_correct || 0,
-+        std_output: result.std_output || "",
-+        runtime_percentile: result.runtime_percentile || "",
-+        memory_percentile: result.memory_percentile || "",
-+        status_memory: result.status_memory || "",
-         total:    result.total_testcases || 0
+ var spin;
+ 
+ // update options with user credentials
+ plugin.signOpts = function(opts, user) {
+-    opts.headers.Cookie =
+-        "LEETCODE_SESSION=" +
+-        user.sessionId +
+-        ";csrftoken=" +
+-        user.sessionCSRF +
+-        ";";
+-    opts.headers["X-CSRFToken"] = user.sessionCSRF;
+-    opts.headers["X-Requested-With"] = "XMLHttpRequest";
++    opts.headers.Cookie = 'LEETCODE_SESSION=' + user.sessionId +
++        ';csrftoken=' + user.sessionCSRF + ';';
++    opts.headers['X-CSRFToken'] = user.sessionCSRF;
++    opts.headers['X-Requested-With'] = 'XMLHttpRequest';
+ };
+ 
+ plugin.makeOpts = function(url) {
+@@ -40,49 +32,45 @@ plugin.makeOpts = function(url) {
+     opts.url = url;
+     opts.headers = {};
+ 
+-    if (session.isLogin()) plugin.signOpts(opts, session.getUser());
++    if (session.isLogin())
++        plugin.signOpts(opts, session.getUser());
+     return opts;
+ };
+ 
+ plugin.checkError = function(e, resp, expectedStatus) {
+     if (!e && resp && resp.statusCode !== expectedStatus) {
+         const code = resp.statusCode;
+-        log.debug("http error: " + code);
++        log.debug('http error: ' + code);
+ 
+         if (code === 403 || code === 401) {
+             e = session.errors.EXPIRED;
+         } else {
+-            e = { msg: "http error", statusCode: code };
++            e = {msg: 'http error', statusCode: code};
+         }
+     }
+     return e;
+ };
+ 
+ plugin.init = function() {
+-    config.app = "leetcode";
+-};
++    config.app = 'leetcode';
++}
+ 
+ plugin.getProblems = function(cb) {
+-    log.debug("running leetcode.getProblems");
++    log.debug('running leetcode.getProblems');
+     let problems = [];
+     const getCategory = function(category, queue, cb) {
+         plugin.getCategoryProblems(category, function(e, _problems) {
+             if (e) {
+-                log.debug(category + ": failed to getProblems: " + e.msg);
++                log.debug(category + ': failed to getProblems: ' + e.msg);
+             } else {
+-                log.debug(
+-                    category +
+-                        ": getProblems got " +
+-                        _problems.length +
+-                        " problems"
+-                );
++                log.debug(category + ': getProblems got ' + _problems.length + ' problems');
+                 problems = problems.concat(_problems);
+             }
+             return cb(e);
+         });
      };
  
-@@ -256,11 +260,12 @@ function formatResult(result) {
+-    spin = h.spin("Downloading problems");
++    spin = h.spin('Downloading problems');
+     const q = new Queue(config.sys.categories, {}, getCategory);
+     q.run(null, function(e) {
+         spin.stop();
+@@ -91,12 +79,10 @@ plugin.getProblems = function(cb) {
+ };
+ 
+ plugin.getCategoryProblems = function(category, cb) {
+-    log.debug("running leetcode.getCategoryProblems: " + category);
+-    const opts = plugin.makeOpts(
+-        config.sys.urls.problems.replace("$category", category)
+-    );
++    log.debug('running leetcode.getCategoryProblems: ' + category);
++    const opts = plugin.makeOpts(config.sys.urls.problems.replace('$category', category));
+ 
+-    spin.text = "Downloading category " + category;
++    spin.text = 'Downloading category ' + category;
+     request(opts, function(e, resp, body) {
+         e = plugin.checkError(e, resp, 200);
+         if (e) return cb(e);
+@@ -106,9 +92,7 @@ plugin.getCategoryProblems = function(category, cb) {
+         // leetcode permits anonymous access to the problem list
+         // while we require login first to make a better experience.
+         if (json.user_name.length === 0) {
+-            log.debug(
+-                "no user info in list response, maybe session expired..."
+-            );
++            log.debug('no user info in list response, maybe session expired...');
+             return cb(session.errors.EXPIRED);
+         }
+ 
+@@ -116,15 +100,12 @@ plugin.getCategoryProblems = function(category, cb) {
+             .filter(p => !p.stat.question__hide)
+             .map(function(p) {
+                 return {
+-                    state: p.status || "None",
++                    state:    p.status || 'None',
+                     id:       p.stat.question_id,
+                     fid:      p.stat.frontend_question_id,
+                     name:     p.stat.question__title,
+                     slug:     p.stat.question__title_slug,
+-                    link: config.sys.urls.problem.replace(
+-                        "$slug",
+-                        p.stat.question__title_slug
+-                    ),
++                    link:     config.sys.urls.problem.replace('$slug', p.stat.question__title_slug),
+                     locked:   p.paid_only,
+                     percent:  p.stat.total_acs * 100 / p.stat.total_submitted,
+                     level:    h.levelToName(p.difficulty.level),
+@@ -138,7 +119,7 @@ plugin.getCategoryProblems = function(category, cb) {
+ };
+ 
+ plugin.getProblem = function(problem, cb) {
+-    log.debug("running leetcode.getProblem");
++    log.debug('running leetcode.getProblem');
+     const user = session.getUser();
+ 
+     const opts = plugin.makeOpts(config.sys.urls.graphql);
+@@ -148,43 +129,38 @@ plugin.getProblem = function(problem, cb) {
+     opts.json = true;
+     opts.body = {
+         query: [
+-            "query getQuestionDetail($titleSlug: String!) {",
+-            "  question(titleSlug: $titleSlug) {",
+-            "    content",
+-            "    stats",
+-            "    codeDefinition",
+-            "    sampleTestCase",
+-            "    enableRunCode",
+-            "    metaData",
+-            "    translatedContent",
+-            "  }",
+-            "}"
+-        ].join("\n"),
++            'query getQuestionDetail($titleSlug: String!) {',
++            '  question(titleSlug: $titleSlug) {',
++            '    content',
++            '    stats',
++            '    codeDefinition',
++            '    sampleTestCase',
++            '    enableRunCode',
++            '    metaData',
++            '    translatedContent',
++            '  }',
++            '}'
++        ].join('\n'),
+         variables:     {titleSlug: problem.slug},
+-        operationName: "getQuestionDetail"
++        operationName: 'getQuestionDetail'
+     };
+ 
+-    const spin = h.spin("Downloading " + problem.slug);
++    const spin = h.spin('Downloading ' + problem.slug);
+     request.post(opts, function(e, resp, body) {
+         spin.stop();
+         e = plugin.checkError(e, resp, 200);
+         if (e) return cb(e);
+ 
+         const q = body.data.question;
+-        if (!q) return cb("failed to load problem!");
++        if (!q) return cb('failed to load problem!');
+ 
+         problem.totalAC = JSON.parse(q.stats).totalAccepted;
+         problem.totalSubmit = JSON.parse(q.stats).totalSubmission;
+ 
+         let content = q.translatedContent ? q.translatedContent : q.content;
+         // Replace <sup/> with '^' as the power operator
+-        content = content.replace(/<\/sup>/gm, "").replace(/<sup>/gm, "^");
+-        problem.desc = he.decode(
+-            cheerio
+-                .load(content)
+-                .root()
+-                .text()
+-        );
++        content = content.replace(/<\/sup>/gm, '').replace(/<sup>/gm, '^');
++        problem.desc = he.decode(cheerio.load(content).root().text());
+ 
+         problem.templates = JSON.parse(q.codeDefinition);
+         problem.testcase = q.sampleTestCase;
+@@ -198,7 +174,7 @@ plugin.getProblem = function(problem, cb) {
+ };
+ 
+ function runCode(opts, problem, cb) {
+-    opts.method = "POST";
++    opts.method = 'POST';
+     opts.headers.Origin = config.sys.urls.base;
+     opts.headers.Referer = problem.link;
+     opts.json = true;
+@@ -212,21 +188,22 @@ function runCode(opts, problem, cb) {
+         typed_code:  file.data(problem.file)
+     });
+ 
+-    const spin = h.spin("Sending code to judge");
++    const spin = h.spin('Sending code to judge');
+     request(opts, function(e, resp, body) {
+         spin.stop();
+         e = plugin.checkError(e, resp, 200);
+         if (e) return cb(e);
+ 
+         if (body.error) {
+-            if (!body.error.includes("too soon")) return cb(body.error);
++            if (!body.error.includes('too soon'))
++                return cb(body.error);
+ 
+             // hit 'run code too soon' error, have to wait a bit
+             log.debug(body.error);
+ 
+             // linear wait
+             ++opts._delay;
+-            log.debug("Will retry after %d seconds...", opts._delay);
++            log.debug('Will retry after %d seconds...', opts._delay);
+ 
+             const reRun = _.partial(runCode, opts, problem, cb);
+             return setTimeout(reRun, opts._delay * 1000);
+@@ -241,17 +218,17 @@ function runCode(opts, problem, cb) {
+ 
+ function verifyResult(task, queue, cb) {
+     const opts = queue.ctx.opts;
+-    opts.method = "GET";
+-    opts.url = config.sys.urls.verify.replace("$id", task.id);
++    opts.method = 'GET';
++    opts.url = config.sys.urls.verify.replace('$id', task.id);
+ 
+-    const spin = h.spin("Waiting for judge result");
++    const spin = h.spin('Waiting for judge result');
+     request(opts, function(e, resp, body) {
+         spin.stop();
+         e = plugin.checkError(e, resp, 200);
+         if (e) return cb(e);
+ 
+         let result = JSON.parse(body);
+-        if (result.state === "SUCCESS") {
++        if (result.state === 'SUCCESS') {
+             result = formatResult(result);
+             _.extendOwn(result, task);
+             queue.ctx.results.push(result);
+@@ -265,10 +242,11 @@ function verifyResult(task, queue, cb) {
+ function formatResult(result) {
+     const x = {
+         ok:       result.run_success,
+-        answer: result.code_answer || "",
+-        runtime: result.status_runtime || "",
++        answer:   result.code_answer || '',
++        expected_answer:   result.expected_code_answer || '',
++        runtime:  result.status_runtime || '',
+         state:    h.statusToName(result.status_code),
+-        testcase: util.inspect(result.input || result.last_testcase || ""),
++        testcase: util.inspect(result.input || result.last_testcase || ''),
+         passed:   result.total_correct || 0,
+         std_output: result.std_output || "",
+         runtime_percentile: result.runtime_percentile || "",
+@@ -282,31 +260,39 @@ function formatResult(result) {
          .values()
          .value();
  
--  if (result.judge_type === 'large') {
 +    if (result.total_testcases > 0) {
          x.answer = result.code_output;
          x.expected_answer = result.expected_output;
          x.stdout = result.std_output;
-     } else {
++    } else {
 +        x.ok = result.code_answer === result.expected_code_answer;
-         if (typeof(result.code_output) === 'string') {
-             x.stdout = util.inspect(result.code_output);
-         } else if (Array.isArray(result.code_output)) {
-@@ -287,8 +292,7 @@ plugin.testProblem = function(problem, cb) {
++        if (typeof(result.code_output) === 'string') {
++            x.stdout = util.inspect(result.code_output);
++        } else if (Array.isArray(result.code_output)) {
++            x.stdout = util.inspect(result.code_output.join('\n'));
++        } else {
++            x.stdout = util.inspect('');
++        }
++    }
+ 
+     // make sure we pass eveything!
+     if (x.passed !== x.total) x.ok = false;
+-    if (x.state !== "Accepted") x.ok = false;
++    if (x.state !== 'Accepted') x.ok = false;
+     if (x.error.length > 0) x.ok = false;
+ 
+     return x;
+ }
+ 
+ plugin.testProblem = function(problem, cb) {
+-    log.debug("running leetcode.testProblem");
+-    const opts = plugin.makeOpts(
+-        config.sys.urls.test.replace("$slug", problem.slug)
+-    );
++    log.debug('running leetcode.testProblem');
++    const opts = plugin.makeOpts(config.sys.urls.test.replace('$slug', problem.slug));
+     opts.body = {data_input: problem.testcase};
+ 
+     runCode(opts, problem, function(e, task) {
          if (e) return cb(e);
  
          const tasks = [
--      {type: 'Actual', id: task.interpret_id},
--      {type: 'Expected', id: task.interpret_expected_id}
+-            { type: "Actual", id: task.interpret_id },
+-            { type: "Expected", id: task.interpret_expected_id }
 +            {type: 'Actual', id: task.interpret_id}
          ];
          const q = new Queue(tasks, {opts: opts, results: []}, verifyResult);
          q.run(null, function(e, ctx) {
-@@ -342,8 +346,17 @@ plugin.getSubmission = function(submission, cb) {
-         let re = body.match(/submissionCode:\s('[^']*')/);
-         if (re) submission.code = eval(re[1]);
+@@ -316,16 +302,14 @@ plugin.testProblem = function(problem, cb) {
+ };
  
--    re = body.match(/runtimeDistributionFormatted:\s('[^']+')/);
-+        re = body.match(/DistributionFormatted:\s('[^']+')/);
-         if (re) submission.distributionChart = JSON.parse(eval(re[1]));
-+
-+        function wait(ms) {
-+            var start = new Date().getTime();
-+            var end = start;
-+            while (end < start + ms) {
-+                end = new Date().getTime();
-+            }
-+        }
-+        wait(6000);
-         return cb(null, submission);
+ plugin.submitProblem = function(problem, cb) {
+-    log.debug("running leetcode.submitProblem");
+-    const opts = plugin.makeOpts(
+-        config.sys.urls.submit.replace("$slug", problem.slug)
+-    );
+-    opts.body = { judge_type: "large" };
++    log.debug('running leetcode.submitProblem');
++    const opts = plugin.makeOpts(config.sys.urls.submit.replace('$slug', problem.slug));
++    opts.body = {judge_type: 'large'};
+ 
+     runCode(opts, problem, function(e, task) {
+         if (e) return cb(e);
+ 
+-        const tasks = [{ type: "Actual", id: task.submission_id }];
++        const tasks = [{type: 'Actual', id: task.submission_id}];
+         const q = new Queue(tasks, {opts: opts, results: []}, verifyResult);
+         q.run(null, function(e, ctx) {
+             return cb(e, ctx.results);
+@@ -334,14 +318,9 @@ plugin.submitProblem = function(problem, cb) {
+ };
+ 
+ plugin.getSubmissions = function(problem, cb) {
+-    log.debug("running leetcode.getSubmissions");
+-    const opts = plugin.makeOpts(
+-        config.sys.urls.submissions.replace("$slug", problem.slug)
+-    );
+-    opts.headers.Referer = config.sys.urls.problem.replace(
+-        "$slug",
+-        problem.slug
+-    );
++    log.debug('running leetcode.getSubmissions');
++    const opts = plugin.makeOpts(config.sys.urls.submissions.replace('$slug', problem.slug));
++    opts.headers.Referer = config.sys.urls.problem.replace('$slug', problem.slug);
+ 
+     request(opts, function(e, resp, body) {
+         e = plugin.checkError(e, resp, 200);
+@@ -350,17 +329,15 @@ plugin.getSubmissions = function(problem, cb) {
+         // FIXME: this only return the 1st 20 submissions, we should get next if necessary.
+         const submissions = JSON.parse(body).submissions_dump;
+         for (let submission of submissions)
+-            submission.id = _.last(_.compact(submission.url.split("/")));
++            submission.id = _.last(_.compact(submission.url.split('/')));
+ 
+         return cb(null, submissions);
      });
  };
+ 
+ plugin.getSubmission = function(submission, cb) {
+-    log.debug("running leetcode.getSubmission");
+-    const opts = plugin.makeOpts(
+-        config.sys.urls.submission.replace("$id", submission.id)
+-    );
++    log.debug('running leetcode.getSubmission');
++    const opts = plugin.makeOpts(config.sys.urls.submission.replace('$id', submission.id));
+ 
+     request(opts, function(e, resp, body) {
+         e = plugin.checkError(e, resp, 200);
+@@ -385,7 +362,7 @@ plugin.getSubmission = function(submission, cb) {
+ };
+ 
+ plugin.starProblem = function(problem, starred, cb) {
+-    log.debug("running leetcode.starProblem");
++    log.debug('running leetcode.starProblem');
+     const opts = plugin.makeOpts();
+     opts.headers.Origin = config.sys.urls.base;
+     opts.headers.Referer = problem.link;
+@@ -393,7 +370,7 @@ plugin.starProblem = function(problem, starred, cb) {
+     const user = session.getUser();
+     if (starred) {
+         opts.url = config.sys.urls.favorites;
+-        opts.method = "POST";
++        opts.method = 'POST';
+         opts.json = true;
+         opts.body = {
+             favorite_id_hash: user.hash,
+@@ -401,9 +378,9 @@ plugin.starProblem = function(problem, starred, cb) {
+         };
+     } else {
+         opts.url = config.sys.urls.favorite_delete
+-            .replace("$hash", user.hash)
+-            .replace("$id", problem.id);
+-        opts.method = "DELETE";
++            .replace('$hash', user.hash)
++            .replace('$id', problem.id);
++        opts.method = 'DELETE';
+     }
+ 
+     request(opts, function(e, resp, body) {
+@@ -415,10 +392,10 @@ plugin.starProblem = function(problem, starred, cb) {
+ };
+ 
+ plugin.getFavorites = function(cb) {
+-    log.debug("running leetcode.getFavorites");
++    log.debug('running leetcode.getFavorites');
+     const opts = plugin.makeOpts(config.sys.urls.favorites);
+ 
+-    const spin = h.spin("Retrieving user favorites");
++    const spin = h.spin('Retrieving user favorites');
+     request(opts, function(e, resp, body) {
+         spin.stop();
+         e = plugin.checkError(e, resp, 200);
+@@ -430,24 +407,24 @@ plugin.getFavorites = function(cb) {
+ };
+ 
+ plugin.getUserInfo = function(cb) {
+-    log.debug("running leetcode.getUserInfo");
++    log.debug('running leetcode.getUserInfo');
+     const opts = plugin.makeOpts(config.sys.urls.graphql);
+     opts.headers.Origin = config.sys.urls.base;
+     opts.headers.Referer = config.sys.urls.base;
+     opts.json = true;
+     opts.body = {
+         query: [
+-            "{",
+-            "  user {",
+-            "    username",
+-            "    isCurrentUserPremium",
+-            "  }",
+-            "}"
+-        ].join("\n"),
++            '{',
++            '  user {',
++            '    username',
++            '    isCurrentUserPremium',
++            '  }',
++            '}'
++        ].join('\n'),
+         variables: {}
+     };
+ 
+-    const spin = h.spin("Retrieving user profile");
++    const spin = h.spin('Retrieving user profile');
+     request.post(opts, function(e, resp, body) {
+         spin.stop();
+         e = plugin.checkError(e, resp, 200);
+@@ -464,7 +441,7 @@ function runSession(method, data, cb) {
+     opts.method = method;
+     opts.body = data;
+ 
+-    const spin = h.spin("Waiting session result");
++    const spin = h.spin('Waiting session result');
+     request(opts, function(e, resp, body) {
+         spin.stop();
+         e = plugin.checkError(e, resp, 200);
+@@ -475,44 +452,44 @@ function runSession(method, data, cb) {
+ }
+ 
+ plugin.getSessions = function(cb) {
+-    log.debug("running leetcode.getSessions");
+-    runSession("POST", {}, cb);
++    log.debug('running leetcode.getSessions');
++    runSession('POST', {}, cb);
+ };
+ 
+ plugin.activateSession = function(session, cb) {
+-    log.debug("running leetcode.activateSession");
+-    const data = { func: "activate", target: session.id };
+-    runSession("PUT", data, cb);
++    log.debug('running leetcode.activateSession');
++    const data = {func: 'activate', target: session.id};
++    runSession('PUT', data, cb);
+ };
+ 
+ plugin.createSession = function(name, cb) {
+-    log.debug("running leetcode.createSession");
+-    const data = { func: "create", name: name };
+-    runSession("PUT", data, cb);
++    log.debug('running leetcode.createSession');
++    const data = {func: 'create', name: name};
++    runSession('PUT', data, cb);
+ };
+ 
+ plugin.deleteSession = function(session, cb) {
+-    log.debug("running leetcode.deleteSession");
++    log.debug('running leetcode.deleteSession');
+     const data = {target: session.id};
+-    runSession("DELETE", data, cb);
++    runSession('DELETE', data, cb);
+ };
+ 
+ plugin.signin = function(user, cb) {
+-    log.debug("running leetcode.signin");
+-    const spin = h.spin("Signing in leetcode.com");
++    log.debug('running leetcode.signin');
++    const spin = h.spin('Signing in leetcode.com');
+     request(config.sys.urls.login, function(e, resp, body) {
+         spin.stop();
+         e = plugin.checkError(e, resp, 200);
+         if (e) return cb(e);
+ 
+-        user.loginCSRF = h.getSetCookieValue(resp, "csrftoken");
++        user.loginCSRF = h.getSetCookieValue(resp, 'csrftoken');
+ 
+         const opts = {
+             url:     config.sys.urls.login,
+             headers: {
+                 Origin:  config.sys.urls.base,
+                 Referer: config.sys.urls.login,
+-                Cookie: "csrftoken=" + user.loginCSRF + ";"
++                Cookie:  'csrftoken=' + user.loginCSRF + ';'
+             },
+             form: {
+                 csrfmiddlewaretoken: user.loginCSRF,
+@@ -522,10 +499,10 @@ plugin.signin = function(user, cb) {
+         };
+         request.post(opts, function(e, resp, body) {
+             if (e) return cb(e);
+-            if (resp.statusCode !== 302) return cb("invalid password?");
++            if (resp.statusCode !== 302) return cb('invalid password?');
+ 
+-            user.sessionCSRF = h.getSetCookieValue(resp, "csrftoken");
+-            user.sessionId = h.getSetCookieValue(resp, "LEETCODE_SESSION");
++            user.sessionCSRF = h.getSetCookieValue(resp, 'csrftoken');
++            user.sessionId = h.getSetCookieValue(resp, 'LEETCODE_SESSION');
+             session.saveUser(user);
+             return cb(null, user);
+         });
+@@ -535,17 +512,15 @@ plugin.signin = function(user, cb) {
+ plugin.getUser = function(user, cb) {
+     plugin.getFavorites(function(e, favorites) {
+         if (!e) {
+-            const f = favorites.favorites.private_favorites.find(
+-                f => f.name === "Favorite"
+-            );
++            const f = favorites.favorites.private_favorites.find(f => f.name === 'Favorite');
+             if (f) {
+                 user.hash = f.id_hash;
+                 user.name = favorites.user_name;
+             } else {
+-                log.warn("Favorite not found?");
++                log.warn('Favorite not found?');
+             }
+         } else {
+-            log.warn("Failed to retrieve user favorites: " + e);
++            log.warn('Failed to retrieve user favorites: ' + e);
+         }
+ 
+         plugin.getUserInfo(function(e, _user) {
+@@ -560,7 +535,7 @@ plugin.getUser = function(user, cb) {
+ };
+ 
+ plugin.login = function(user, cb) {
+-    log.debug("running leetcode.login");
++    log.debug('running leetcode.login');
+     plugin.signin(user, function(e, user) {
+         if (e) return cb(e);
+         plugin.getUser(user, cb);
 diff --git a/package.json b/package.json
-index a9af9f7c..601d997d 100644
+index 1d4a897d..601d997d 100644
 --- ./package.json
 +++ ./package.json
-@@ -53,12 +53,15 @@
+@@ -53,7 +53,7 @@
      "ansi-styles": "3.2.1",
      "cheerio": "0.20.0",
      "he": "1.2.0",
+-    "keytar": "^5.0.0",
 +    "keytar": "^5.6.0",
      "mkdirp": "0.5.1",
      "moment": "^2.20.1",
      "nconf": "0.10.0",
-     "ora": "3.0.0",
+@@ -61,7 +61,7 @@
      "prompt": "1.0.0",
      "request": "2.88.0",
-+    "sprintf-js": "^1.1.1",
+     "sprintf-js": "^1.1.1",
+-    "sqlite3": "^4.1.0",
 +    "sqlite3": "^4.2.0",
      "supports-color": "5.5.0",
      "underscore": "1.9.1",
      "wordwrap": "1.0.0",
-@@ -66,11 +69,11 @@
-   },
-   "devDependencies": {
-     "chai": "4.2.0",
--    "eslint": "5.9.0",
-+    "eslint": "^5.16.0",
-     "eslint-config-google": "0.11.0",
-     "mocha": "5.2.0",
-     "nock": "10.0.2",
--    "nyc": "13.1.0",
-+    "nyc": "^14.1.1",
-     "pkg": "^4.3.4",
-     "rewire": "4.0.1"
-   }
+diff --git a/test/test_helper.js b/test/test_helper.js
+index 6eb6e106..143bda9e 100644
+--- ./test/test_helper.js
++++ ./test/test_helper.js
+@@ -128,12 +128,13 @@ describe('helper', function() {
+       assert.equal(h.langToExt('java'), '.java');
+       assert.equal(h.langToExt('javascript'), '.js');
+       assert.equal(h.langToExt('mysql'), '.sql');
++      assert.equal(h.langToExt('php'), '.php');
+       assert.equal(h.langToExt('python'), '.py');
+       assert.equal(h.langToExt('python3'), '.py');
+       assert.equal(h.langToExt('ruby'), '.rb');
++      assert.equal(h.langToExt('rust'), '.rs');
+       assert.equal(h.langToExt('scala'), '.scala');
+       assert.equal(h.langToExt('swift'), '.swift');
+-      assert.equal(h.langToExt('rust'), '.rs');
+     });
+   }); // #langToExt
+ 
+@@ -146,13 +147,14 @@ describe('helper', function() {
+       assert.equal(h.extToLang('../file.go'), 'golang');
+       assert.equal(h.extToLang('file.java'), 'java');
+       assert.equal(h.extToLang('c:/file.js'), 'javascript');
++      assert.equal(h.extToLang('~/leetcode/../file.sql'), 'mysql');
++      assert.equal(h.extToLang('~/leetcode/hello.php'), 'php');
+       assert.equal(h.extToLang('c:/Users/skygragon/file.py'), 'python');
+       assert.equal(h.extToLang('~/file.rb'), 'ruby');
++      assert.equal(h.extToLang('~/leetcode/file.rs'), 'rust');
+       assert.equal(h.extToLang('/tmp/file.scala'), 'scala');
+       assert.equal(h.extToLang('~/leetcode/file.swift'), 'swift');
+-      assert.equal(h.extToLang('~/leetcode/../file.sql'), 'mysql');
+       assert.equal(h.extToLang('/home/skygragon/file.dat'), 'unknown');
+-      assert.equal(h.extToLang('~/leetcode/file.rs'), 'rust');
+     });
+   }); // #extToLang
+ 
+@@ -170,9 +172,11 @@ describe('helper', function() {
+       assert.deepEqual(h.langToCommentStyle('java'), C_STYLE);
+       assert.deepEqual(h.langToCommentStyle('javascript'), C_STYLE);
+       assert.deepEqual(h.langToCommentStyle('mysql'), SQL_STYLE);
++      assert.deepEqual(h.langToCommentStyle('php'), C_STYLE);
+       assert.deepEqual(h.langToCommentStyle('python'), RUBY_STYLE);
+       assert.deepEqual(h.langToCommentStyle('python3'), RUBY_STYLE);
+       assert.deepEqual(h.langToCommentStyle('ruby'), RUBY_STYLE);
++      assert.deepEqual(h.langToCommentStyle('rust'), C_STYLE);
+       assert.deepEqual(h.langToCommentStyle('scala'), C_STYLE);
+       assert.deepEqual(h.langToCommentStyle('swift'), C_STYLE);
+     });

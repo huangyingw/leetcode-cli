@@ -3,5 +3,4 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-./build.sh
-leetcode list -s
+leetcode list -x

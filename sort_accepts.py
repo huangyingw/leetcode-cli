@@ -6,7 +6,7 @@ myCmd = 'cd submissions/ ; git checkout \*Accepted\* ; cd -'
 os.system(myCmd)
 
 fileName = 'files.proj'
-lines = [line.rstrip('\n') for line in open(fileName) if 'Accepted' in line]
+lines = [line.rstrip('\n') for line in open(fileName) if 'Accepted' in line and 'submissions' in line]
 
 accepts = {}
 for line in lines:

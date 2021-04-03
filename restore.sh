@@ -4,6 +4,7 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
 rsync -aHv --progress \
+    --ignore-existing \
     --exclude-from=./excludeFile \
-    ../leetcode-cli.bak/submissions/ \
+    ./downloads/ \
     ./submissions/

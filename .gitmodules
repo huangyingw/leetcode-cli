@@ -7,3 +7,6 @@
 [submodule "remove_comments"]
 	path = remove_comments
 	url = git@github.com:huangyingw/remove_comments.git
+[submodule "downloads"]
+	path = downloads
+	url = git@github.com:huangyingw/downloads.git

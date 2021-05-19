@@ -1,12 +1,12 @@
 diff --git a/lib/commands/list.js b/lib/commands/list.js
-index c010de86..9d4e9d90 100644
+index c010de86..d7847ceb 100644
 --- ./lib/commands/list.js
 +++ ./lib/commands/list.js
 @@ -7,6 +7,7 @@ var icon = require('../icon');
  var log = require('../log');
  var core = require('../core');
  var session = require('../session');
-+var sprintf = require('../sprintf'); 
++var sprintf = require('../sprintf');
  
  const cmd = {
    command: 'list [keyword]',

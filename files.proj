@@ -43,6 +43,7 @@
 "./docs/install.md"
 "./docs/releases.md"
 "./done.md"
+"./downloads/.gitconfig"
 "./error"
 "./excludeFile"
 "./fav.log"

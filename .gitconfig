@@ -11,8 +11,8 @@
     remote = origin
     remote = gitlab
 [gsync]
-    remote = skygragon
-    branch = master
+    remote = origin
+    branch = dev
 [merge]
     allow = true
 [commit]
@@ -28,7 +28,6 @@
     async = false
 [gdif]
     ignore = *.md
-    ignore = *.sh
     ignore = .gitignore
     ignore = .gitmodules
     ignore = companies.list

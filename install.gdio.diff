@@ -1,5 +1,5 @@
 diff --git a/install_chrome_plugin.sh b/install_chrome_plugin.sh
-index f116fbf4..e027aec4 100755
+index f116fbf4..9db61598 100755
 --- ./install_chrome_plugin.sh
 +++ ./install_chrome_plugin.sh
 @@ -3,5 +3,4 @@ SCRIPT=$(realpath "$0")
@@ -7,7 +7,39 @@ index f116fbf4..e027aec4 100755
  cd "$SCRIPTPATH"
  
 -leetcode plugin -D cookie.chrome
- leetcode plugin -i cookie.chrome
+-leetcode plugin -i cookie.chrome
++./bin/leetcode plugin -i cookie.chrome
+diff --git a/lib/plugin.js b/lib/plugin.js
+index bbd6da44..3fb72cd2 100644
+--- ./lib/plugin.js
++++ ./lib/plugin.js
+@@ -93,7 +93,7 @@ Plugin.init = function(head) {
+     log.trace('found plugin: ' + p.name + '=' + p.ver);
+ 
+         p.file = f.file;
+-    p.enabled = stats[p.name];
++        p.enabled = true;
+ 
+         if (!(p.name in stats)) {
+             if (p.builtin) {
+@@ -177,16 +177,12 @@ Plugin.copy = function(src, cb) {
+ };
+ 
+ Plugin.install = function(name, cb) {
+-  Plugin.copy(name, function(e, fullpath) {
+-    if (e) return cb(e);
+-    log.debug('copied to ' + fullpath);
+-
++    const fullpath = file.pluginFile(name);
+     const p = require(fullpath);
+     p.file = path.basename(fullpath);
+     p.install(function() {
+         return cb(null, p);
+     });
+-  });
+ };
+ 
+ Plugin.installMissings = function(cb) {
 diff --git a/lib/plugins/leetcode.js b/lib/plugins/leetcode.js
 index d19e9620..53c4c1b3 100644
 --- ./lib/plugins/leetcode.js

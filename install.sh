@@ -3,7 +3,7 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-rm -fr ~/.lc/leetcode/cache
+rm -fr ~/.lc/
 . ~/.nvm/nvm.sh
 nvm install 14
 ./build.sh

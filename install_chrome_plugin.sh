@@ -3,4 +3,5 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-leetcode plugin -i cookie.chrome
+# ./bin/leetcode plugin -D cookie.chrome
+./bin/leetcode plugin -i cookie.chrome

@@ -1,14 +1,415 @@
-diff --git a/install_chrome_plugin.sh b/install_chrome_plugin.sh
-index f116fbf4..9db61598 100755
---- ./install_chrome_plugin.sh
-+++ ./install_chrome_plugin.sh
-@@ -3,5 +3,4 @@ SCRIPT=$(realpath "$0")
- SCRIPTPATH=$(dirname "$SCRIPT")
- cd "$SCRIPTPATH"
+diff --git a/lib/commands/list.js b/lib/commands/list.js
+index c010de86..d7847ceb 100644
+--- ./lib/commands/list.js
++++ ./lib/commands/list.js
+@@ -7,6 +7,7 @@ var icon = require('../icon');
+ var log = require('../log');
+ var core = require('../core');
+ var session = require('../session');
++var sprintf = require('../sprintf');
  
--leetcode plugin -D cookie.chrome
--leetcode plugin -i cookie.chrome
-+./bin/leetcode plugin -i cookie.chrome
+ const cmd = {
+   command: 'list [keyword]',
+@@ -66,14 +67,11 @@ cmd.handler = function(argv) {
+       if (problem.locked) ++stat.locked;
+       if (problem.starred) ++stat.starred;
+ 
+-      log.printf('%s %s %s [%=4s] %-60s %-6s (%s %%)',
+-          (problem.starred ? chalk.yellow(icon.like) : icon.empty),
+-          (problem.locked ? chalk.red(icon.lock) : icon.nolock),
+-          h.prettyState(problem.state),
++        log.printf('%3d.%, %-6s',
+             problem.fid,
+-          problem.name,
+-          h.prettyLevel(problem.level),
+-          problem.percent.toFixed(2));
++            problem.slug,
++            h.prettyLevel(sprintf('%-6s', problem.level))
++        );
+ 
+       if (argv.extra) {
+         let badges = [problem.category];
+@@ -98,9 +96,9 @@ cmd.handler = function(argv) {
+ 
+     if (argv.stat) {
+       log.info();
+-      log.printf('      Listed: %-9s Locked:  %-9s Starred: %-9s', problems.length, stat.locked, stat.starred);
+-      log.printf('      Accept: %-9s Not-AC:  %-9s Remain:  %-9s', stat.ac, stat.notac, stat.None);
+-      log.printf('      Easy:   %-9s Medium:  %-9s Hard:    %-9s', stat.Easy, stat.Medium, stat.Hard);
++      log.printf('      Listed: %-9d Locked:  %-9d Starred: %-9d', problems.length, stat.locked, stat.starred);
++      log.printf('      Accept: %-9d Not-AC:  %-9d Remain:  %-9d', stat.ac, stat.notac, stat.None);
++      log.printf('      Easy:   %-9d Medium:  %-9d Hard:    %-9d', stat.Easy, stat.Medium, stat.Hard);
+     }
+   });
+ };
+diff --git a/lib/commands/show.js b/lib/commands/show.js
+index 7c66204a..7f15ef36 100644
+--- ./lib/commands/show.js
++++ ./lib/commands/show.js
+@@ -19,6 +19,12 @@ const cmd = {
+   desc:    'Show question',
+   builder: function(yargs) {
+     return yargs
++            .option('a', {
++                alias: 'all',
++                type: 'boolean',
++                default: false,
++                describe: 'show all questions'
++            })
+       .option('c', {
+         alias:    'codeonly',
+         type:     'boolean',
+@@ -75,18 +81,12 @@ const cmd = {
+ function genFileName(problem, opts) {
+   const path = require('path');
+   const params = [
+-    file.fmt(config.file.show, problem),
+-    '',
++        problem.fid,
++        problem.slug,
+     h.langToExt(opts.lang)
+   ];
+ 
+-  // try new name to avoid overwrite by mistake
+-  for (let i = 0; ; ++i) {
+-    const name = path.join(opts.outdir, params.join('.').replace(/\.+/g, '.'));
+-    if (!file.exist(name))
+-      return name;
+-    params[1] = i;
+-  }
++    return path.join(opts.outdir, params.join('.').replace(/\.+/g, '.'));
+ }
+ 
+ function showProblem(problem, argv) {
+@@ -122,13 +122,9 @@ function showProblem(problem, argv) {
+   if (argv.gen) {
+     file.mkdir(argv.outdir);
+     filename = genFileName(problem, argv);
+-    file.write(filename, code);
+ 
+-    if (argv.editor !== undefined) {
+-      childProcess.spawn(argv.editor || config.code.editor, [filename], {
+-        // in case your editor of choice is vim or emacs
+-        stdio: 'inherit'
+-      });
++        if (!file.exist(filename)) {
++    file.write(filename, code);
+     }
+   } else {
+     if (argv.codeonly) {
+@@ -137,7 +133,7 @@ function showProblem(problem, argv) {
+     }
+   }
+ 
+-  log.printf('[%s] %s %s', problem.fid, problem.name,
++    log.printf('[%d] %s %s', problem.fid, problem.name,
+       (problem.starred ? chalk.yellow(icon.like) : icon.empty));
+   log.info();
+   log.info(chalk.underline(problem.link));
+@@ -150,7 +146,7 @@ function showProblem(problem, argv) {
+ 
+   log.info();
+   log.printf('* %s', problem.category);
+-  log.printf('* %s (%s%%)', h.prettyLevel(problem.level), problem.percent.toFixed(2));
++    log.printf('* %s (%.2f%%)', h.prettyLevel(problem.level), problem.percent);
+ 
+   if (filename)
+     log.printf('* Source Code:       %s', chalk.yellow.underline(filename));
+@@ -167,32 +163,26 @@ function showProblem(problem, argv) {
+ 
+ cmd.handler = function(argv) {
+   session.argv = argv;
+-  if (argv.keyword.length > 0) {
+-    // show specific one
+-    core.getProblem(argv.keyword, function(e, problem) {
++    if (argv.all) {
++        core.getProblems(function(e, problems) {
++            if (e) return log.fail(e);
++
++            for (let problem of problems) {
++                core.getProblem(problem.fid, function(e, problem) {
+       if (e) return log.fail(e);
+       showProblem(problem, argv);
+     });
+-  } else {
+-    // show random one
+-    core.filterProblems(argv, function(e, problems) {
+-      if (e) return log.fail(e);
+-
+-      // random select one that not AC-ed yet
+-      const user = session.getUser();
+-      problems = problems.filter(function(x) {
+-        if (x.state === 'ac') return false;
+-        if (!user.paid && x.locked) return false;
+-        return true;
++            }
+       });
+-      if (problems.length === 0) return log.fail('Problem not found!');
++        return;
++    }
+ 
+-      const problem = _.sample(problems);
+-      core.getProblem(problem, function(e, problem) {
++    if (argv.keyword.length > 0) {
++        // show specific one
++        core.getProblem(argv.keyword, function(e, problem) {
+         if (e) return log.fail(e);
+         showProblem(problem, argv);
+       });
+-    });
+   }
+ };
+ 
+diff --git a/lib/commands/stat.js b/lib/commands/stat.js
+index 772499c4..910d8de5 100644
+--- ./lib/commands/stat.js
++++ ./lib/commands/stat.js
+@@ -104,7 +104,7 @@ function showGraph(problems) {
+   for (let problem of problems)
+     graph[problem.fid] = ICONS[problem.state] || ICONS.none;
+ 
+-  let rowNumFormat = ' %04s';
++  let rowNumFormat = ' %03s';
+   let line = [sprintf(rowNumFormat, 0)];
+   for (let i = 1, n = graph.length; i <= n; ++i) {
+     // padding before group
+diff --git a/lib/commands/submission.js b/lib/commands/submission.js
+index de0449a3..7b3c9008 100644
+--- ./lib/commands/submission.js
++++ ./lib/commands/submission.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ var path = require('path');
+-
++var sprintf = require('sprintf-js').sprintf;
+ var _ = require('underscore');
+ 
+ var h = require('../helper');
+@@ -85,19 +85,19 @@ function exportSubmission(problem, argv, cb) {
+             return cb('No submissions?');
+ 
+         // get obj list contain required filetype
+-    submissions = submissions.filter(x => argv.lang === 'all' || argv.lang === x.lang);
++        submissions = submissions.filter(x => x.status_display !== 'Compile Error');
+         if (submissions.length === 0)
+             return cb('No submissions in required language.');
+ 
+-    // if no accepted, use the latest non-accepted one
+-    const submission = submissions.find(x => x.status_display === 'Accepted') || submissions[0];
+-    submission.ac = (submission.status_display === 'Accepted');
++        for (let submission of submissions) {
+ 
+-    const data = _.extend({}, submission, problem);
+-    data.sid = submission.id;
+-    data.ac = submission.ac ? 'ac' : 'notac';
+-    const basename = file.fmt(config.file.submission, data);
+-    const f = path.join(argv.outdir, basename + h.langToExt(submission.lang));
++            const f = sprintf('%s/%d.%s.%s.%s%s',
++                argv.outdir,
++                problem.fid,
++                problem.slug,
++                submission.id,
++                submission.status_display.replace(/ /g, "-"),
++                h.langToExt(submission.lang));
+ 
+             file.mkdir(argv.outdir);
+             // skip the existing cached submissions
+@@ -116,6 +116,7 @@ function exportSubmission(problem, argv, cb) {
+                 cb(null, submission.ac ? chalk.green.underline(f)
+                     : chalk.yellow.underline(f));
+             });
++        }
+     });
+ }
+ 
+@@ -126,7 +127,6 @@ cmd.handler = function(argv) {
+     if (argv.all) {
+         core.getProblems(function(e, problems) {
+             if (e) return log.fail(e);
+-      problems = problems.filter(x => x.state === 'ac' || x.state === 'notac');
+             q.addTasks(problems).run();
+         });
+         return;
+diff --git a/lib/commands/submit.js b/lib/commands/submit.js
+index 56f5ed04..26b8d602 100644
+--- ./lib/commands/submit.js
++++ ./lib/commands/submit.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ var util = require('util');
+-
++const fs = require("fs");
+ var h = require('../helper');
+ var file = require('../file');
+ var chalk = require('../chalk');
+@@ -14,6 +14,12 @@ const cmd = {
+     desc:    'Submit code',
+     builder: function(yargs) {
+         return yargs
++            .option('d', {
++                alias: 'delete',
++                type: 'boolean',
++                default: false,
++                describe: 'delete the already submitted file'
++            })
+             .positional('filename', {
+                 type: 'string',
+                 describe: 'Code file to submit',
+@@ -29,7 +35,7 @@ function printResult(actual, k) {
+     const v = actual[k] || '';
+     const lines = Array.isArray(v) ? v : [v];
+     for (let line of lines) {
+-    if (k !== 'state') line = k + ': ' + line;
++        if (k !== 'state') line = k + ': \n' + line;
+         log.info('  ' + h.prettyText(' ' + line, actual.ok));
+     }
+ }
+@@ -63,6 +69,24 @@ cmd.handler = function(argv) {
+             printLine(result, '%d/%d cases passed (%s)',
+                 result.passed, result.total, result.runtime);
+ 
++            if (argv.delete) {
++                try {
++                    fs.unlinkSync(argv.filename);
++
++                    function wait(ms) {
++                        var start = new Date().getTime();
++                        var end = start;
++                        while (end < start + ms) {
++                            end = new Date().getTime();
++                        }
++                    }
++
++                    wait(12000);
++                } catch (err) {
++                    console.error(err);
++                }
++            }
++
+             if (result.ok) {
+                 session.updateStat('ac', 1);
+                 session.updateStat('ac.set', problem.fid);
+@@ -74,14 +98,18 @@ cmd.handler = function(argv) {
+                     const scores = submission.distributionChart.distribution;
+                     const myRuntime = parseFloat(result.runtime);
+ 
+-          let ratio = 0.0;
+-          for (let score of scores) {
+-            if (parseFloat(score[0]) >= myRuntime)
+-              ratio += parseFloat(score[1]);
+-          }
+-
+-          printLine(result, 'Your runtime beats %d %% of %s submissions',
+-              ratio.toFixed(2), lang);
++                    printLine(
++                        result,
++                        "Your runtime beats %d %% of %s submissions",
++                        result.runtime_percentile,
++                        lang
++                    );
++                    printLine(
++                        result,
++                        "Your memory beats %d %% of %s submissions",
++                        result.memory_percentile,
++                        lang
++                    );
+                 });
+             } else {
+                 printResult(result, 'error');
+diff --git a/lib/commands/test.js b/lib/commands/test.js
+index 21c4a4eb..76643bd4 100644
+--- ./lib/commands/test.js
++++ ./lib/commands/test.js
+@@ -84,11 +84,18 @@ function runTest(argv) {
+         log.info();
+         log.info(chalk.yellow(results[i].type));
+ 
++                log.info('\nstdouts: ');
++                let stdouts = results[i]['stdout'];
++                stdouts = stdouts.replace(/\'/g, '').replace(/"/g, '').split('\\n');
++                for (let stdout of stdouts) {
++                    stdout = stdout.replace(/\s+\+\n\s+/g, '');
++                    log.printf('%s', stdout);
++                }
+         printResult(results[i], null, 'state');
+         printResult(results[i], null, 'runtime');
+         printResult(results[i], results[i + 1], 'answer');
+-        printResult(results[i], results[i + 1], 'stdout');
+         printResult(results[i], null, 'error');
++        printResult(results[i], null, 'expected_answer');
+       }
+     });
+   });
+diff --git a/lib/commands/user.js b/lib/commands/user.js
+index 4cd903cd..28e3cf02 100644
+--- ./lib/commands/user.js
++++ ./lib/commands/user.js
+@@ -35,23 +35,15 @@ const cmd = {
+ 
+ cmd.handler = function(argv) {
+     session.argv = argv;
+-  let user = null;
++    const user = {};
+     if (argv.login) {
+         // login
+-    prompt.colors = false;
+-    prompt.message = '';
+-    prompt.start();
+-    prompt.get([
+-      {name: 'login', required: true},
+-      {name: 'pass', required: true, hidden: true}
+-    ], function(e, user) {
+-      if (e) return log.fail(e);
+-
++        user.login = 'huangyingw@gmail.com';
++        user.pass = '1qaz@WSX';
+         core.login(user, function(e, user) {
+             if (e) return log.fail(e);
+             log.info('Successfully login as', chalk.yellow(user.name));
+         });
+-    });
+     } else if (argv.logout) {
+         // logout
+         user = core.logout(user, true);
+diff --git a/lib/file.js b/lib/file.js
+index 51ea21c3..3643cf39 100644
+--- ./lib/file.js
++++ ./lib/file.js
+@@ -129,10 +129,11 @@ file.metaByName = function(filename) {
+ 
+     // expect the 1st section in filename as id
+     // e.g. 1.two-sum.cpp
+-  m.id = file.name(filename).split('.')[0];
++    let fidRegexp = /(?<fid>\d+)/;
++    m.id = file.name(filename).match(fidRegexp).groups.fid;
+ 
+     // HACK: compatible with old ext
+-  if (filename.endsWith('.py3') || filename.endsWith('.python3.py'))
++    if (filename.endsWith('.py3') || filename.endsWith('.py'))
+         m.lang = 'python3';
+     else
+         m.lang = require('./helper').extToLang(filename);
+diff --git a/lib/helper.js b/lib/helper.js
+index 8806086e..f8e98e6b 100644
+--- ./lib/helper.js
++++ ./lib/helper.js
+@@ -35,13 +35,13 @@ const LANGS = [
+   {lang: 'cpp',        ext: '.cpp',        style: 'c'},
+   {lang: 'csharp',     ext: '.cs',         style: 'c'},
+   {lang: 'golang',     ext: '.go',         style: 'c'},
+-  {lang: 'java',       ext: '.java',       style: 'c'},
++  {lang: 'java',       ext: '.leetcode.java',       style: 'c'},
+   {lang: 'javascript', ext: '.js',         style: 'c'},
+   {lang: 'kotlin',     ext: '.kt',         style: 'c'},
+   {lang: 'mysql',      ext: '.sql',        style: '--'},
+   {lang: 'php',        ext: '.php',        style: 'c'},
+-  {lang: 'python',     ext: '.py',         style: '#'},
+-  {lang: 'python3',    ext: '.py',         style: '#'},
++  {lang: 'python',     ext: '.leetcode.py',         style: '#'},
++  {lang: 'python3',    ext: '.leetcode.python3.py', style: '#'},
+   {lang: 'ruby',       ext: '.rb',         style: '#'},
+   {lang: 'rust',       ext: '.rs',         style: 'c'},
+   {lang: 'scala',      ext: '.scala',      style: 'c'},
 diff --git a/lib/plugin.js b/lib/plugin.js
 index bbd6da44..3fb72cd2 100644
 --- ./lib/plugin.js
@@ -41,22 +442,97 @@ index bbd6da44..3fb72cd2 100644
  
  Plugin.installMissings = function(cb) {
 diff --git a/lib/plugins/leetcode.js b/lib/plugins/leetcode.js
-index d19e9620..53c4c1b3 100644
+index 24331ec6..53c4c1b3 100644
 --- ./lib/plugins/leetcode.js
 +++ ./lib/plugins/leetcode.js
-@@ -348,15 +348,6 @@ plugin.getSubmission = function(submission, cb) {
+@@ -121,7 +121,6 @@ plugin.getCategoryProblems = function(category, cb) {
+ plugin.getProblem = function(problem, cb) {
+     log.debug('running leetcode.getProblem');
+     const user = session.getUser();
+-  if (problem.locked && !user.paid) return cb('failed to load locked problem!');
  
-         re = body.match(/DistributionFormatted:\s('[^']+')/);
+     const opts = plugin.makeOpts(config.sys.urls.graphql);
+     opts.headers.Origin = config.sys.urls.base;
+@@ -244,10 +243,15 @@ function formatResult(result) {
+     const x = {
+         ok:       result.run_success,
+         answer:   result.code_answer || '',
++        expected_answer:   result.expected_code_answer || '',
+         runtime:  result.status_runtime || '',
+         state:    h.statusToName(result.status_code),
+         testcase: util.inspect(result.input || result.last_testcase || ''),
+         passed:   result.total_correct || 0,
++        std_output: result.std_output || "",
++        runtime_percentile: result.runtime_percentile || "",
++        memory_percentile: result.memory_percentile || "",
++        status_memory: result.status_memory || "",
+         total:    result.total_testcases || 0
+     };
+ 
+@@ -256,11 +260,12 @@ function formatResult(result) {
+         .values()
+         .value();
+ 
+-  if (result.judge_type === 'large') {
++    if (result.total_testcases > 0) {
+         x.answer = result.code_output;
+         x.expected_answer = result.expected_output;
+         x.stdout = result.std_output;
+     } else {
++        x.ok = result.code_answer === result.expected_code_answer;
+         if (typeof(result.code_output) === 'string') {
+             x.stdout = util.inspect(result.code_output);
+         } else if (Array.isArray(result.code_output)) {
+@@ -287,8 +292,7 @@ plugin.testProblem = function(problem, cb) {
+         if (e) return cb(e);
+ 
+         const tasks = [
+-      {type: 'Actual', id: task.interpret_id},
+-      {type: 'Expected', id: task.interpret_expected_id}
++            {type: 'Actual', id: task.interpret_id}
+         ];
+         const q = new Queue(tasks, {opts: opts, results: []}, verifyResult);
+         q.run(null, function(e, ctx) {
+@@ -342,7 +346,7 @@ plugin.getSubmission = function(submission, cb) {
+         let re = body.match(/submissionCode:\s('[^']*')/);
+         if (re) submission.code = eval(re[1]);
+ 
+-    re = body.match(/runtimeDistributionFormatted:\s('[^']+')/);
++        re = body.match(/DistributionFormatted:\s('[^']+')/);
          if (re) submission.distributionChart = JSON.parse(eval(re[1]));
--
--        function wait(ms) {
--            var start = new Date().getTime();
--            var end = start;
--            while (end < start + ms) {
--                end = new Date().getTime();
--            }
--        }
--        wait(6000);
          return cb(null, submission);
      });
- };
+diff --git a/package.json b/package.json
+index a9af9f7c..601d997d 100644
+--- ./package.json
++++ ./package.json
+@@ -53,12 +53,15 @@
+     "ansi-styles": "3.2.1",
+     "cheerio": "0.20.0",
+     "he": "1.2.0",
++    "keytar": "^5.6.0",
+     "mkdirp": "0.5.1",
+     "moment": "^2.20.1",
+     "nconf": "0.10.0",
+     "ora": "3.0.0",
+     "prompt": "1.0.0",
+     "request": "2.88.0",
++    "sprintf-js": "^1.1.1",
++    "sqlite3": "^4.2.0",
+     "supports-color": "5.5.0",
+     "underscore": "1.9.1",
+     "wordwrap": "1.0.0",
+@@ -66,11 +69,11 @@
+   },
+   "devDependencies": {
+     "chai": "4.2.0",
+-    "eslint": "5.9.0",
++    "eslint": "^5.16.0",
+     "eslint-config-google": "0.11.0",
+     "mocha": "5.2.0",
+     "nock": "10.0.2",
+-    "nyc": "13.1.0",
++    "nyc": "^14.1.1",
+     "pkg": "^4.3.4",
+     "rewire": "4.0.1"
+   }

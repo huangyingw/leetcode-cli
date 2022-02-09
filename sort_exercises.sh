@@ -3,8 +3,8 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-~/loadrc/bashrc/mirror.sh
-cat files.proj | grep \/submissions\/.*.py | sed "s/\"//g" > files.proj.sort
+rsync -aH --delete ./submissions/ ./exercises/
+cat files.proj | grep \/exercises\/.*.py | sed "s/\"//g" > files.proj.sort
 
 IFS=$'\r\n' GLOBIGNORE='*' command eval  'files=($(cat files.proj.sort))'
 

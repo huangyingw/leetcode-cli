@@ -1,3 +1,5 @@
 lib/plugin.js <unknown> 175   const spin = h.spin('Downloading ' + src);
 ./lib/plugin.js:69:  const cmd = 'npm install --save ' + this.deps.join(' ');
 print("val --> %s" % val)
+ 
+need_more_efforts 

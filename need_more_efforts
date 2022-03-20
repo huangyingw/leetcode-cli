@@ -1,3 +1,6 @@
-2022-02-21 21:38:02.924456444 -0800	./exercises/234/234.palindrome-linked-list.645822382.Wrong-Answer.leetcode.python3.py
-2022-02-21 22:18:35.000341811 -0800	./exercises/24/24.swap-nodes-in-pairs.251778545.Accepted.leetcode.py
-2022-02-22 22:26:57.170081107 -0800	./exercises/258/258.add-digits.272122208.Accepted.leetcode.py
+./exercises/234/234.palindrome-linked-list.645822382.Wrong-Answer.leetcode.python3.py
+./exercises/24/24.swap-nodes-in-pairs.251778545.Accepted.leetcode.py
+./exercises/258/258.add-digits.272122208.Accepted.leetcode.py
+./exercises/276/276.paint-fence.254745299.Accepted.leetcode.py
+./exercises/297/297.serialize-and-deserialize-binary-tree.267745016.Runtime-Error.leetcode.py
+exercises/297/297.serialize-and-deserialize-binary-tree.649753846.Accepted.leetcode.python3.py

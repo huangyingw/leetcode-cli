@@ -5,7 +5,7 @@ cd "$SCRIPTPATH"
 
 rm -fr ~/.lc/
 . ~/.nvm/nvm.sh
-nvm install 14
+nvm install 13
 ./build.sh
 ./install_chrome_plugin.sh
 leetcode user -l

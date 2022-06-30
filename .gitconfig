@@ -7,6 +7,9 @@
 [remote "gitlab"]
     url = git@gitlab.com:huangyingw/leetcode-cli.git
     fetch = +refs/heads/*:refs/remotes/gitlab/*
+[remote "github"]
+    url = https://github.com/huangyingw/leetcode-cli.git 
+    fetch = +refs/heads/*:refs/remotes/github/*
 [push]
     remote = origin
     remote = gitlab
